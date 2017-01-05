@@ -1,0 +1,70 @@
+<html>
+<head>
+	<title>Course Viewer Template</title>
+	
+	<script type="text/javascript">
+		// This is a very rough template. Feel free to modify the javascript variables and 
+		// HTML as you wish. The HTML tags are version 4, make it 5.
+		
+		// You will probably want to start by stylizing the course html below, I would recommend 
+		// doing a darker background color for the page and using white as the background color of 
+		// the course wrapper.
+		
+		// When you get it looking good, then try to fill the course html tags with content from 
+		// the javascript variables. This will require writing more javascript.
+		
+		// The name of course, read this variable and apply it to the H1 tags inside the header
+		var course_title = "Alpha Course Template Level 1";
+		
+		// Color the header should be, read this variable and apply color as background color
+		// Note: This red will appear too strong, change it to a more subtle color.
+		var header_color = "#FF0000";
+		
+		// course content will be found in the slides variable
+		// it is an array containing arrays
+		// each array inside represents a slide
+		// Key: [Template1, Text, Image, Audio]
+		// Key: [Template2, Video]
+		// Key: [Template3, Text]
+		// Note: Images/Audio are dead links, replace with your own content for now
+		//       Make sure content is in same directory as this html page
+		//       Then update the text here with filenames.
+		var slides = [
+			["Template1","Welcome to the Course","introduction.jpg","introduction.mp3"],
+			["Template2","introductionVideo.mpg"],
+			["Template1","The content here would be the third slide", "3.jpg","3.mp3"]
+			["Template3","This is the next slide in the course."]
+		];
+		
+		// After pulling the content from the array, add a next button
+		// When clicked it will look into the slides variable and grab the next array
+		// Read the content in the array and then replace existing
+		// You may have to add a new variable to keep track of current slide, ex: var current_slide = 1;
+		// The next button will be a link that calls a javascript function you will create
+	</script>
+	
+	<style type="text/css">
+		/* Put your styles here */
+	</style>
+</head>
+<body>
+	
+	<p>This page may appear blank. Open in a text editor to help change that. Then remove this line.</p>
+	
+	<div id="course_wrapper">
+		<div id="course_header">
+			<h1 id="course_title"></h1>
+		</div>
+		<div id="slide_content">
+			<div id="slide_text">
+				
+			</div>
+			
+			<div id="slide_image">
+				
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

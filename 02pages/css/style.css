@@ -1,0 +1,165 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	/* font-size: 100%;*/
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: arial, sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+p {
+	margin: 10px 0;
+}
+/* Type will scale with document */
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1rem;
+}
+#masterhead {
+	background: #222;
+	color: #fff;
+	padding: 10px;
+	display: -ms-flexbox; /* IE 10 */
+	display: flex;
+}
+.corporate-name {
+	font-family: 'Rosario', sans-serif;
+	font-size: 24px;
+	padding-top: 5px; /* This particular font tends to appear too height so I adjusted to align with the User Info */
+	font-weight: bold;
+  	margin-right: auto;
+}
+#subhead {
+	background: #f1efef;
+	padding: 10px;
+}
+.selected {
+	font-weight: bold;
+}
+h1 {
+	font-weight: bold;
+	margin: 30px 0 10px;
+}
+
+#page {
+	text-align: right;
+	font-weight: bold;
+	margin: 10px 0;
+}
+#template-basic {
+	display: -ms-flexbox; /* IE 10 */
+	display: flex;
+}
+#slide-audio {
+	margin: 0 auto;
+	display: block;
+}
+#template-basic.display-no {
+	display: none;
+}
+#template-video {
+	display: none;
+}
+#template-video.display-yes {
+	display: block;
+}
+#slide-video {
+	max-width: 100%;
+	display: block;
+	margin: 10px auto;
+}
+#bodymedia {
+	margin-left: auto;
+}
+#bodymedia img {
+	max-width: 100%;
+	display: block;
+}
+#audio-controller {
+	display: -ms-flexbox; /* IE 10 */
+	display: flex;
+	max-width: 450px;
+	margin: 50px auto;
+}
+#audio-controller li {
+	width: 100px;
+	background: #f1efef;
+	border-radius: 2px;
+	border: 1px solid #ccc;
+	text-align: center;
+	margin: auto;
+	padding: 10px;
+}
+#audio-controller li:hover {
+	background: #fff;
+	cursor: pointer;
+}
+#audio-controller i {
+	padding-right: 6px;
+}
+
+#footer {
+	clear: both;
+}
+/* Document level adjustments */
+html {
+  font-size: 17px;
+}
+.block-padding { padding: 10px; }
+@media (max-width: 900px) {
+  html { font-size: 15px; }
+  .contentbody-left { max-width: 50%; }
+  #slide-audio { width: 100%; }
+  .block-padding { padding: 0 10px; }
+}
+@media (max-width: 400px) {
+  html { font-size: 13px; }
+  #template-basic { display: block; }
+  .contentbody-left { max-width: 100%; }
+  #bodymedia img { margin: 0 auto; }
+}
