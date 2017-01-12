@@ -174,4 +174,27 @@ function slides_num() {
 
 }
 
+// Audio Button Enabled/ Disabled
+$('#slide-audio').on('playing', function() {
+	// disable button/link
+	document.getElementById('pg-next').setAttribute("disabled", true);
+});
+$('#slide-audio').on('ended', function() {
+   // enable button/link
+   document.getElementById('pg-next').removeAttribute('disabled');
+});
+
+
+var audio;
+        //jInit is my own site standard which is triggered after aynschronous loading of javascript
+        //libraries. You can here use $(document).ready instead, in general case.
+        function jInit(){
+            audio = $(".audioDemo");
+            addEventHandlers();
+        }
+ 
+        function toggleMuteAudio(){
+            audio.prop("muted",!audio.prop("muted"));
+        }
+
 

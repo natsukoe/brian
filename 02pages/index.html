@@ -16,9 +16,8 @@
 	<div id="masterhead">
 		<div class="corporate-name">ADM - Cidar Rapids, Iowa</div>
 		<div class="user-info">
-			<p>Hi, Curt Evans </h2>
+			<p>Hi, Curt</h2>
 			<i class="icon-user"></i>
-			<i class="icon-angle-down"></i>
 		</div>
 	</div>
 
@@ -42,10 +41,12 @@
 					<p>
 						As largest agricultual company in the world, ADM serves vital glocal purpose. We connect the harvest to the home, transporting crops into products that serve vital needs for food and energy. As largest agricultual company in the world, ADM serves vital glocal purpose. We connect the harvest to the home, transporting crops into products that serve vital needs for food and energy. As largest agricultual company in the world, ADM serves vital glocal purpose. We connect the harvest to the home, transporting crops into products that serve vital needs for food and energy.
 					</p>		
-				</div>
-				<audio autoplay controls id="slide-audio">
+				</div>	
+				<audio autoplay id="slide-audio" class="audioDemo" controls preload="none">
 					<source src="audio/letgo.mp3" type="audio/mpeg">
+					<!-- <source src="music.ogg" type="audio/ogg"> -->
 				</audio>
+				<div class="mute">toggle volume on/ off</div>
 			</div>
 			<div id="bodymedia" class="block-padding">
 				<img src="images/adm-intro.jpg" alt="Image of ADM headquater" />
@@ -61,11 +62,11 @@
 		</video>
 	</div>
 
-	<ul id="audio-controller" class="block-padding">
-		<li><i class="icon-repeat"></i>Replay</li>
-		<li id="pg-back"><i class="icon-step-backward"></i>Back</li>
-		<li id="pg-next"><i class="icon-step-forward"></i>Next</li>
-	</ul>
+	<div id="audio-controller" class="block-padding">
+		<button><i class="icon-repeat"></i>Replay</button>
+		<button id="pg-back"><i class="icon-step-backward"></i>Back</button>
+		<button id="pg-next"><i class="icon-step-forward"></i>Next</button>
+	</div>
 
 	<div id="footer" class="block-padding">
 		<p><a href="#">Problem with course?</a></p>

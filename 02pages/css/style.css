@@ -126,7 +126,7 @@ h1 {
 	max-width: 450px;
 	margin: 50px auto;
 }
-#audio-controller li {
+#audio-controller button {
 	width: 100px;
 	background: #f1efef;
 	border-radius: 2px;
@@ -134,8 +134,9 @@ h1 {
 	text-align: center;
 	margin: auto;
 	padding: 10px;
+	font-size: 100%;
 }
-#audio-controller li:hover {
+#audio-controller button:hover {
 	background: #fff;
 	cursor: pointer;
 }
