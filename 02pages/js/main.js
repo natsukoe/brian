@@ -184,17 +184,3 @@ $('#slide-audio').on('ended', function() {
    document.getElementById('pg-next').removeAttribute('disabled');
 });
 
-
-var audio;
-        //jInit is my own site standard which is triggered after aynschronous loading of javascript
-        //libraries. You can here use $(document).ready instead, in general case.
-        function jInit(){
-            audio = $(".audioDemo");
-            addEventHandlers();
-        }
- 
-        function toggleMuteAudio(){
-            audio.prop("muted",!audio.prop("muted"));
-        }
-
-
