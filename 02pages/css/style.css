@@ -73,6 +73,10 @@ h3 {
 	padding-top: 5px; /* This particular font tends to appear too height so I adjusted to align with the User Info */
 	font-weight: bold;
   	margin-right: auto;
+  	width: 82%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 #subhead {
 	background: #f1efef;
@@ -149,7 +153,7 @@ h1 {
 	clear: both;
 }
 
-/* Media Controller heights adjustments */
+/* Media Controller height adjustments */
 #template-basic, #template-video {
 	min-height: 390px;
 }
@@ -157,14 +161,12 @@ h1 {
 html {
   font-size: 17px;
 }
-#bodymedia { width: 100%; }
+.contentbody-left { max-width: 50%; }
 .block-padding { padding: 10px; }
 @media (max-width: 900px) {
   html { font-size: 15px; }
-  .contentbody-left { max-width: 50%; }
   #slide-audio { width: 100%; }
   .block-padding { padding: 0 10px; }
-  #bodymedia { width: auto; }
 }
 /* Started with 400px and 700px seems right */
 @media (max-width: 700px) {

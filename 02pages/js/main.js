@@ -133,6 +133,15 @@ document.getElementById("pg-next").addEventListener("click", function(){
 	slides_num();
 });
 
+// Replay Button
+document.getElementById("pg-replay").addEventListener("click", function(){
+	if ( slides[ pg_current.innerHTML - 1 ].templateType === 'video' ) {
+		document.getElementById('slide-video').play(); 	
+	}
+	else {
+		document.getElementById('slide-audio').play(); 
+	}	
+});
 
 /* Course Contents */
 
@@ -188,7 +197,7 @@ function slides_num() {
 
 }
 
-// Audio Button Enabled/ Disabled
+// Next Button Enabled/ Disabled until audio or video ends
 $('#slide-audio').on('playing', function() {
 	// disable button/link
 	document.getElementById('pg-next').setAttribute("disabled", true);
@@ -197,4 +206,14 @@ $('#slide-audio').on('ended', function() {
    // enable button/link
    document.getElementById('pg-next').removeAttribute('disabled');
 });
+
+$('#slide-video').on('playing', function() {
+	// disable button/link
+	document.getElementById('pg-next').setAttribute("disabled", true);
+});
+$('#slide-video').on('ended', function() {
+   // enable button/link
+   document.getElementById('pg-next').removeAttribute('disabled');
+});
+
 
