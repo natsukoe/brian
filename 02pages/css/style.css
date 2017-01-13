@@ -119,6 +119,7 @@ h1 {
 #bodymedia img {
 	max-width: 100%;
 	display: block;
+	margin: 0 auto;
 }
 #audio-controller {
 	display: -ms-flexbox; /* IE 10 */
@@ -147,10 +148,16 @@ h1 {
 #footer {
 	clear: both;
 }
+
+/* Media Controller heights adjustments */
+#template-basic, #template-video {
+	min-height: 390px;
+}
 /* Document level adjustments */
 html {
   font-size: 17px;
 }
+#bodymedia { width: 100%; }
 .block-padding { padding: 10px; }
 @media (max-width: 900px) {
   html { font-size: 15px; }
@@ -158,7 +165,8 @@ html {
   #slide-audio { width: 100%; }
   .block-padding { padding: 0 10px; }
 }
-@media (max-width: 400px) {
+/* Started with 400px and 700px seems right */
+@media (max-width: 700px) {
   html { font-size: 13px; }
   #template-basic { display: block; }
   .contentbody-left { max-width: 100%; }

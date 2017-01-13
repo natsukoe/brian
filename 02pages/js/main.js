@@ -28,7 +28,7 @@ var slides = [
 	{
 		slideText: '<p>Page 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
 		slideAudio: 'business1/eclipse.mp3',
-		slideMedia: 'business1/books.jpg',
+		slideMedia: 'business1/adm-3.jpg',	
 		slideMediaAlt: 'Image of SlideMedia',
 		templateType: 'basic'
 	},
@@ -39,7 +39,7 @@ var slides = [
 	{
 		slideText: '<p>Page 3 of Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
 		slideAudio: 'business1/eclipse.mp3',
-		slideMedia: 'images/adm-intro.jpg',
+		slideMedia: 'business1/adm-1.jpg',
 		slideMediaAlt: 'Image of SlideMedia for page 3',
 		templateType: 'basic'
 	},
@@ -47,7 +47,21 @@ var slides = [
 		slideText: '<p>Page 4: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
 		slideAudio: 'audio/letgo.mp3',
 		slideMedia: 'business1/man-in-office.jpg',
-		slideMediaAlt: 'Image of SlideMedia for page 3',
+		slideMediaAlt: 'Image of SlideMedia for page 4',
+		templateType: 'basic'
+	},
+	{
+		slideText: 'Page 5: <font color="#026332"><b>ADM Safe Work Plan</b></font><p>Designated ADM personnel must approve all permits.  All signatures must be obtained PRIOR to allowing the work to commence.</p>  <p>Each item on a permit must be initialed as it is completed and/or verified.  Involved personnel in the SWP include authorizing crew members, atmospheric tester, work supervisor, fire watch, attendant, entrant, and operation representative.</p>  <p>Please follow the instructions for the SWP for its usage and approvals.  See your ADM representative before proceeding.</p>',
+		slideAudio: 'audio/letgo.mp3',
+		slideMedia: 'business1/adm-2.jpg',
+		slideMediaAlt: 'Image of SlideMedia for page 5',
+		templateType: 'basic'
+	},
+	{
+		slideText: 'Safe Work, <font color="#026332"><b>Barricades</b></font><br />Barricades should be installed around most work areas, to make everyone entering the area aware of potential hazards and material movement.<br />The type of barricading will depend on the hazards; examples may include excavations, holes in floors, leaks, overhead work, areas where structures such as handrails or stairs have been removed, and all temporary work areas where tripping or falling hazards exist.<br />Barricading should not block emergency equipment such as: fire extinguishers, fire hoses, safety showers, and eyewashes.<br />',
+		slideAudio: 'audio/letgo.mp3',
+		slideMedia: 'business1/books.jpg',
+		slideMediaAlt: 'Image of SlideMedia for page 6',
 		templateType: 'basic'
 	}
 ];
