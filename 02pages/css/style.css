@@ -164,6 +164,7 @@ html {
   .contentbody-left { max-width: 50%; }
   #slide-audio { width: 100%; }
   .block-padding { padding: 0 10px; }
+  #bodymedia { width: auto; }
 }
 /* Started with 400px and 700px seems right */
 @media (max-width: 700px) {
