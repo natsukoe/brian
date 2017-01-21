@@ -195,6 +195,16 @@ function slides_num() {
 		media_video.pause();
 	}
 
+	// Disable back button when current page is 1
+	if ( pg_current.innerHTML == 1 ) {
+		document.getElementById('pg-back').setAttribute("disabled", true);
+	}
+	// Enable back button when current page is NOT 1
+	else {
+		document.getElementById('pg-back').removeAttribute('disabled');
+	}
+
+
 }
 
 // Next Button Enabled/ Disabled until audio or video ends
@@ -215,5 +225,4 @@ $('#slide-video').on('ended', function() {
    // enable button/link
    document.getElementById('pg-next').removeAttribute('disabled');
 });
-
 
