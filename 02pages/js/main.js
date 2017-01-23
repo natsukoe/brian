@@ -149,7 +149,7 @@ document.getElementById("pg-replay").addEventListener("click", function(){
 slides_num();
 
 
-// Clicked Course Contents
+// Loading Course Contents
 function slides_num() {
 
 	// Get text
@@ -207,22 +207,46 @@ function slides_num() {
 
 }
 
-// Next Button Enabled/ Disabled until audio or video ends
+/* Next Button Enabled/ Disabled until audio or video ends */
 $('#slide-audio').on('playing', function() {
-	// disable button/link
-	document.getElementById('pg-next').setAttribute("disabled", true);
+	// disable next btn if current page num is greater than bookmarked page num
+	if ( bookmarked === 0 || pg_current.innerHTML > bookmarked ) {
+		document.getElementById('pg-next').setAttribute("disabled", true);
+	}
+	else {
+		document.getElementById('pg-next').removeAttribute('disabled');
+	}
 });
+
 $('#slide-audio').on('ended', function() {
-   // enable button/link
+   // enable button
    document.getElementById('pg-next').removeAttribute('disabled');
+   writeBookmark();  
 });
 
 $('#slide-video').on('playing', function() {
-	// disable button/link
-	document.getElementById('pg-next').setAttribute("disabled", true);
+	// disable next btn if current page num is greater than bookmarked page num
+	if ( bookmarked === 0 || pg_current.innerHTML > bookmarked ) {
+		document.getElementById('pg-next').setAttribute("disabled", true);
+	}
+	else {
+		document.getElementById('pg-next').removeAttribute('disabled');
+	}
 });
 $('#slide-video').on('ended', function() {
-   // enable button/link
+   // enable button
    document.getElementById('pg-next').removeAttribute('disabled');
+   writeBookmark();
 });
+
+/* Bookmark */
+var bookmarked;
+bookmarked = 0;
+
+function writeBookmark() {
+	if ( bookmarked === 0 || bookmarked < pg_current.innerHTML ) {
+		bookmarked++;
+		console.log("registered: " + bookmarked);	
+	}
+}
 
