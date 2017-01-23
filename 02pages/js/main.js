@@ -1,6 +1,6 @@
 'use strict';
 
-var course_title = "Alpha Course Template Level 1";
+var course_title = "Alpha Course Template Level 1!!";
 var header_color = "#b1273e";
 
 var pg_current = document.getElementById('pg-current');
