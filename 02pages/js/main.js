@@ -1,11 +1,16 @@
 'use strict';
 
-var course_title = "Alpha Course Template Level 1!!";
+var course_title = "Alpha Course Template Level 1";
 var header_color = "#b1273e";
 
 var pg_current = document.getElementById('pg-current');
 var pg_total = document.getElementById('pg-total');
 var slide_text = document.getElementById('slide-text');
+
+var media_audio = document.getElementById('slide-audio');
+var tempplate_basic = document.getElementById('template-basic');
+var template_video = document.getElementById('template-video');
+var media_video = document.getElementById('slide-video');
 
 		// course content will be found in the slides variable
 		// it is an array containing arrays
@@ -108,39 +113,25 @@ pg_current.innerHTML = 1;
 pg_total.innerHTML = slides.length;
 
 // Back Button
-document.getElementById("pg-back").addEventListener("click", function(){
-	
+document.getElementById("pg-back").addEventListener("click", function(){	
 	if ( pg_current.innerHTML > 1 ) {
 	  	pg_current.innerHTML--;
 	}
 	else {
 		pg_current.innerHTML = pg_total.innerHTML;
 	}
-
 	slides_num();
 });
 
 // Next Button
-document.getElementById("pg-next").addEventListener("click", function(){
-		
+document.getElementById("pg-next").addEventListener("click", function(){	
 	if ( pg_current.innerHTML < pg_total.innerHTML ) {
 		pg_current.innerHTML++;
 	}
 	else {
 		pg_current.innerHTML = 1;
 	}
-
 	slides_num();
-});
-
-// Replay Button
-document.getElementById("pg-replay").addEventListener("click", function(){
-	if ( slides[ pg_current.innerHTML - 1 ].templateType === 'video' ) {
-		document.getElementById('slide-video').play(); 	
-	}
-	else {
-		document.getElementById('slide-audio').play(); 
-	}	
 });
 
 /* Course Contents */
@@ -172,14 +163,9 @@ function slides_num() {
 	body_media.appendChild(media_img);
 
 	// Inserting an audio file
-	var media_audio = document.getElementById('slide-audio');
 	media_audio.src = slides[ pg_current.innerHTML - 1 ].slideAudio;
 
 	// Insderting a new video
-	var tempplate_basic = document.getElementById('template-basic');
-	var template_video = document.getElementById('template-video');
-	var media_video = document.getElementById('slide-video');
-
 	if ( slides[ pg_current.innerHTML - 1 ].templateType === 'video' ) {	
 		tempplate_basic.setAttribute("class", "display-no"); 
 		template_video.setAttribute("class", "display-yes block-padding"); 
@@ -190,7 +176,7 @@ function slides_num() {
 		template_video.removeAttribute("class", "display-yes");
 	}
 	
-	// Removing a video that has ran previously
+	// Removing a video that has run previously
 	if ( slides[ pg_current.innerHTML - 1 ].templateType != 'video' ) {
 		media_video.pause();
 	}
@@ -204,11 +190,24 @@ function slides_num() {
 		document.getElementById('pg-back').removeAttribute('disabled');
 	}
 
-
 }
 
+// Replay Button
+document.getElementById("pg-replay").addEventListener("click", function(){
+	if ( slides[ pg_current.innerHTML - 1 ].templateType === 'video' ) {
+		media_video.pause();
+		media_video.currentTime = 0.0;
+		media_video.play(); 	
+	}
+	else {
+		media_audio.pause();
+		media_audio.currentTime = 0.0;
+		media_audio.play();
+	}	
+});
+
 /* Next Button Enabled/ Disabled until audio or video ends */
-$('#slide-audio').on('playing', function() {
+$(media_audio).on('playing', function() {
 	// disable next btn if current page num is greater than bookmarked page num
 	if ( bookmarked === 0 || pg_current.innerHTML > bookmarked ) {
 		document.getElementById('pg-next').setAttribute("disabled", true);
@@ -218,13 +217,13 @@ $('#slide-audio').on('playing', function() {
 	}
 });
 
-$('#slide-audio').on('ended', function() {
+$(media_audio).on('ended', function() {
    // enable button
    document.getElementById('pg-next').removeAttribute('disabled');
    writeBookmark();  
 });
 
-$('#slide-video').on('playing', function() {
+$(media_video).on('playing', function() {
 	// disable next btn if current page num is greater than bookmarked page num
 	if ( bookmarked === 0 || pg_current.innerHTML > bookmarked ) {
 		document.getElementById('pg-next').setAttribute("disabled", true);
@@ -233,7 +232,7 @@ $('#slide-video').on('playing', function() {
 		document.getElementById('pg-next').removeAttribute('disabled');
 	}
 });
-$('#slide-video').on('ended', function() {
+$(media_video).on('ended', function() {
    // enable button
    document.getElementById('pg-next').removeAttribute('disabled');
    writeBookmark();
@@ -242,11 +241,14 @@ $('#slide-video').on('ended', function() {
 /* Bookmark */
 var bookmarked;
 bookmarked = 0;
+function seeBookmark() {
+	console.log("current bookmarked pg: " + bookmarked);	
+}
 
 function writeBookmark() {
 	if ( bookmarked === 0 || bookmarked < pg_current.innerHTML ) {
 		bookmarked++;
-		console.log("registered: " + bookmarked);	
+		seeBookmark();
 	}
 }
 
