@@ -1,8 +1,18 @@
 'use strict';
 
-var course_title = "Alpha Course Template Level 1";
+var course_title = "ADM - Cidar Rapids (Adding more letters to test for a longer name), Iowa";
+var sub_title = "Safety Orientation";
+var chapter_name = "Alpha Course Template Level 1";
 var header_color = "#b1273e";
 var user_name = 'Curt';
+
+// Selecting each title
+document.getElementsByTagName('h1')[0].innerHTML = course_title;
+document.getElementsByTagName('h2')[0].innerHTML = sub_title;
+document.getElementsByTagName('h3')[0].innerHTML = chapter_name;
+
+// Applying a custom header color
+$("#masterhead").css({"background":header_color});
 
 var pg_current = document.getElementById('pg-current');
 var pg_total = document.getElementById('pg-total');
@@ -55,12 +65,6 @@ var slides = [
 	}
 ];
 
-// Replacing a course title
-document.getElementsByTagName('h1')[0].innerHTML = course_title;
-
-// Applying a custom header color
-$("#masterhead").css({"background":header_color});
-
 // Pagenation
 var current_pg_num;
 
@@ -95,7 +99,6 @@ document.getElementById("pg-next").addEventListener("click", function(){
 document.getElementById('user-name').innerHTML = user_name;
 // Invoke course contents when page loaded
 slides_num();
-
 
 // Loading Course Contents
 function slides_num() {
@@ -204,13 +207,22 @@ $(media_video).on('ended', function() {
 var bookmarked;
 bookmarked = 0;
 function seeBookmark() {
-	console.log("current bookmarked pg: " + bookmarked);	
+	console.log("current bookmarked pg: " + bookmarked);
 }
 
 function writeBookmark() {
 	if ( bookmarked === 0 || bookmarked < pg_current.innerHTML ) {
 		bookmarked++;
+		updateProgress();
 		seeBookmark();
 	}
 }
+
+// Sowing progress bar
+function updateProgress() {
+	$("#compled-bar").css({"width": bookmarked / pg_total.innerHTML * 100 + "%"});
+}
+
+
+
 

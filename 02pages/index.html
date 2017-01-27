@@ -14,22 +14,18 @@
 </head>
 <body>
 	<div id="masterhead">
-		<div class="corporate-name">ADM - Cidar Rapids (Adding more letters to test for a longer name), Iowa</div>
+		<h1 id="corporate-name">ADM</h1>
 		<div class="user-info">
-			<p>Hi, <span id="user-name">user name</span>!</h2>
-			<i class="icon-user"></i>
+			<p>
+				Hi, <span id="user-name">user name</span>!
+				<i class="icon-user"></i>
+			</p>	
 		</div>
 	</div>
 
-	<ul id="subhead">
-		<li class="selected">Core</li>
-	</ul>
+	<h2 id="sub-title">Core</h2>
 
-	<h1 class="block-padding">Default Course Title</h1>
-	<div id="page" class="block-padding">
-			<span id="pg-current"></span> of <span id="pg-total"></span>
-	</div>
-
+	<h3 class="block-padding">Default Chapter Name</h3>
 	<div id="contentbody">
 		<div id="template-basic">
 			<div class="contentbody-left block-padding">
@@ -42,7 +38,7 @@
 						As largest agricultual company in the world, ADM serves vital glocal purpose. We connect the harvest to the home, transporting crops into products that serve vital needs for food and energy. As largest agricultual company in the world, ADM serves vital glocal purpose. We connect the harvest to the home, transporting crops into products that serve vital needs for food and energy. As largest agricultual company in the world, ADM serves vital glocal purpose. We connect the harvest to the home, transporting crops into products that serve vital needs for food and energy.
 					</p>		
 				</div>	
-				<audio autoplay id="slide-audio" class="audioDemo" controls>
+				<audio autoplay id="slide-audio" class="audioDemo">
 					<source src="audio/letgo.mp3" type="audio/mpeg">
 					<!-- <source src="music.ogg" type="audio/ogg"> -->
 				</audio>
@@ -54,7 +50,7 @@
 	</div>
 
 	<div id="template-video" class="block-padding">
-		<video autoplay controls id="slide-video">
+		<video autoplay id="slide-video">
 			<source src="video/staples.mpg" type="video/webm">
 				I'm sorry; your browser doesn't support HTML5 video in WebM with VP8/VP9 or MP4 with H.264.
 				<!-- You can embed a Flash player here, to play your mp4 video in older browsers -->
@@ -65,6 +61,13 @@
 		<button id="pg-replay"><i class="icon-repeat"></i>Replay</button>
 		<button id="pg-back"><i class="icon-step-backward"></i>Back</button>
 		<button id="pg-next"><i class="icon-step-forward"></i>Next</button>
+	</div>
+
+	<div id="page" class="block-padding">
+		<div id="progress-bar">
+			<div id="compled-bar"></div>
+		</div>
+		<span id="pg-current"></span> of <span id="pg-total"></span>
 	</div>
 
 	<div id="footer" class="block-padding">
