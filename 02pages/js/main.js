@@ -2,6 +2,7 @@
 
 var course_title = "Alpha Course Template Level 1";
 var header_color = "#b1273e";
+var user_name = 'Curt';
 
 var pg_current = document.getElementById('pg-current');
 var pg_total = document.getElementById('pg-total');
@@ -11,23 +12,6 @@ var media_audio = document.getElementById('slide-audio');
 var tempplate_basic = document.getElementById('template-basic');
 var template_video = document.getElementById('template-video');
 var media_video = document.getElementById('slide-video');
-
-		// course content will be found in the slides variable
-		// it is an array containing arrays
-		// each array inside represents a slide
-		// Key: [Template1, Text, Image, Audio]
-		// Key: [Template2, Video]
-		// Key: [Template3, Text]
-		// Note: Images/Audio are dead links, replace with your own content for now
-		//       Make sure content is in same directory as this html page
-		//       Then update the text here with filenames.
-
-var slidesEX = [
-		["Template1","Welcome to the Course","introduction.jpg","introduction.mp3"],
-		["Template2","introductionVideo.mpg"],
-		["Template1","The content here would be the third slide", "3.jpg","3.mp3"]
-		["Template3","This is the next slide in the course."]
-];
 
 var slides = [
 	{
@@ -71,35 +55,6 @@ var slides = [
 	}
 ];
 
-/*
-	var slides = [
-{
-slideTitle:'ohgehohoge',
-slideType:'video1',
-slideContent:{
-videoFile:'hogeho.mp3'
-}
-},
-{
-slideTitle:'hogehoge2',
-slideType:'normal1',
-slideContent:{
-slideBody:'<h3>foo bar</h3>',
-slideBg:'hogehoge.jpg'
-}
-},
-{
-slideTitle:'hogehoge2',
-slideType:'image',
-slideContent:{
-slideMainImg:'hogehoge.jpg',
-slideImgCapture:'super cool image!!'
-}
-}
-];
-
-*/
-
 // Replacing a course title
 document.getElementsByTagName('h1')[0].innerHTML = course_title;
 
@@ -136,7 +91,9 @@ document.getElementById("pg-next").addEventListener("click", function(){
 
 /* Course Contents */
 
-// Course Contents when Page Loaded
+// Get user name
+document.getElementById('user-name').innerHTML = user_name;
+// Invoke course contents when page loaded
 slides_num();
 
 
@@ -155,15 +112,17 @@ function slides_num() {
     }
 
 	// Inserting a new image
-	var media_img = document.createElement('img');
-	media_img.setAttribute('src', slides[ pg_current.innerHTML - 1 ].slideMedia);
-	//media_img.setAttribute("width", "304");
-	//media_img.setAttribute("width", "228");
-	media_img.setAttribute('alt', slides[ pg_current.innerHTML - 1 ].slideMediaAlt);
-	body_media.appendChild(media_img);
+	if ( slides[ pg_current.innerHTML - 1 ].templateType === 'basic' ) {
+		var media_img = document.createElement('img');
+		media_img.setAttribute('src', slides[ pg_current.innerHTML - 1 ].slideMedia);
+		//media_img.setAttribute("width", "304");
+		//media_img.setAttribute("width", "228");
+		media_img.setAttribute('alt', slides[ pg_current.innerHTML - 1 ].slideMediaAlt);
+		body_media.appendChild(media_img);
 
-	// Inserting an audio file
-	media_audio.src = slides[ pg_current.innerHTML - 1 ].slideAudio;
+		// Inserting an audio file
+		media_audio.src = slides[ pg_current.innerHTML - 1 ].slideAudio;
+	}
 
 	// Insderting a new video
 	if ( slides[ pg_current.innerHTML - 1 ].templateType === 'video' ) {	
