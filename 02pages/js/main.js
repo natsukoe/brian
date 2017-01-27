@@ -125,7 +125,10 @@ function slides_num() {
 	}
 
 	// Insderting a new video
-	if ( slides[ pg_current.innerHTML - 1 ].templateType === 'video' ) {	
+	if ( slides[ pg_current.innerHTML - 1 ].templateType === 'video' ) {
+		// Removing audio that has run previously
+		media_audio.pause();
+		// Choosing a proper template	
 		tempplate_basic.setAttribute("class", "display-no"); 
 		template_video.setAttribute("class", "display-yes block-padding"); 
 		media_video.src = slides[ pg_current.innerHTML - 1 ].slideVideo;
@@ -135,7 +138,7 @@ function slides_num() {
 		template_video.removeAttribute("class", "display-yes");
 	}
 	
-	// Removing a video that has run previously
+	// Removing video that has run previously
 	if ( slides[ pg_current.innerHTML - 1 ].templateType != 'video' ) {
 		media_video.pause();
 	}
