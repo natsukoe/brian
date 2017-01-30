@@ -175,6 +175,9 @@ document.getElementById("pg-replay").addEventListener("click", function(){
 
 /* Next Button Enabled/ Disabled until audio or video ends */
 $(media_audio).on('playing', function() {
+	$("#state-play").css({"display": "none"});
+	$("#state-repeat").css({"display": "block"});
+
 	// disable next btn if current page num is greater than bookmarked page num
 	if ( bookmarked === 0 || pg_current.innerHTML > bookmarked ) {
 		document.getElementById('pg-next').setAttribute('disabled', true);
@@ -184,12 +187,18 @@ $(media_audio).on('playing', function() {
 	}
 });
 $(media_audio).on('ended', function() {
+	$("#state-play").css({"display": "block"});
+	$("#state-repeat").css({"display": "none"});
+
    // enable button
    document.getElementById('pg-next').removeAttribute('disabled');
    writeBookmark();  
 });
 
 $(media_video).on('playing', function() {
+	$("#state-play").css({"display": "none"});
+	$("#state-repeat").css({"display": "block"});
+
 	// disable next btn if current page num is greater than bookmarked page num
 	if ( bookmarked === 0 || pg_current.innerHTML > bookmarked ) {
 		document.getElementById('pg-next').setAttribute('disabled', true);
@@ -199,10 +208,15 @@ $(media_video).on('playing', function() {
 	}
 });
 $(media_video).on('ended', function() {
+	$("#state-play").css({"display": "block"});
+	$("#state-repeat").css({"display": "none"});
+
    // enable button
    document.getElementById('pg-next').removeAttribute('disabled');
    writeBookmark();
 });
+
+//<button id="pg-replay"><i class="icon-repeat"></i>Replay</button>
 
 
 /* Bookmark */

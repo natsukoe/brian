@@ -118,9 +118,7 @@ h3 {
 	display: -ms-flexbox; /* IE 10 */
 	display: flex;
 	justify-content: center;
-
 	padding: 10px;
-
     z-index:100;
     position: fixed;
     bottom: 0;
