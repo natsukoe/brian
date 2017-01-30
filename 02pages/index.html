@@ -38,10 +38,16 @@
 						As largest agricultual company in the world, ADM serves vital glocal purpose. We connect the harvest to the home, transporting crops into products that serve vital needs for food and energy. As largest agricultual company in the world, ADM serves vital glocal purpose. We connect the harvest to the home, transporting crops into products that serve vital needs for food and energy. As largest agricultual company in the world, ADM serves vital glocal purpose. We connect the harvest to the home, transporting crops into products that serve vital needs for food and energy.
 					</p>		
 				</div>	
-				<audio autoplay id="slide-audio" class="audioDemo" controls>
+				<audio autoplay id="slide-audio" class="audioDemo">
 					<source src="audio/letgo.mp3" type="audio/mpeg">
 					<!-- <source src="music.ogg" type="audio/ogg"> -->
 				</audio>
+				<button onclick="playVid()" type="button">Play Video</button>
+				<script type="text/javascript">
+					function playVid() { 
+    vid.play(); 
+}
+				</script>
 			</div>
 			<div id="bodymedia" class="block-padding">
 				<img src="images/adm-intro.jpg" alt="Image of ADM headquater" />
@@ -70,7 +76,7 @@
 		<button id="pg-back"><i class="icon-step-backward"></i>Back</button>
 		<button id="pg-next"><i class="icon-step-forward"></i>Next</button>
 	</div>
-	
+
 
 	<div id="footer" class="block-padding">
 		<p><a href="#">Problem with course?</a></p>
