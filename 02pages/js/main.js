@@ -86,6 +86,8 @@ document.getElementById("pg-back").addEventListener("click", function(){
 document.getElementById("pg-next").addEventListener("click", function(){	
 	if ( pg_current.innerHTML < pg_total.innerHTML ) {
 		pg_current.innerHTML++;
+		// Disable next button after clicking
+		document.getElementById('pg-next').setAttribute("disabled", true);
 	}
 	else {
 		pg_current.innerHTML = 1;
@@ -181,7 +183,6 @@ $(media_audio).on('playing', function() {
 		document.getElementById('pg-next').removeAttribute('disabled');
 	}
 });
-
 $(media_audio).on('ended', function() {
    // enable button
    document.getElementById('pg-next').removeAttribute('disabled');
@@ -202,6 +203,7 @@ $(media_video).on('ended', function() {
    document.getElementById('pg-next').removeAttribute('disabled');
    writeBookmark();
 });
+
 
 /* Bookmark */
 var bookmarked;
