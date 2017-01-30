@@ -220,6 +220,10 @@ $(media_audio).on('pause', function() {
 	$("#state-play").css({"display": "block"});
 	$("#state-repeat").css({"display": "none"});
 });
+$(media_video).on('pause', function() {
+	$("#state-play").css({"display": "block"});
+	$("#state-repeat").css({"display": "none"});
+});
 
 /* Bookmark */
 var bookmarked;
