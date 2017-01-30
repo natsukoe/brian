@@ -216,8 +216,10 @@ $(media_video).on('ended', function() {
    writeBookmark();
 });
 
-//<button id="pg-replay"><i class="icon-repeat"></i>Replay</button>
-
+$(media_audio).on('pause', function() {
+	$("#state-play").css({"display": "block"});
+	$("#state-repeat").css({"display": "none"});
+}
 
 /* Bookmark */
 var bookmarked;
