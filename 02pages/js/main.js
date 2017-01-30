@@ -175,7 +175,7 @@ document.getElementById("pg-replay").addEventListener("click", function(){
 $(media_audio).on('playing', function() {
 	// disable next btn if current page num is greater than bookmarked page num
 	if ( bookmarked === 0 || pg_current.innerHTML > bookmarked ) {
-		document.getElementById('pg-next').setAttribute("disabled", true);
+		document.getElementById('pg-next').setAttribute('disabled', true);
 	}
 	else {
 		document.getElementById('pg-next').removeAttribute('disabled');
@@ -191,7 +191,7 @@ $(media_audio).on('ended', function() {
 $(media_video).on('playing', function() {
 	// disable next btn if current page num is greater than bookmarked page num
 	if ( bookmarked === 0 || pg_current.innerHTML > bookmarked ) {
-		document.getElementById('pg-next').setAttribute("disabled", true);
+		document.getElementById('pg-next').setAttribute('disabled', true);
 	}
 	else {
 		document.getElementById('pg-next').removeAttribute('disabled');
@@ -223,6 +223,34 @@ function updateProgress() {
 	$("#compled-bar").css({"width": bookmarked / pg_total.innerHTML * 100 + "%"});
 }
 
+/*
+function progressAnimation() {
+  var elem = document.getElementById('compled-bar');   
+  var width = bookmarked / pg_total.innerHTML * 100;
+  console.log(width);
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}
+*/
 
-
+/* Make controller float when page is scrolled down 
+$(window).scroll(function(e){ 
+  var $el = $('#audio-controller'); 
+  var isPositionFixed = ($el.css('position') == 'fixed');
+  if ($(this).scrollTop() > 30 && !isPositionFixed){ 
+    $('#audio-controller').css({'position': 'fixed', 'top': '0', 'background': '#c0c0c0', 'width': '100%', 'left': '-10px'}); 
+  }
+  if ($(this).scrollTop() < 30 && isPositionFixed)
+  {
+    $('#audio-controller').css({'position': 'static', 'background': 'none', 'max-width': '450px'}); 
+  } 
+});
+*/
 
