@@ -219,7 +219,7 @@ $(media_video).on('ended', function() {
 $(media_audio).on('pause', function() {
 	$("#state-play").css({"display": "block"});
 	$("#state-repeat").css({"display": "none"});
-}
+});
 
 /* Bookmark */
 var bookmarked;
