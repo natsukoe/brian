@@ -174,11 +174,11 @@ document.getElementById("pg-replay").addEventListener("click", function(){
 /* Next Button Enabled/ Disabled until audio or video ends */
 $(media_audio).on('playing', function() {
 	// disable next btn if current page num is greater than bookmarked page num
-	if ( bookmarked === 0 || pg_current.innerHTML > bookmarked ) {
-		document.getElementById('pg-next').setAttribute('disabled', true);
+	if ( pg_current.innerHTML <= bookmarked ) {
+		document.getElementById('pg-next').removeAttribute('disabled');
 	}
 	else {
-		document.getElementById('pg-next').removeAttribute('disabled');
+		document.getElementById('pg-next').setAttribute('disabled', true);
 	}
 });
 
@@ -190,11 +190,11 @@ $(media_audio).on('ended', function() {
 
 $(media_video).on('playing', function() {
 	// disable next btn if current page num is greater than bookmarked page num
-	if ( bookmarked === 0 || pg_current.innerHTML > bookmarked ) {
-		document.getElementById('pg-next').setAttribute('disabled', true);
+	if ( pg_current.innerHTML <= bookmarked ) {
+		document.getElementById('pg-next').removeAttribute('disabled');
 	}
 	else {
-		document.getElementById('pg-next').removeAttribute('disabled');
+		document.getElementById('pg-next').setAttribute('disabled', true);
 	}
 });
 $(media_video).on('ended', function() {
