@@ -80,8 +80,13 @@ h3 {
 	font-family: 'Rosario', sans-serif;
 	padding-top: 5px; /* This particular font tends to appear too height so I adjusted to align with the User Info */
   	margin-right: auto;
-  	width: 82%;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#user-name {
+	width: 10px;
+	white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -99,6 +104,9 @@ h3 {
 	border-radius: 3px;
     box-shadow: 0 0 4px rgba(0,0,0,.1);
     background: #fff;
+}
+#contentbody {
+	margin: 20px 0 80px;
 }
 #template-basic {
 	display: -ms-flexbox; /* IE 10 */
@@ -126,14 +134,10 @@ h3 {
 	margin-left: auto;
 }
 #bodymedia img {
-	max-width: 100%;
 	display: block;
 	margin: 0 auto;
 }
 #audio-controller {
-	display: -ms-flexbox; /* IE 10 */
-	display: flex;
-	justify-content: center;
 	padding: 10px;
     z-index:100;
     position: fixed;
@@ -142,15 +146,21 @@ h3 {
     right: 0;
     background: #fafafa;
 }
+#controller-inner {
+	max-width: 960px;
+	margin: 0 auto;
+	display: -ms-flexbox; /* IE 10 */
+	display: flex;
+	align-items: center;
+}
 #audio-controller button {
-	width: 104px;
 	background: #f1efef;
 	border-radius: 6px;
 	border: 1px solid #aaa;
 	box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.5);
 	text-align: center;
-	margin: 0 10px;
-	padding: 10px 12px;
+	margin: 0 10px 0 0;
+	padding: 10px;
 	font-size: 100%;
 }
 #audio-controller button:hover {
@@ -161,9 +171,9 @@ h3 {
 	padding-right: 6px;
 }
 #page {
-	text-align: center;
-	margin: 20px 0;
+	margin-left: auto;
 }
+/*
 #progress-bar {
 	height: 5px;
 	background: #ccc;
@@ -174,32 +184,29 @@ h3 {
 	background: #2c3dff;
 	width: 0%;
 }
-#footer {
-	clear: both;
-	text-align: right;
-	border-top: 1px solid #ccc;
-	margin: 0 0 80px;
-}
-#footer p {
-	padding-bottom: 10px;
-}
+*/
 /* Document level adjustments */
 html {
   font-size: 17px;
 }
+#corporate-name { width: 82%; }
 .contentbody-left { max-width: 50%; }
 .block-padding { padding: 20px; }
+ #audio-controller button { width: 98px; }
 @media (max-width: 900px) {
   html { font-size: 15px; }
   body { background: #fff; }
   #container { box-shadow: none; padding: 0; }
+  #bodymedia img { max-width: 100%; }
   #slide-audio { width: 100%; }
   .block-padding { padding: 0 10px; }
 }
 /* Started with 400px and 700px seems right */
 @media (max-width: 700px) {
   html { font-size: 13px; }
+  #corporate-name { width: 76%; }
   #template-basic { display: block; }
   .contentbody-left { max-width: 100%; }
   #bodymedia img { margin: 0 auto; }
+  #audio-controller button { width: 82px; }
 }

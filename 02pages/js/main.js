@@ -4,7 +4,8 @@ var course_title = "ADM - Cidar Rapids (Adding more letters to test for a longer
 var sub_title = "Safety Orientation";
 var chapter_name = "Alpha Course Template Level 1";
 var header_color = "#b1273e";
-var user_name = 'Curt';
+var user_name = 'Admin';
+//var user_name = 'Curt';
 
 // Selecting each title
 document.getElementsByTagName('h1')[0].innerHTML = course_title;
@@ -13,6 +14,16 @@ document.getElementsByTagName('h3')[0].innerHTML = chapter_name;
 
 // Applying a custom header color
 $("#masterhead").css({"background":header_color});
+
+// If user is admin add controls as property on audio and media tag
+if ( user_name == 'Admin') {
+	document.getElementById('slide-audio').setAttribute("controls", true);
+	document.getElementById('slide-video').setAttribute("controls", true);
+}
+else {
+	document.getElementById('slide-audio').removeAttribute("controls");
+	document.getElementById('slide-video').removeAttribute("controls");
+}
 
 var pg_current = document.getElementById('pg-current');
 var pg_total = document.getElementById('pg-total');
@@ -31,10 +42,12 @@ var slides = [
 		slideMediaAlt: 'Image of SlideMedia',
 		templateType: 'basic'
 	},
+	/*
 	{
 		slideVideo: 'business1/firstMilkyWay.mp4',
 		templateType: 'video'
 	},
+	*/
 	{
 		slideText: '<p>Page 3 of Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
 		slideAudio: 'business1/eclipse.mp3',
@@ -45,7 +58,7 @@ var slides = [
 	{
 		slideText: '<p>Page 4: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
 		slideAudio: 'audio/letgo.mp3',
-		slideMedia: 'business1/man-in-office.jpg',
+		slideMedia: 'images/450-blue.jpg',
 		slideMediaAlt: 'Image of SlideMedia for page 4',
 		templateType: 'basic'
 	},
@@ -59,7 +72,7 @@ var slides = [
 	{
 		slideText: 'Safe Work, <font color="#026332"><b>Barricades</b></font><br />Barricades should be installed around most work areas, to make everyone entering the area aware of potential hazards and material movement.<br />The type of barricading will depend on the hazards; examples may include excavations, holes in floors, leaks, overhead work, areas where structures such as handrails or stairs have been removed, and all temporary work areas where tripping or falling hazards exist.<br />Barricading should not block emergency equipment such as: fire extinguishers, fire hoses, safety showers, and eyewashes.<br />',
 		slideAudio: 'audio/letgo.mp3',
-		slideMedia: 'business1/books.jpg',
+		slideMedia: 'images/450-pink.jpg',
 		slideMediaAlt: 'Image of SlideMedia for page 6',
 		templateType: 'basic'
 	}
@@ -235,44 +248,14 @@ function seeBookmark() {
 function writeBookmark() {
 	if ( bookmarked === 0 || bookmarked < pg_current.innerHTML ) {
 		bookmarked++;
-		updateProgress();
+		//updateProgress();
 		seeBookmark();
 	}
 }
 
 // Sowing progress bar
+/*
 function updateProgress() {
 	$("#compled-bar").css({"width": bookmarked / pg_total.innerHTML * 100 + "%"});
 }
-
-/*
-function progressAnimation() {
-  var elem = document.getElementById('compled-bar');   
-  var width = bookmarked / pg_total.innerHTML * 100;
-  console.log(width);
-  var id = setInterval(frame, 10);
-  function frame() {
-    if (width >= 100) {
-      clearInterval(id);
-    } else {
-      width++; 
-      elem.style.width = width + '%'; 
-    }
-  }
-}
 */
-
-/* Make controller float when page is scrolled down 
-$(window).scroll(function(e){ 
-  var $el = $('#audio-controller'); 
-  var isPositionFixed = ($el.css('position') == 'fixed');
-  if ($(this).scrollTop() > 30 && !isPositionFixed){ 
-    $('#audio-controller').css({'position': 'fixed', 'top': '0', 'background': '#c0c0c0', 'width': '100%', 'left': '-10px'}); 
-  }
-  if ($(this).scrollTop() < 30 && isPositionFixed)
-  {
-    $('#audio-controller').css({'position': 'static', 'background': 'none', 'max-width': '450px'}); 
-  } 
-});
-*/
-
