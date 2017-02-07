@@ -192,14 +192,14 @@ html {
 #corporate-name { width: 80%; }
 .contentbody-left { max-width: 50%; }
 .block-padding { padding: 20px; }
- #audio-controller button { width: 98px; }
+audio { width: 350px; margin: 10px auto; }
+#audio-controller button { width: 98px; }
 @media (max-width: 900px) {
   html { font-size: 15px; }
   body { background: #fff; }
   #corporate-name { width: 78%; }
   #container { box-shadow: none; padding: 0; }
   #bodymedia img { max-width: 100%; }
-  #slide-audio { width: 350px; margin: 10px auto; }
   .block-padding { padding: 0 10px; }
 }
 /* Started with 400px and 700px seems right */
@@ -208,6 +208,7 @@ html {
   #corporate-name { width: 63%; }
   #template-basic { display: block; }
   .contentbody-left { max-width: 100%; }
-  #bodymedia img { margin: 0 auto; }
+  audio { width: 100%; }
   #audio-controller button { width: 82px; }
+  #bodymedia img { margin: 0 auto; }
 }
