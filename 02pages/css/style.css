@@ -199,7 +199,7 @@ html {
   #corporate-name { width: 78%; }
   #container { box-shadow: none; padding: 0; }
   #bodymedia img { max-width: 100%; }
-  #slide-audio { width: 90%; margin: 10px auto; }
+  #slide-audio { width: 350px; margin: 10px auto; }
   .block-padding { padding: 0 10px; }
 }
 /* Started with 400px and 700px seems right */
