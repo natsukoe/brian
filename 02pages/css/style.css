@@ -192,13 +192,14 @@ html {
 #corporate-name { width: 80%; }
 .contentbody-left { max-width: 50%; }
 .block-padding { padding: 20px; }
-audio { width: 370px; margin: 10px auto; }
+audio { width: 450px; margin: 10px auto; }
 #audio-controller button { width: 98px; }
 @media (max-width: 900px) {
   html { font-size: 15px; }
   body { background: #fff; }
   #corporate-name { width: 78%; }
   #container { box-shadow: none; padding: 0; }
+  audio { width: 370px; margin: 10px auto; }
   #bodymedia img { max-width: 100%; }
   .block-padding { padding: 0 10px; }
 }
