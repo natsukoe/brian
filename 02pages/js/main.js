@@ -25,6 +25,14 @@ else {
 	document.getElementById('slide-video').removeAttribute("controls");
 }
 
+// Trim user name after 10th letter
+if (user_name.length > 11) {
+    user_name = user_name.substr(0,11)+'...';
+}
+else {
+	// Show the whole name
+}
+
 var pg_current = document.getElementById('pg-current');
 var pg_total = document.getElementById('pg-total');
 var slide_text = document.getElementById('slide-text');

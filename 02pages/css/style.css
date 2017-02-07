@@ -189,13 +189,14 @@ h3 {
 html {
   font-size: 17px;
 }
-#corporate-name { width: 82%; }
+#corporate-name { width: 80%; }
 .contentbody-left { max-width: 50%; }
 .block-padding { padding: 20px; }
  #audio-controller button { width: 98px; }
 @media (max-width: 900px) {
   html { font-size: 15px; }
   body { background: #fff; }
+  #corporate-name { width: 78%; }
   #container { box-shadow: none; padding: 0; }
   #bodymedia img { max-width: 100%; }
   #slide-audio { width: 100%; }
@@ -204,7 +205,7 @@ html {
 /* Started with 400px and 700px seems right */
 @media (max-width: 700px) {
   html { font-size: 13px; }
-  #corporate-name { width: 76%; }
+  #corporate-name { width: 63%; }
   #template-basic { display: block; }
   .contentbody-left { max-width: 100%; }
   #bodymedia img { margin: 0 auto; }
