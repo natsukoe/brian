@@ -55,6 +55,8 @@ var q_2_span = document.querySelector('#q-2 span');
 var q_3_span = document.querySelector('#q-3 span');
 var q_4_span = document.querySelector('#q-4 span');
 
+//var answerAA = ['UK', 'France', 'Germany'];
+
 var slides = [
 	{
 		slideText: '<p>Page 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
@@ -67,9 +69,11 @@ var slides = [
 		slideVideo: 'business1/firstMilkyWay.mp4',
 		templateType: 'video'
 	},
-	{
-		quizQuestion: 'Is Hungarian Indo-European language?',
-		quizAnswer: 'False',
+
+	/*{
+		quizQuestion: 'Where would you think the best city to live in Japan?',
+		quizChoice: [ 'Tokyo', 'Nagoya', 'Osaka', 'Kobe' ],
+		quizAnswer: [ 3 ],
 		templateType: 'question'
 	},
 	{
@@ -79,9 +83,10 @@ var slides = [
 		slideMediaAlt: 'Image of SlideMedia for page 5',
 		templateType: 'basic',
 		slideType: 'remediation'
-	},
+	},*/
+	/*
 	{
-		quizQuestion: 'Wich of the following country belongs to EU?',
+		quizQuestion: 'Wich of the following countries belongs to EU?',
 		quizChoice: [ 'UK', 'Russia', 'Turkey', 'All of the above' ],
 		quizAnswer: [ 1 ],
 		templateType: 'question'
@@ -94,6 +99,20 @@ var slides = [
 		templateType: 'basic',
 		slideType: 'remediation'
 	},
+	{
+		quizQuestion: 'Is Hungarian Indo-European language?',
+		quizAnswer: 'False',
+		templateType: 'question'
+	},
+	{
+		slideText: 'remediation slide 3 <font color="#026332"><b>ADM Safe Work Plan</b></font><p>Designated <font color="#f00">ADM personnel must approve all permits.</font>  All signatures must be obtained PRIOR to allowing the work to commence.</p>  <p>Each item on a permit must be initialed as it is completed and/or verified.  Involved personnel in the SWP include authorizing crew members, atmospheric tester, work supervisor, fire watch, attendant, entrant, and operation representative.</p>  <p>Please follow the instructions for the SWP for its usage and approvals.  See your ADM representative before proceeding.</p>',
+		slideAudio: 'audio/letgo.mp3',
+		slideMedia: 'business1/adm-2.jpg',
+		slideMediaAlt: 'Image of SlideMedia for page 5',
+		templateType: 'basic',
+		slideType: 'remediation'
+	},
+*/
 	{
 		slideText: '<p>Page 3 of Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
 		slideAudio: 'business1/eclipse.mp3',
@@ -109,20 +128,6 @@ var slides = [
 		templateType: 'basic'
 	},
 	{
-		quizQuestion: 'Where would you think the best city to live in Japan?',
-		quizChoice: [ 'Tokyo', 'Nagoya', 'Osaka', 'Kobe' ],
-		quizAnswer: [ 3 ],
-		templateType: 'question'
-	},
-	{
-		slideText: 'remediation slide 3 <font color="#026332"><b>ADM Safe Work Plan</b></font><p>Designated <font color="#f00">ADM personnel must approve all permits.</font>  All signatures must be obtained PRIOR to allowing the work to commence.</p>  <p>Each item on a permit must be initialed as it is completed and/or verified.  Involved personnel in the SWP include authorizing crew members, atmospheric tester, work supervisor, fire watch, attendant, entrant, and operation representative.</p>  <p>Please follow the instructions for the SWP for its usage and approvals.  See your ADM representative before proceeding.</p>',
-		slideAudio: 'audio/letgo.mp3',
-		slideMedia: 'business1/adm-2.jpg',
-		slideMediaAlt: 'Image of SlideMedia for page 5',
-		templateType: 'basic',
-		slideType: 'remediation'
-	},
-	{
 		slideText: 'Page 5: <font color="#026332"><b>ADM Safe Work Plan</b></font><p>Designated ADM personnel must approve all permits.  All signatures must be obtained PRIOR to allowing the work to commence.</p>  <p>Each item on a permit must be initialed as it is completed and/or verified.  Involved personnel in the SWP include authorizing crew members, atmospheric tester, work supervisor, fire watch, attendant, entrant, and operation representative.</p>  <p>Please follow the instructions for the SWP for its usage and approvals.  See your ADM representative before proceeding.</p>',
 		slideAudio: 'audio/letgo.mp3',
 		slideMedia: 'business1/adm-2.jpg',
@@ -130,7 +135,7 @@ var slides = [
 		templateType: 'basic'
 	},
 	{
-		slideText: 'Page 6: Safe Work, <font color="#026332"><b>Barricades</b></font><br />Barricades should be installed around most work areas, to make everyone entering the area aware of potential hazards and material movement.<br />The type of barricading will depend on the hazards; examples may include excavations, holes in floors, leaks, overhead work, areas where structures such as handrails or stairs have been removed, and all temporary work areas where tripping or falling hazards exist.<br />Barricading should not block emergency equipment such as: fire extinguishers, fire hoses, safety showers, and eyewashes.<br />',
+		slideText: 'Safe Work, <font color="#026332"><b>Barricades</b></font><br />Barricades should be installed around most work areas, to make everyone entering the area aware of potential hazards and material movement.<br />The type of barricading will depend on the hazards; examples may include excavations, holes in floors, leaks, overhead work, areas where structures such as handrails or stairs have been removed, and all temporary work areas where tripping or falling hazards exist.<br />Barricading should not block emergency equipment such as: fire extinguishers, fire hoses, safety showers, and eyewashes.<br />',
 		slideAudio: 'audio/letgo.mp3',
 		slideMedia: 'images/450-pink.jpg',
 		slideMediaAlt: 'Image of SlideMedia for page 6',
@@ -182,30 +187,17 @@ var i = 0;
 			i++;
 		}
 }
-
 // Showing the course slide total and current numbers
 pg_current.innerHTML = current_course_num + 1;
 pg_total.innerHTML = total_course_num + 1;
 
 // Back Button
 document.getElementById('pg-back').addEventListener("click", function(){
-	prev_slide();
-	slides_work();
-});
-
-// Going back to previous slide
-function prev_slide() {
 	if ( current_slide_num > 0 ) {
 		current_slide_num--;
-		if ( slides[ current_slide_num ].templateType !== 'question' || slides[ current_slide_num ].slideType !== 'remediation' ) {
-			current_course_num--;
-			pg_current.innerHTML = current_course_num + 1;
-		}
-		while ( slides[ current_slide_num ].templateType === 'question' || slides[ current_slide_num ].slideType === 'remediation' ) {
-			current_slide_num--;
-		}	
 	}
-}
+	slides_work();
+});
 
 // Next Button
 document.getElementById('pg-next').addEventListener("click", function(){
@@ -214,51 +206,25 @@ document.getElementById('pg-next').addEventListener("click", function(){
 });
 
 // Moving to next slide
-function next_slide() {
-	// Below if statement is to prevent page going to exceed the max slide number
-	if ( current_slide_num < slides.length - 1 ) {
-		if ( bookmarked > current_slide_num + 1 ) {
-			current_slide_num++;
-			current_course_num++;
-			pg_current.innerHTML = current_course_num + 1;
-			while ( slides[ current_slide_num ].templateType === 'question' || slides[ current_slide_num ].slideType === 'remediation' ) {
-				current_slide_num++;
-			}
-		}
-		else {
-			if ( slides[ current_slide_num ].templateType === 'question' ) {
-				current_slide_num++;
-				writeBookmark();
-			}
-			else if ( slides[ current_slide_num ].slideType === 'remediation' ) {
-				current_slide_num--;
-				decreaseBookmark();
-			}
-			else {
-				current_slide_num++;
-				current_course_num++;	
-				pg_current.innerHTML = current_course_num + 1;
-			}
-		}
-	}	
-}
-
-function skip_next_slide() {
-	current_slide_num = current_slide_num + 2;
-	bookmarked = bookmarked + 2;
+function next_slide() {	
+	if ( slides[ current_slide_num ].templateType === 'question' || slides[ current_slide_num ].templateType === 'basic' && slides[ current_slide_num ].slideType === 'remediation' ) {
+		current_slide_num++;
+		writeBookmark();
+	}
+	else {
+		current_slide_num++;
+		current_course_num++;	
+		pg_current.innerHTML = current_course_num + 1;
+	}
 }
 
 // Bookmarking
 function writeBookmark() {
-	if ( bookmarked === 0 || bookmarked <= current_slide_num ) {
+	if ( bookmarked === 0 || bookmarked < current_slide_num ) {
 		bookmarked++;
 		//updateProgress();
+		console.log("current bookmarked: " + bookmarked);
 	}
-}
-// Using only after remediation slide
-function decreaseBookmark() {
-	bookmarked = bookmarked - 2;
-	//updateProgress();
 }
 
 /* Course Contents */
@@ -300,7 +266,6 @@ function slides_work() {
 
 		// Hiding Pagenation and Showing the Embeded Txt in HTML
 		if (slides[ current_slide_num ].slideType === 'remediation') {
-			document.getElementById('pagenation').setAttribute("class", "display-no");
 			document.getElementById('pg-remediation').setAttribute("class", "display-yes");
 			document.getElementById('pg-question').removeAttribute("class", "display-yes");
 		}
@@ -338,8 +303,8 @@ function slides_work() {
 		media_video.pause();
 	}
 
-	// Disable back button when current page is 1 and remediation slids
-	if ( current_slide_num == 0 || slides[ current_slide_num ].slideType === 'remediation' ) {
+	// Disable back button when current page is 1
+	if ( current_slide_num == 0 ) {
 		document.getElementById('pg-back').setAttribute("disabled", true);
 	}
 	// Enable back button when current page is NOT 1
@@ -357,13 +322,6 @@ function slides_work() {
 		template_video.removeAttribute("class", "display-yes");
 		template_question.setAttribute("class", "display-yes block-padding");
 		//media_video.src = slides[ slides_num ].slideVideo;
-
-		// Clearing previously selected answer
-	    var quizInput = document.querySelectorAll("input[name='tfQuestion'], input[name='4choices']");
-	    var index;
-	    for (index = 0; index < quizInput.length; index++) {
-	        quizInput[index].checked = false;
-	    }
 
 		// Hide the page controller
 		document.getElementById('pg-buttons').setAttribute("class", "display-no");
@@ -473,8 +431,6 @@ document.getElementById('question-submit').addEventListener("click", function(){
 	var selectedAnswer = $('input:checked').val();
 
 	if ( slides[ current_slide_num ].quizAnswer == selectedAnswer ) {
-		console.log(slides[ current_slide_num ].quizAnswer);
-		console.log(selectedAnswer);
 		// Correct answer
 		document.getElementById('question-result').setAttribute("class", "display-yes");
 		document.getElementById('question-correct').removeAttribute("class", "display-no");
@@ -482,16 +438,14 @@ document.getElementById('question-submit').addEventListener("click", function(){
 
 		// Moving to the next slide by skipping remediation slide after 2 seconds
 		setTimeout(function(){
-			// current_slide_num++;
-			// bookmarked++;
-			// next_slide();
-			skip_next_slide();
+			current_slide_num++;
+			bookmarked++;
+			next_slide();
 			slides_work();
+			console.log("bookedmarked page when correct: " + bookmarked);
 		}, 1500);
 	}
 	else {
-		console.log(slides[ current_slide_num ].quizAnswer);
-		console.log(selectedAnswer);
 		// Wrong answer
 		document.getElementById('question-result').setAttribute("class", "display-yes");
 		document.getElementById('question-correct').setAttribute("class", "display-no");
@@ -545,6 +499,7 @@ $(media_audio).on('ended', function() {
 
    writeBookmark();  
 });
+
 
 $(media_video).on('playing', function() {
 	$("#state-play").css({"display": "none"});

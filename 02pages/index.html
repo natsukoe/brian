@@ -9,6 +9,8 @@
 
   	<!-- Stylesheet -->
   	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  	<script src="https://use.fontawesome.com/af6c56bfe8.js"></script>
+
   	<link href="https://fonts.googleapis.com/css?family=Rosario" rel="stylesheet">
   	<link href="css/style.css" rel="stylesheet">
 </head>
@@ -27,9 +29,10 @@
 	<div id="sub-title">
 		<h2>Core</h2>
 	</div>
-
 	<div id="container">
 		<div id="contentbody">
+
+			<!-- ** Basic Template Starts ** -->
 			<div id="template-basic">
 				<div class="contentbody-left block-padding">
 					<h3>Default Chapter Name</h3>
@@ -42,34 +45,118 @@
 							As largest agricultual company in the world, ADM serves vital glocal purpose. We connect the harvest to the home, transporting crops into products that serve vital needs for food and energy. As largest agricultual company in the world, ADM serves vital glocal purpose. We connect the harvest to the home, transporting crops into products that serve vital needs for food and energy. As largest agricultual company in the world, ADM serves vital glocal purpose. We connect the harvest to the home, transporting crops into products that serve vital needs for food and energy.
 						</p>		
 					</div>	
-					<audio autoplay id="slide-audio" class="audioDemo">
+					<audio autoplay id="admin-audio" class="audioDemo" style="background: #333;">
 						<source src="audio/letgo.mp3" type="audio/mpeg">
-						<!-- <source src="music.ogg" type="audio/ogg"> -->
+						<<source src="music.ogg" type="audio/ogg">
 					</audio>
 				</div>
 				<div id="bodymedia" class="block-padding">
 					<img src="images/adm-intro.jpg" alt="Image of ADM headquater" />
 				</div>
 			</div>
+			<!-- ** Basic Template Ends ** -->
+
+			<!-- ** Video Template Starts ** -->
+			<div id="template-video" class="block-padding">
+				<video autoplay id="slide-video">
+					<source src="video/staples.mpg" type="video/webm">
+						I'm sorry; your browser doesn't support HTML5 video in WebM with VP8/VP9 or MP4 with H.264.
+						<!-- You can embed a Flash player here, to play your mp4 video in older browsers -->
+				</video>
+			</div>
+			<!-- ** Video Template Ends ** -->
+
+			<!-- ** Question Template Starts ** -->
+			<div id="template-question" class="block-padding">
+				<h4 id="question-q">
+					Where would you think the best city to live in US? Where would you think the best city to live in US? Where would you think the best city to live in US?
+				</h4>
+
+				<div id="question-result">
+					<div id="question-correct" class="display-no">
+						<i class="fa fa-smile-o fa-4x" aria-hidden="true"></i>
+						<p>Nice Work! You've got this.</p>
+					</div>					
+					<div id="question-wrong" class="display-no">
+						<i class="fa fa-meh-o fa-4x" aria-hidden="true"></i>
+						<p>Wrong answer. Please review the associated slide again.</p>
+					</div>
+				</div>
+
+				<form id="question-tf">
+					<label>
+						<input type="radio" name="tfQuestion" value="True">
+						<span id="q-t">True</span>
+					</label>
+					<label>
+						<input type="radio" name="tfQuestion" value="False">
+						<span id="q-f">False</span>
+					</label>
+				</form>
+
+				<form id="question-multi">
+					<label id="q-1">
+						<input type="radio" name="4choices" value="d1">
+						<span>Austine</span>
+					</label>
+					<label id="q-2">
+						<input type="radio" name="4choices" value="d2">
+						<span>SF</span>
+					</label>
+					<label id="q-3">
+						<input type="radio" name="4choices" value="d3">
+						<span>Chicago</span>
+					</label>
+					<label id="q-4">
+						<input type="radio" name="4choices" value="d4">
+						<span>None of the above</span>
+					</label>					
+				</form>
+
+				<input type="button" value=" Submit " id="question-submit">
+
+				<!-- ** The below was dvelopping the Select All that Apply type of answers. JS needs to be tweak a bit more when answer slots shuffle to make it work  ** -->
+				<!-- <form>
+					<label id="q-1">
+						<input type="checkbox" name="checkbox1" value="1">
+						<span>Austine</span>
+					</label>
+					<label id="q-2">
+						<input type="checkbox" name="checkbox2" value="2">
+						<span>SF</span>
+					</label>
+					<label id="q-3">
+						<input type="checkbox" name="checkbox3" value="3">
+						<span>Chicago</span>
+					</label>
+					<label id="q-4">
+						<input type="checkbox" name="checkbox4" value="4">
+						<span>None of the above</span>
+					</label>
+					<input type="button" value=" Submit " id="multi-submit">
+				</form>-->
+			</div>
+			<!-- ** Question Template Ends ** -->
+
 		</div>
-		<div id="template-video" class="block-padding">
-			<video autoplay id="slide-video">
-				<source src="video/staples.mpg" type="video/webm">
-					I'm sorry; your browser doesn't support HTML5 video in WebM with VP8/VP9 or MP4 with H.264.
-					<!-- You can embed a Flash player here, to play your mp4 video in older browsers -->
-			</video>
-		</div>
+
 		<div id="audio-controller" class="block-padding">
 			<div id="controller-inner">
-				<button id="pg-replay">
-					<!-- Toggle Play/ Replay button design -->
-					<span id="state-play"><i class="icon-play"></i>Play</span>
-					<span id="state-repeat" style="display: none;"><i class="icon-repeat"></i>Replay</span>
-				</button>
-				<button id="pg-back"><i class="icon-step-backward"></i>Back</button>
-				<button id="pg-next" disabled><i class="icon-step-forward"></i>Next</button>
+				<div id="pg-buttons">
+					<button id="pg-replay">
+						<!-- Toggle Play/ Replay button design -->
+						<span id="state-play"><i class="icon-play"></i>Play</span>
+						<span id="state-repeat" style="display: none;"><i class="icon-repeat"></i>Replay</span>
+					</button>
+					<button id="pg-back"><i class="icon-step-backward"></i>Back</button>
+					<button id="pg-next" disabled><i class="icon-step-forward"></i>Next</button>
+				</div>
 				<div id="page">
-					<span id="pg-current"></span> of <span id="pg-total"></span>
+					<span id="pagenation">
+						<span id="pg-current"></span> of <span id="pg-total"></span>
+					</span>
+					<span id="pg-question">Question</span>
+					<span id="pg-remediation">Review</span>
 				</div>
 			</div>		
 		</div>
