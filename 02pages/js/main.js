@@ -109,8 +109,8 @@ var slides = [
 		templateType: 'basic'
 	},
 	{
-		quizQuestion: 'Where would you think the best city to live in Japan?',
-		quizChoice: [ 'Tokyo', 'Nagoya', 'Osaka', 'Kobe' ],
+		quizQuestion: 'Where would you think the best city to live in USA?',
+		quizChoice: [ 'Accident, Maryland', 'Embarrass, Minnesota', 'Chicago, Illinois', 'Cut And Shoot, Texas' ],
 		quizAnswer: [ 3 ],
 		templateType: 'question'
 	},
