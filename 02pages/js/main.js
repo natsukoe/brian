@@ -5,8 +5,8 @@ var sub_title = "Safety Orientation";
 var chapter_name = "Alpha Course Template Level 1";
 var header_color = "#b1273e";
 var header_txt_color = "#fff";
-var user_name = 'Admin';
-//var user_name = 'Curt';
+//var user_name = 'Admin';
+var user_name = 'Curt';
 
 // Selecting each title
 document.getElementsByTagName('h1')[0].innerHTML = course_title;

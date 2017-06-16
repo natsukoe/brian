@@ -274,7 +274,7 @@ html {
 .contentbody-left { max-width: 50%; }
 .block-padding { padding: 20px; }
 audio { width: 460px; margin: 10px auto; }
-#audio-controller button { width: 98px; }
+#audio-controller button { width: 101px; }
 @media (max-width: 900px) {
   html { font-size: 16px; }
   body { background: #fff; }
