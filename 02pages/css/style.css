@@ -61,9 +61,9 @@ h2 {
   	font-weight: bold;
 }
 h3 {
-	font-size: 1.1rem;
+	font-size: 1.2rem;
 	font-weight: bold;
-	margin: 20px 0 10px;
+	margin: 0 0 10px;
 }
 #masterhead {
 	background: #222;
@@ -268,7 +268,7 @@ input[type="button"] {
 */
 /* Document level adjustments */
 html {
-  font-size: 17px;
+  font-size: 18px;
 }
 #corporate-name { width: 80%; }
 .contentbody-left { max-width: 50%; }
@@ -276,7 +276,7 @@ html {
 audio { width: 460px; margin: 10px auto; }
 #audio-controller button { width: 98px; }
 @media (max-width: 900px) {
-  html { font-size: 15px; }
+  html { font-size: 16px; }
   body { background: #fff; }
   #corporate-name { width: 78%; }
   #container { box-shadow: none; padding: 0; }
@@ -286,11 +286,11 @@ audio { width: 460px; margin: 10px auto; }
 }
 /* Started with 400px and 700px seems right */
 @media (max-width: 700px) {
-  html { font-size: 13px; }
+  html { font-size: 14px; }
   #corporate-name { width: 63%; }
   #template-basic { display: block; }
   .contentbody-left { max-width: 100%; }
   audio { width: 98%; }
-  #audio-controller button { width: 82px; }
+  #audio-controller button { width: 85px; }
   #bodymedia img { margin: 0 auto; }
 }
