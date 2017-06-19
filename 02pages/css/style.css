@@ -125,7 +125,7 @@ h3 {
 	margin: 10px auto;
 	display: block;
 	box-sizing: border-box;
-	width: 100%;
+	width: 100%; /* If seekbar needs to be seen on IE, comment out this line */
 }
 #audio-controller.display-no {
 	display: none;
