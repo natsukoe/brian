@@ -1,0 +1,301 @@
+Script_1=<font size='20'><b>Introduction</b></font>
+<p>Welcome to Carus Group\'s, Peru Illinois headquarters.</p><p>The employees with Carus are committed to maintaining a safe work environment.  At our headquarters, safety is a condition of employment.  We ask that you always look for safety hazards, be aware of your environment and be your brother\'s keeper. </p><p>SAFETY IS FIRST - NO EXCEPTIONS!!!</p>
+
+&Script_2=<font size='20'><b>Introduction</b></font>
+<p>The policies and procedures set forth in this orientation establish our expectations for Contractor work behavior.</p><p>Failure to adhere to these expectations is considered a violation and will be dealt with accordingly.</p> <p>If you are unsure about anything, please ask your Carus Group representative.</p>
+
+&Script_3=<font size='20'><b>Introduction</b></font>
+<p>This orientation does not replace the safety, health and environmental training you have received from your company and is not intended to be all-inclusive.</p><p>Contractors are responsible for their behavior and unsafe actions will not be tolerated!</p>
+
+&Script_4=<font size='20'><b>General Information</b></font>
+<p>At the successful completion of this orientation you will be issued a Carus Group-approved Contractors ID badge.</p><p>You must have this card on your person, prominently displayed whenever you do work at our facility.</p><p>This Contractors ID badge is to be returned to Carus Group at the conclusion of you contracted tasks.</p>
+
+&Script_5=<font size='20'><b>General Information</b></font>
+<p>The training you will receive today is valid for one year.</p><p>Failure to stay current with the safety certification requirements could result in the termination of your contract and cost your company future work with Carus Group.</p>
+
+&Script_6=<font size='20'><b>General Information</b></font>
+<p>As a contract employee, park your personal vehicle in the main parking lot and enter (and exit) the facility through an authorized exit.  An authorized entrance/exit is one where the exit is equipped with a card reader.</p><p>You are required to "Badge in" when you enter the building and required to "Badge out" when you leave the building.</p><p>This will assure that you will be accounted for in the event of an emergency.</p>
+
+&q_1=You are required to "Badge in" when you enter the building and "Badge out" when you leave the building for any reason.
+&A_1=True
+&B_1=False
+&C_1=
+&D_1=
+&Rem_1=6
+&questionType_1=T
+
+&RemScript_6=<font size='20'><b>General Information</b></font>
+<p>As a contract employee, park your personal vehicle in the main parking lot and enter (and exit) the facility through an authorized exit.  An authorized entrance/exit is one where the exit is equipped with a card reader.</p><p><font color="#FF0000">You are required to "Badge in" when you enter the building and required to "Badge out" when you leave the building.</font></p><p>This will assure that you will be accounted for in the event of an emergency.</p>
+
+&Script_7=<font size='20'><b>General Information</b></font>
+<p>Please be advised that all posted signs (warning or otherwise) and audio warnings in use at our facility use the English language.</p><p>It is the Contractor\'s responsibility to ensure that all of its workers are fluent in reading and speaking English in order to provide the safest work environment possible.</p>
+
+&Script_8=<font size='20'><b>General Information</b></font>
+<p>You are expected to keep your work area clean at all times.</p><p>Tools, materials and equipment must be cleaned up at the end of each shift.  Under no circumstances should tools or equipment block access to safety or emergency equipment or exits.</p><p>Contracting firms are responsible for removing all waste materials, including materials that may be considered hazardous, consistent with the current regulations in force.</p>
+
+&Script_9=<font size='20'><b>General Information</b></font>
+<p>Chemicals must be approved by Carus prior to being brought on site.</p><p>Chemicals and contaminated materials may <b>not</b> be washed down the drain or placed into general waste receptacles unless authorized by the local site EHSS Department.</p><p>Please see your Carus Group representative to coordinate the proper disposal of these items.</p>
+
+&Script_10=<font size='20'><b>General Information</b></font>
+<p>Smoking is permitted only in approved areas outside of the Carus headquarters building; all areas within the building are designated "No Smoking.” </p><p>See your Carus Group representative for approved smoking areas if needed.  Smoking material must be disposed of in approved containers.</p>  <p>Food and beverage consumption is limited to authorized areas only and not in areas where a spill or a breakage would create a safety and/or health hazard.</p>
+
+&q_2=Smoking is not permitted in the Peru Headquarters building.
+&A_2=True
+&B_2=False
+&C_2=
+&D_2=
+&Rem_2=10
+&questionType_2=T
+
+&RemScript_10=<font size='20'><b>General Information</b></font>
+<p><font color="#FF0000">Smoking is permitted only in approved areas outside of the Carus headquarters building; all areas within the building are designated "No Smoking."</font></p> <p>See your Carus Group representative for approved smoking areas if needed.  Smoking material must be disposed of in approved containers.</p><p>Food and beverage consumption is limited to authorized areas only and not in areas where a spill or a breakage would create a safety and/or health hazard.</p>
+
+
+&Script_11=<font size='20'><b>General Information</b></font>
+<p>Cameras are not allowed on facility grounds without written permission from a Carus Group representative.</p><p>The possession or use of firearms, ammunition, explosives, alcoholic beverages or illegal drugs is strictly prohibited.</p> <p>Concealed deadly weapons are also strictly prohibited.</p> 
+
+&Script_12=<font size='20'><b>General Information</b></font>
+<p>All injuries, no matter how minor, <b>must</b> be reported to your Carus Group representative immediately.</p><p>An accident report is to be filled out for each incident.</p><p>Your Carus Group representative, or member of management, must be notified immediately when an ambulance or other vehicle is called to assist in an emergency.</p>
+
+&q_3=All injuries, no matter how minor, must be reported to your Carus Group representative _____.
+&A_3=Immediately
+&B_3=By the end of the work week
+&C_3=By the end of the day
+&D_3=When you get an opportunity
+&Rem_3=12
+&questionType_3=M
+
+&RemScript_12=<font size='20'><b>General Information</b></font>
+<p><font color="#FF0000">All injuries, no matter how minor, <b>must</b> be reported to your Carus Group representative immediately.</font></p><p>An accident report is to be filled out for each incident.</p><p>Your Carus Group representative, or member of management, must be notified immediately when an ambulance or other vehicle is called to assist in an emergency.</p>
+
+&Script_13=<font size='20'><b>General Information</b></font>
+<p>You must report any safety hazards or conditions or near-miss incidents to your supervisor as well as your Carus Group representative.</p>  <p>It is Carus Group\'s requirement that any employee or contractor who observes unsafe work practices request that the work STOP immediately, and notify their Carus Group supervisor or contact.</p><p>Safety is everyone\'s responsibility.  Keep your eyes and mind on your task while on site, and ask questions if there is any doubt.</p>  
+
+&q_4=A Carus Group employee is observed to be violating established work procedures.  You should:
+&A_4=Request that the work stop, and notify a supervisor
+&B_4=Not worry about it as it is not your problem
+&C_4=Walk away and look for a supervisor to intervene
+&D_4=Take good notes so that it can be discussed at the next safety meeting
+&Rem_4=13
+&questionType_4=M
+
+&RemScript_13=<font size='20'><b>General Information</b></font>
+<p>You must report any safety hazards or conditions or near-miss incidents to your supervisor as well as your Carus Group representative.</p><p><font color="#FF0000">It is Carus Group\'s requirement that any employee or contractor who observes unsafe work practices request that the work STOP immediately, and notify their Carus Group supervisor or contact.</font></p><p>Safety is everyone\'s responsibility.  Keep your eyes and mind on your task while on site, and ask questions if there is any doubt.</p>
+
+&Script_14=<font size='20'><b>Personal Protective Equipment (PPE)</b></font>
+<p>Contractors performing work at the Carus Group headquarters are expected to arrive for their job “Fit for Duty,” including having all appropriate PPE for the contracted job.</p><p>Examples include: safety glasses, gloves fit for the task, appropriate footwear, hearing protection, and specialized PPE such as burning goggles, and respirators, etc.</p><p>Failure to wear the required PPE will result in action on the part of Carus up to expulsion from the site.</p>    
+
+&Script_15=<font size='20'><b>Fall Protection</b></font>
+<p>Contractors must provide their own personal fall protection equipment.</p>  <p>Personal fall protection equipment (as required by OSHA) is required when working at heights over <b>4 feet</b> or where temporary or permanent fall protection is not in place.   At a minimum, a full body harness with shock absorbing lanyard is required.</p><p>Contractors must provide fall protection barricades, covers, or rails, etc. to protect any openings, pits or holes that have resulted from their work.</p>
+
+&q_5= Personal fall protection equipment is required when working at heights over _____ feet.
+&A_5=4
+&B_5=6
+&C_5=8
+&D_5=10
+&Rem_5=15
+&questionType_5=M
+
+&RemScript_15=<font size='20'><b>Fall Protection</b></font>
+<p>Contractors must provide their own personal fall protection equipment.</p><p><font color="#FF0000">Personal fall protection equipment (as required by OSHA) is required when working at heights over <b>4 feet</b> or where temporary or permanent fall protection is not in place.</font>   At a minimum, a full body harness with shock absorbing lanyard is required.</p><p>Contractors must provide fall protection barricades, covers, or rails, etc. to protect any openings, pits or holes that have resulted from their work.</p>
+
+&Script_16=<font size='20'><b>Fall Protection</b></font>
+<p>Examples of conditions where personal fall protection will be required include work performed on:</p><p><ul><li>Manlifts or personnel lifts of any type (in this situation, the fall protection equipment must be secured to approved anchor points on the lift)</li><li>Sloping roofs</li><li>Any suspended platform or stage</li><li>Flat roofs without handrails or parapets within 8 feet of the edge or opening</li></ul></p>
+
+&Script_17=<font size='20'><b>Fall Protection</b></font>
+<p>Examples of conditions where personal fall protection will be required include work performed on:</p><p><ul><li>Elevated positions without permanent fall protection</li><li>Any scaffold with incomplete handrails or decking, or</li><li>Any scaffold during assembly</li></ul></p><p>Please note: all tie-off points must be capable of withstanding 5000 pounds of force per employee.</p>
+
+&Script_18=<font size='20'><b>Tools and Equipment</b></font>
+<p>The Contractor must furnish all tools and equipment.  They must be in good condition and used in a safe manner.</p><p>All tools and equipment, including extension cords, must be inspected prior to use; defective tools or equipment may not be used and must be removed from the site.</p><p>Contract employees will not be permitted to use Carus Group tools or equipment unless authorized by their Carus Group representative.</p>
+
+&Script_19=<font size='20'><b>Tools and Equipment</b></font>
+<p>Ground Fault Circuit Interrupters (GFCIs) must be used on all electric tools, extension cords, and portable electric equipment.</p><p>They must be in good condition and used in a safe manner.</p> 
+
+&Script_20=<font size='20'><b>Ladders</b></font>
+<p>Carus Group insists on the use of fiberglass ladders; wood or metal ladders are prohibited.  All ladders should be inspected prior to use.</p><p>You are required to follow all rules and regulations for the safe use of ladders.  Do not overload ladders.  Always maintain 3 points of contact when using a ladder.</p><p>Use ladders for their intended purpose only.  Under no circumstance should a chair, other furniture, drums or pails be used as a ladder.</p>
+
+&q_6=Carus Group insists on the use of metal ladders on site.
+&A_6=False
+&B_6=True
+&C_6=
+&D_6=
+&Rem_6=20
+&questionType_6=F
+
+&RemScript_20=<font size='20'><b>Ladders</b></font>
+<p><font color="#FF0000">Carus Group insists on the use of fiberglass ladders; wood or metal ladders are prohibited.</font>  All ladders should be inspected prior to use.</p><p>You are required to follow all rules and regulations for the safe use of ladders.  Do not overload ladders.  Always maintain 3 points of contact when using a ladder.</p><p>Use ladders for their intended purpose only.  Under no circumstance should a chair, other furniture, drums or pails be used as a ladder.</p>
+
+&Script_21=<font size='20'><b>Ladders</b></font>
+<p>All straight and extension ladders must be adequately tied-off or held securely in place with spreaders locked in place.  Follow the "4 to 1" rule when using a straight ladder or extension ladder.</p><p>Stepladders must be fully opened and set level on all four feet with spreaders locked in place.  Never use a stepladder as a straight ladder.</p><p>No materials or tools should be placed on steps or the platform.</p>
+
+&Script_22=<font size='20'><b>Scaffolding</b></font>
+<p>All scaffolds must be erected level and plumb, on a firm base, and meet applicable OSHA Standards.  They must be rated to handle five times the working load.</p><p>Always inspect scaffolding before working from it to insure that:</p><p><ul><li>Handrails, midrails, toeboards, and decking are in place</li><li>All wheels are locked, if it is a moveable scaffold, and that</li><li>Locking pins are in place at each joint</li></ul></p>
+
+&Script_23=<font size='20'><b>Barricades</b></font>
+<p>Barricades or covers are required around excavations, holes, or openings in floors, roofs and elevated platforms.</p><p>They must also be used for overhead work, underground work, in areas where it is necessary to warn or protect people of potential hazards, or to separate the construction area.</p><p>Barricades must be about 42 inches high, neat, level, and constantly maintained.</p>  
+
+&q_7=Which of the following statements regarding barricades at this facility are true?
+&A_7=All of the above
+&B_7=Barricades must be about 42 inches high, neat, level and constantly maintained
+&C_7=Barricades are required around excavations, holes or openings in floors, roofs and elevated platforms
+&D_7= Barricades must be used wherever necessary to warn or protect people of potential hazards
+&Rem_7=23
+&questionType_7=A
+
+&RemScript_23=<font size='20'><b>Barricades</b></font>
+<p><font color="#FF0000">Barricades or covers are required around excavations, holes, or openings in floors, roofs and elevated platforms.</p><p>They must also be used for overhead work, underground work, in areas where it is necessary to warn or protect people of potential hazards, or to separate the construction area.</p><p>Barricades must be about 42 inches high, neat, level, and constantly maintained.</font></p>  
+
+&Script_24=<font size='20'><b>Utilities</b></font>
+<p>Your Carus Group representative must be notified before attaching any hose or other equipment to any site utility, such as steam, water, or air, etc.</p><p>At no time, should you hook any hose or other equipment to the potable (city) water line without the permission of your Carus Group representative.</p>
+
+&Script_25=<font size='20'><b>Confined Space Entry</b></font>
+<p>A <b><i>Confined Space Entry Permit</i></b> is required for any job that involves entering a confined space such as a vessel, tank, or other space where the atmospheric conditions must be monitored prior to and during occupancy.</p><p>A <b><i>Confined Space Entry Permit</i></b> is required for all confined space entry.</p>  
+
+&q_8=A _____ is required for any job that involves entering a confined space such as a vessel or a tank.
+&A_8=<b><i>Confined Space Entry Permit</i></b>
+&B_8=<b><i>Lockout/Tagout Permt</i></b>
+&C_8=<b><i>Line Breaking Permit</i></b>
+&D_8=<b><i>Hot Work Permit</i></b>
+&Rem_8=25
+&questionType_8=M
+
+&RemScript_25=<font size='20'><b>Confined Space Entry</b></font>
+<p><font color="#FF0000">A <b><i>Confined Space Entry Permit</i></b> is required for any job that involves entering a confined space such as a vessel, tank, or other space where the atmospheric conditions must be monitored prior to and during occupancy.</font></p><p>A <b><i>Confined Space Entry Permit</i></b> is required for all confined space entry.</p>  
+
+&Script_26=<font size='20'><b>Confined Space Entry</b></font>
+<p>Your Carus Group representative (or a qualified designee) will indicate when the scope of work requires entry into a confined space and will issue this permit.</p><p>Properly display the <b><i>Confined Space Entry Permit</i></b> at the entrance to the confined space.</p><p>A Carus Group representative will review any specific procedures for a particular confined space to be entered.</p>  
+
+&Script_27=<font size='20'><b>Lockout/Tagout</b></font>
+<p>Carus Group maintains a strict lockout/tagout policy.  This practice applies to electrical, pneumatic and hydraulic equipment as well as piping systems.</p><p>Many pre-established written procedures are available and will be followed for most common lockout situations.</p><p>If a pre-established written procedure is not available, one may be developed for the lockout.</p> 
+
+
+
+&Script_28=<font size='20'><b>Lockout/Tagout</b></font>
+<p>During a lockout at this facility, a Carus Group employee will be responsible for placing locks on all energy sources along with the contracting employee.</p><p>There will always be at a minimum two locks required, one for the contractor and one for the Carus Group employee.</p>   
+
+&Script_29=<font size='20'><b>Lockout/Tagout</b></font>
+<p>Contractors are encouraged to bring their own locks.  Contractor locks must be installed on the equipment before work is initiated.  In the absence of specific contracting company locks, maintenance locks can be obtained and coordinated through Maintenance.</p><p>Contractor locks must include the name of the company on the lock (and the craft for multi-craft companies).</p><p>Only a contractor company representative can remove a contractor lock.</p>  
+
+&Script_30=<font size='20'><b>Lockout/Tagout</b></font>
+<p>Only the person who attaches their lock to a piece of equipment may remove it; you are not permitted to remove someone else\'s lock or tag.</p><p>Should a lock need to be cut, only an authorized contractor employee, in coordination with the building Maintenance Department, can have the lock removed.</p>
+
+&q_9=Who may remove a lock placed for lockout/tagout of a piece of equipment?
+&A_9=Only the person who attached the lock
+&B_9=Anyone
+&C_9=Any Carus employee
+&D_9=Any Supervisor
+&Rem_9=30
+&questionType_9=M
+
+&RemScript_30=<font size='20'><b>Lockout/Tagout</b></font>
+<p><font color="#FF0000">Only the person who attaches their lock to a piece of equipment may remove it; you are not permitted to remove someone else\'s lock or tag.</font></p><p>Should a lock need to be cut, only an authorized contractor employee, in coordination with the building Maintenance Department, can have the lock removed.</p>
+
+&Script_31=<font size='20'><b>Hazard Communication (HazCom)</b></font>
+<p>All Contractors must be trained in the specific hazards present at this facility.</p><p>A list of all hazardous chemicals used on site is present and available in the Maintenance Department.</p><p>Each chemical has its own Safety Data Sheet (SDS) describing all aspects of the chemical.</p>   
+
+&q_10=All SDSs are kept where?
+&A_10=Maintenance Department
+&B_10=CEO\'s office
+&C_10=EHSS Department
+&D_10=Receptionist
+&Rem_10=31
+&questionType_10=M
+
+&RemScript_31=<font size='20'><b>Hazard Communication (HazCom)</b></font>
+<p>All Contractors must be trained in the specific hazards present at this facility.</p><p><font color="#FF0000">A list of all hazardous chemicals used on site is present and available in the Maintenance Department. </font></p><p>Each chemical has its own Safety Data Sheet (SDS) describing all aspects of the chemical.</p>   
+
+&Script_32=<font size='20'><b>Hazard Communication (HazCom)</b></font>
+<p>HazCom requires that all containers of hazardous chemicals entering or leaving the plant be properly labeled.</p><p>These labels must include: the identity of the chemical, the appropriate hazard warnings, and the name and address of the manufacturer or importer of the chemical.</p>  
+  
+&Script_33=<font size='20'><b>Hazard Communication (HazCom)</b></font>
+<p>All chemicals brought on site must be pre-approved by the EHSS Department and your Carus Group representative.</p><p>An SDS for each chemical must be on site prior to the arrival of the chemical.</p>
+
+&q_11=All chemicals brought on site must be pre-approved by EHSS and your Carus Group representative, and _____ must be on site prior to the arrival of the chemical.
+&A_11=An SDS
+&B_11=An original container
+&C_11=A Bill of Lading
+&D_11=A label
+&Rem_11=33
+&questionType_11=M
+
+&RemScript_33=<font size='20'><b>Hazard Communication (HazCom)</b></font>
+<p><font color="#FF0000">All chemicals brought on site must be pre-approved by the EHSS Department and your Carus Group representative.</p><p>An SDS for each chemical must be on site prior to the arrival of the chemical.</font></p>
+
+
+&Script_34=<font size='20'><b>Hazard Communication (HazCom)</b></font>
+<p>Asbestos is a mineral made up of microscopic fibers.</p><p>Asbestos consisting of fibers that become airborne when disturbed is considered "friable" and can present a breathing hazard.</p>
+
+&Script_35=<font size='20'><b>Hazard Communication (HazCom)</b></font>
+<p>Old asbestos insulating material exists in isolated areas of the building, away from any normal day-to-day activity.  It has been encapsulated in such a way as to prevent any potential exposure.</p><p>Any and all operations that require work on piping must be coordinated with the Maintenance Department to ensure that the asbestos is not disturbed.</p><p>Only trained and licensed contractors can handle asbestos.</p>
+
+&q_12=Asbestos, which is present in some areas of the building, may only be handled by trained and licensed contractors.
+&A_12=True
+&B_12=False
+&C_12=
+&D_12=
+&Rem_12=35
+&questionType_12=T
+
+&RemScript_35=<font size='20'><b>Hazard Communication (HazCom)</b></font>
+<p><font color="#FF0000">Old asbestos insulating material exists in isolated areas of the building, away from any normal day-to-day activity.</font>  It has been encapsulated in such a way as to prevent any potential exposure.</p><p>Any and all operations that require work on piping must be coordinated with the Maintenance Department to ensure that the asbestos is not disturbed.</p><p><font color="#FF0000">Only trained and licensed contractors can handle asbestos.</font></p>
+
+
+
+
+&Script_36=<font size='20'><b>Hot Work</b></font>
+<p>You must obtain a Carus <b><i>Hot Work Permit</i></b> prior to starting any welding jobs.</p><p>Appropriate fire extinguishers and a 30-minute fire watch must also be provided for all hot work.</p>
+
+&Script_37=<font size='20'><b>Hot Work</b></font>
+<p>Contractors must provide approved welding blinds made of a fire resistant material when welding.</p><p>These blinds must be placed so as to shield all passersby from exposure to welding flash.</p><p>Welding blinds must also protect the immediate environment of people and facilities from welding slag, sparks, and flying particles from grinding or chipping.</p>
+
+&Script_38=<font size='20'><b>Emergency Response</b></font>
+<p>It is important that you know how to act during an emergency while working here at the Carus Group\\'s Peru facility.</p><p>You should be familiar with the location of all emergency equipment, evacuation routes, and assembly areas before you begin your job.</p><p>Your Carus Group contact can help you with this important information.  If you do not know, ask!</p>
+
+&Script_39=<font size='20'><b>Emergency Response</b></font>
+<p>If you need to report a life-threatening emergency, you are required to notify your Carus Group representative and pick up the nearest phone and dial <b>8-911</b>.</p>
+
+&q_13=If you need to report a life-threatening emergency, pick up the nearest phone and dial _____.
+&A_13=8-911
+&B_13=711
+&C_13=6060
+&D_13=311
+&Rem_13=39
+&questionType_13=M
+
+&RemScript_39=<font size='20'><b>Emergency Response</b></font>
+<p><font color="#FF0000">If you need to report a life-threatening emergency, you are required to notify your Carus Group representative and pick up the nearest phone and dial <b>8-911</b>.</font></p>
+
+&Script_40=<font size='20'><b>Emergency Response</b></font>
+<p>All contractors are required to immediately evacuate the site to the designated muster point when the evacuation alarm sounds.</p><p>Specific training for Headquarter-related evacuations and emergency response will be provided by the appropriate Carus Group representative prior to any work being performed on site.</p>
+
+&Script_41=<font size='20'><b>Emergency Response</b></font>
+<p>First aid cabinets are located within the building.</p><p>Carus Group is not responsible for first aid treatment for contractors.</p><p>All injuries, however, should be reported to the appropriate Carus Group personnel.</p>
+
+&Script_42=<font size='20'><b>Emergency Response</b></font>
+<p>If an emergency (such as a serious injury, fire, or health, safety or security issue) requires immediate assistance or response, the appropriate Carus Group personnel must be notified.</p>
+
+&Script_43=<font size='20'><b>Emergency Response</b></font>
+<p>If an emergency alarm is activated you are required to do the following:</p><p><ul><li>Shut down all tools and equipment</li><li>Follow all instructions given by Carus Group personnel and consistent with the evacuation training received</li><li>Walk immediately to the \"muster area,\" and</li><li>Remain in the muster area for further instructions</li></ul></p>
+
+&q_14=Which of the following should you NOT do if an emergency alarm is activated?
+&A_14=Finish whatever you are doing and then evacuate
+&B_14=Shut down all tools and equipment
+&C_14=Follow all instructions you were provided during training
+&D_14=Walk immediately to the “muster area”
+&Rem_14=43
+&questionType_14=M
+
+&RemScript_43=<font size='20'><b>Emergency Response</b></font>
+<p><font color="#FF0000">If an emergency alarm is activated you are required to do the following:</font></p><p><ul><li><font color="#FF0000">Shut down all tools and equipment</font></li><li><font color="#FF0000">Follow all instructions given by Carus Group personnel and consistent with the evacuation training received</font></li><li><font color="#FF0000">Walk immediately to the "muster area,"</font> and</li><li>Remain in the muster area for further instructions</li></ul></p>
+
+&Script_44=<font size='20'><b>Emergency Response</b></font>
+<p>Building maps displaying evacuation routes, fire extinguisher locations, and assembly areas are located throughout this facility.</p><p>You should familiarize yourself with all possible evacuation routes from your work area as well as the nearest assembly areas.</p>  
+
+&Script_45=<font size='20'><b>Emergency Response</b></font>
+<p>Be sure to ask your Carus Group representative if you are unsure about evacuation routes or muster area locations.</p><p>It is important that you report to the muster area in case of an evacuation.</p><p>Do not leave the muster area until you have been accounted for.</p>
+
+&Script_46=<font size='20'><b>Emergency Response</b></font>
+<p>Fire alarms, hydrants, fire extinguishers and exits are plainly marked and must be kept clear of all obstructions.</p>  
+
+&Script_47=<font size='20'><b>Conclusion</b></font>
+<p>Once again, welcome to Carus Groups’ Corporate Headquarters.</p><p>Your safety, as well as that of our employees and the community, is our top priority.  We are working hard on our safety record and hope that you realize how important safety is to us.</p><p>It should be just as important to you - your health and safety may depend on it!</p>

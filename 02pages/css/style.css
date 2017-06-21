@@ -242,6 +242,9 @@ input[type="button"] {
 	background: #fff;
 	cursor: pointer;
 }
+#audio-controller button[disabled]:hover {
+	background: #f1efef;
+}
 #audio-controller i {
 	padding-right: 6px;
 }
