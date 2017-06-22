@@ -1,7 +1,7 @@
 'use strict';
 
-var course_title = "ADM - Cidar Rapids (Adding more letters to test for a longer name), Iowa";
-var sub_title = "Safety Orientation";
+var course_title = "Carus Group";
+var sub_title = "Peru, Illinois";
 var header_color = "#b1273e";
 var header_txt_color = "#fff";
 var user_name = 'Admin';
