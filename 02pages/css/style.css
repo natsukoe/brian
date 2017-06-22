@@ -304,10 +304,10 @@ audio { width: 460px; margin: 10px auto; }
   #template-basic { display: block; }
   .contentbody-left { max-width: 100%; }
   audio { width: 98%; }
-  #audio-controller button { width: 76px; }
+  #audio-controller button { width: 72px; }
   #bodymedia img { margin: 0 auto; }
   #audio-controller button, input[type="button"] {
-	margin: 0 1px 0;
-	padding: 6px 0;
+	margin: 0 2px 0;
+	padding: 8px 0;
 }
 }
