@@ -56,6 +56,12 @@ var q_4_span = document.querySelector('#q-4 span');
 var slides = [
 
 	{
+		slideVideo: 'business1/firstMilkyWay.mp4',
+		templateType: 'video'
+	},
+
+
+	{
 		slideTitle: 'Introduction',
 		slideText: '<p>Welcome to Carus Group\'s, Peru Illinois headquarters.</p><p>The employees with Carus are committed to maintaining a safe work environment. At our headquarters, safety is a condition of employment. We ask that you always look for safety hazards, be aware of your environment and be your brother\'s keeper.</p><p>SAFETY IS FIRST - NO EXCEPTIONS!!!</p>',
 		slideAudio: 'CarusGroup_Peru_Contractor_Course/1.mp3',
@@ -64,10 +70,7 @@ var slides = [
 		templateType: 'basic'
 	},
 
-	{
-		slideVideo: 'business1/firstMilkyWay.mp4',
-		templateType: 'video'
-	},
+
 
 	{
 		slideTitle: 'Introduction',
