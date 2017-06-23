@@ -2,7 +2,7 @@
 
 var course_title = "Carus Group";
 var sub_title = "Peru, Illinois";
-var header_color = "#b1273e";
+var header_color = "#e3721b"; //#b1273e
 var header_txt_color = "#fff";
 var user_name = 'Admin';
 //var user_name = 'Curt';
@@ -68,7 +68,7 @@ var slides = [
 		slideVideo: 'business1/firstMilkyWay.mp4',
 		templateType: 'video'
 	},
-	
+
 	{
 		slideTitle: 'Introduction',
 		slideText: '<p>The policies and procedures set forth in this orientation establish our expectations for Contractor work behavior.</p><p>Failure to adhere to these expectations is considered a violation and will be dealt with accordingly.</p> <p>If you are unsure about anything, please ask your Carus Group representative.</p>',
