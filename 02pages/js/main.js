@@ -1015,19 +1015,6 @@ document.getElementById("pg-replay").addEventListener("click", function(){
 	}	
 });
 
-
-	// disable next btn when no bookmarked pg or current slide num is smaller than bookmarked
-	if ( bookmarked === 0 || current_slide_num >= bookmarked ) {
-		document.getElementById('pg-next').setAttribute('disabled', true);
-		console.log('case disabled true');
-	}
-	else {
-		document.getElementById('pg-next').removeAttribute('disabled');
-		console.log('case disabled removed');
-	}
-
-	
-
 /* Next Button Enabled/ Disabled until audio or video ends */
 $(media_audio).on('playing', function() {
 	$("#state-play").css({"display": "none"});
@@ -1075,6 +1062,20 @@ $(media_video).on('ended', function() {
    document.getElementById('pg-next').removeAttribute('disabled');
    writeBookmark();
 });
+
+// This block is to accommodate next button gets disabled initially on iPhone
+if ( slides[ current_slide_num ].templateType === 'video' ) {
+	// disable next btn when no bookmarked pg or current slide num is smaller than bookmarked
+	if ( bookmarked === 0 || current_slide_num >= bookmarked ) {
+		document.getElementById('pg-next').setAttribute('disabled', true);
+		console.log('case disabled true');
+	}
+	else {
+		document.getElementById('pg-next').removeAttribute('disabled');
+		console.log('case disabled removed');
+	}	
+}
+
 
 $(media_audio).on('pause', function() {
 	$("#state-play").css({"display": "block"});
