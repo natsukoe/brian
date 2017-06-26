@@ -55,10 +55,7 @@ var q_4_span = document.querySelector('#q-4 span');
 
 var slides = [
 
-	{
-		slideVideo: 'business1/firstMilkyWay.mp4',
-		templateType: 'video'
-	},
+
 
 
 	{
@@ -70,7 +67,10 @@ var slides = [
 		templateType: 'basic'
 	},
 
-
+	{
+		slideVideo: 'business1/firstMilkyWay.mp4',
+		templateType: 'video'
+	},
 
 	{
 		slideTitle: 'Introduction',
@@ -1051,6 +1051,7 @@ $(media_video).on('playing', function() {
 	}
 	else {
 		document.getElementById('pg-next').removeAttribute('disabled');
+		alert("removed disabled");
 	}
 });
 
