@@ -1,6 +1,6 @@
 'use strict';
 
-var course_title = "Carus Group test";
+var course_title = "Carus Group";
 var sub_title = "Peru, Illinois";
 var header_color = "#e3721b"; //#b1273e
 var header_txt_color = "#fff";
@@ -1059,7 +1059,7 @@ $(media_video).on('ended', function() {
 	$("#state-repeat").css({"display": "none"});
 
    // enable button
-   document.getElementById('pg-next').removeAttribute('disabled');
+   //document.getElementById('pg-next').removeAttribute('disabled');
    writeBookmark();
 });
 
