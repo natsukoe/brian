@@ -1037,7 +1037,6 @@ $(media_audio).on('ended', function() {
 
    // enable button
    document.getElementById('pg-next').removeAttribute('disabled');
-
    writeBookmark();  
 });
 
@@ -1059,7 +1058,7 @@ $(media_video).on('ended', function() {
 	$("#state-repeat").css({"display": "none"});
 
    // enable button
-   //document.getElementById('pg-next').removeAttribute('disabled');
+   document.getElementById('pg-next').removeAttribute('disabled');
    writeBookmark();
 });
 
