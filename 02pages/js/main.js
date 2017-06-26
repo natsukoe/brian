@@ -763,6 +763,21 @@ document.getElementById('user-name').innerHTML = user_name;
 
 // Creating Course Contents
 function slides_work() {
+
+
+// This block is to accommodate next button gets disabled initially on iPhone
+if ( slides[ current_slide_num ].templateType === 'video' ) {
+	// disable next btn when no bookmarked pg or current slide num is smaller than bookmarked
+	if ( current_slide_num >= bookmarked ) {
+		document.getElementById('pg-next').setAttribute('disabled', true);
+		console.log('case disabled true');
+	}
+}
+
+
+
+
+	
 	// Getting text
 	document.getElementsByTagName('h3')[0].innerHTML = slides[ current_slide_num ].slideTitle;
 	slide_text.innerHTML = slides[ current_slide_num ].slideText;
@@ -1061,18 +1076,6 @@ $(media_video).on('ended', function() {
    document.getElementById('pg-next').removeAttribute('disabled');
    writeBookmark();
 });
-
-
-
-// This block is to accommodate next button gets disabled initially on iPhone
-if ( slides[ current_slide_num ].templateType === 'video' ) {
-	// disable next btn when no bookmarked pg or current slide num is smaller than bookmarked
-	if ( current_slide_num >= bookmarked ) {
-		document.getElementById('pg-next').setAttribute('disabled', true);
-		console.log('case disabled true');
-	}
-}
-
 
 $(media_audio).on('pause', function() {
 	$("#state-play").css({"display": "block"});
