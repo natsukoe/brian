@@ -2,7 +2,7 @@
 
 var course_title = "Carus Group";
 var sub_title = "Peru, Illinois";
-var header_color = "#b1273e"; //#b1273e
+var header_color = "#e3721b"; //#b1273e
 var header_txt_color = "#fff";
 var user_name = 'Admin';
 //var user_name = 'Curt';
