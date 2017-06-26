@@ -1,6 +1,6 @@
 'use strict';
 
-var course_title = "Carus Group";
+var course_title = "Carus Group test";
 var sub_title = "Peru, Illinois";
 var header_color = "#e3721b"; //#b1273e
 var header_txt_color = "#fff";
@@ -1063,17 +1063,15 @@ $(media_video).on('ended', function() {
    writeBookmark();
 });
 
+
+
 // This block is to accommodate next button gets disabled initially on iPhone
 if ( slides[ current_slide_num ].templateType === 'video' ) {
 	// disable next btn when no bookmarked pg or current slide num is smaller than bookmarked
-	if ( bookmarked === 0 || current_slide_num >= bookmarked ) {
+	if ( current_slide_num >= bookmarked ) {
 		document.getElementById('pg-next').setAttribute('disabled', true);
 		console.log('case disabled true');
 	}
-	else {
-		document.getElementById('pg-next').removeAttribute('disabled');
-		console.log('case disabled removed');
-	}	
 }
 
 
