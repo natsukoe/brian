@@ -1016,10 +1016,6 @@ document.getElementById("pg-replay").addEventListener("click", function(){
 });
 
 /* Next Button Enabled/ Disabled until audio or video ends */
-$(media_audio).on('playing', function() {
-	$("#state-play").css({"display": "none"});
-	$("#state-repeat").css({"display": "block"});
-	console.log('media_audio on playing, current_slide_num ', current_slide_num, '  bookmarked: ', bookmarked);
 
 	// disable next btn when no bookmarked pg or current slide num is smaller than bookmarked
 	if ( bookmarked === 0 || current_slide_num >= bookmarked ) {
@@ -1030,7 +1026,15 @@ $(media_audio).on('playing', function() {
 		document.getElementById('pg-next').removeAttribute('disabled');
 		console.log('case disabled removed');
 	}
+
+
+
+$(media_audio).on('playing', function() {
+	$("#state-play").css({"display": "none"});
+	$("#state-repeat").css({"display": "block"});
+	console.log('media_audio on playing, current_slide_num ', current_slide_num, '  bookmarked: ', bookmarked);
 });
+
 $(media_audio).on('ended', function() {
 	$("#state-play").css({"display": "block"});
 	$("#state-repeat").css({"display": "none"});
@@ -1051,7 +1055,6 @@ $(media_video).on('playing', function() {
 	}
 	else {
 		document.getElementById('pg-next').removeAttribute('disabled');
-		alert("removed disabled");
 	}
 });
 
