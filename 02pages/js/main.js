@@ -1,6 +1,6 @@
 'use strict';
 
-var course_title = "Carus Group";
+var course_title = "Carus Group test";
 var sub_title = "Peru, Illinois";
 var header_color = "#e3721b"; //#b1273e
 var header_txt_color = "#fff";
@@ -777,7 +777,7 @@ if ( slides[ current_slide_num ].templateType === 'video' ) {
 
 
 
-	
+
 	// Getting text
 	document.getElementsByTagName('h3')[0].innerHTML = slides[ current_slide_num ].slideTitle;
 	slide_text.innerHTML = slides[ current_slide_num ].slideText;
