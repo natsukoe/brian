@@ -36,7 +36,7 @@ body {
 #masterhead-inner ol, #masterhead-inner ul {
 	list-style: none;
 }
-#container li {
+#contentbody li {
 	list-style: disc inside;
 	margin: 2px 0;
 }
@@ -69,10 +69,10 @@ h3 {
 	font-weight: bold;
 	margin: 0 0 10px;
 }
-#container i {
+#contentbody i {
 	font-style: italic;
 }
-#container b {
+#contentbody b {
 	font-weight: bold;
 }
 #masterhead {
