@@ -54,10 +54,6 @@ var q_3_span = document.querySelector('#q-3 span');
 var q_4_span = document.querySelector('#q-4 span');
 
 var slides = [
-
-
-
-
 	{
 		slideTitle: 'Introduction',
 		slideText: '<p>Welcome to Carus Group\'s, Peru Illinois headquarters.</p><p>The employees with Carus are committed to maintaining a safe work environment. At our headquarters, safety is a condition of employment. We ask that you always look for safety hazards, be aware of your environment and be your brother\'s keeper.</p><p>SAFETY IS FIRST - NO EXCEPTIONS!!!</p>',
@@ -195,6 +191,7 @@ var slides = [
 		templateType: 'question'
 	},
 	{
+		slideTitle: 'General Information',
 		slideText: '<p><font color="#FF0000">All injuries, no matter how minor, <b>must</b> be reported to your Carus Group representative immediately.</font></p><p>An accident report is to be filled out for each incident.</p><p>Your Carus Group representative, or member of management, must be notified immediately when an ambulance or other vehicle is called to assist in an emergency.</p>',
 		slideAudio: 'CarusGroup_Peru_Contractor_Course/12.mp3',
 		slideMedia: 'CarusGroup_Peru_Contractor_Course/12.jpg',
@@ -235,11 +232,25 @@ var slides = [
 	},
 	{
 		slideTitle: 'Fall Protection',
-		slideText: '<p>Contractors must provide their own personal fall protection equipment.</p><p><font color="#FF0000">Personal fall protection equipment (as required by OSHA) is required when working at heights over <b>4 feet</b> or where temporary or permanent fall protection is not in place.</font>   At a minimum, a full body harness with shock absorbing lanyard is required.</p><p>Contractors must provide fall protection barricades, covers, or rails, etc. to protect any openings, pits or holes that have resulted from their work.</p>',
+		slideText: '<p>Contractors must provide their own personal fall protection equipment.</p>  <p>Personal fall protection equipment (as required by OSHA) is required when working at heights over <b>4 feet</b> or where temporary or permanent fall protection is not in place.   At a minimum, a full body harness with shock absorbing lanyard is required.</p><p>Contractors must provide fall protection barricades, covers, or rails, etc. to protect any openings, pits or holes that have resulted from their work.</p>',
 		slideAudio: 'CarusGroup_Peru_Contractor_Course/15.mp3',
 		slideMedia: 'CarusGroup_Peru_Contractor_Course/15.jpg',
 		slideMediaAlt: 'Image of SlideMedia',
 		templateType: 'basic'
+	},
+	{
+		quizQuestion: 'Personal fall protection equipment is required when working at heights over _____ feet.',
+		quizChoice: [ '4', '6', '8', '10' ],
+		quizAnswer: [ 1 ],
+		templateType: 'question'
+	},
+	{
+		slideTitle: 'Fall Protection',
+		slideText: '<p>Contractors must provide their own personal fall protection equipment.</p><p><font color="#FF0000">Personal fall protection equipment (as required by OSHA) is required when working at heights over <b>4 feet</b> or where temporary or permanent fall protection is not in place.</font>   At a minimum, a full body harness with shock absorbing lanyard is required.</p><p>Contractors must provide fall protection barricades, covers, or rails, etc. to protect any openings, pits or holes that have resulted from their work.</p>',
+		slideAudio: 'CarusGroup_Peru_Contractor_Course/15.mp3',
+		slideMedia: 'CarusGroup_Peru_Contractor_Course/15.jpg',
+		slideMediaAlt: 'Image of SlideMedia',
+		templateType: 'remediation'
 	},
 	{
 		slideTitle: 'Fall Protection',
@@ -442,14 +453,6 @@ var slides = [
 		slideMediaAlt: 'Image of SlideMedia for page 5',
 		templateType: 'basic',
 		slideType: 'remediation'
-	},
-	{
-		slideTitle: 'Hazard Communication (HazCom)',
-		slideText: '<p>All Contractors must be trained in the specific hazards present at this facility.</p><p>A list of all hazardous chemicals used on site is present and available in the Maintenance Department.</p><p>Each chemical has its own Safety Data Sheet (SDS) describing all aspects of the chemical.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/31.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/31.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
 	},
 	{
 		slideTitle: 'Hazard Communication (HazCom)',
@@ -765,6 +768,8 @@ document.getElementById('user-name').innerHTML = user_name;
 function slides_work() {
 
 
+
+
 // This block is to accommodate next button gets disabled initially on iPhone
 if ( slides[ current_slide_num ].templateType === 'video' ) {
 	// disable next btn when no bookmarked pg or current slide num is smaller than bookmarked
@@ -773,8 +778,6 @@ if ( slides[ current_slide_num ].templateType === 'video' ) {
 		console.log('case disabled true');
 	}
 }
-
-
 
 
 

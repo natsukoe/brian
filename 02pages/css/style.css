@@ -33,8 +33,12 @@ body {
 	font-family: arial, sans-serif;
 	background: #e5e5e5;
 }
-ol, ul {
+#masterhead-inner ol, #masterhead-inner ul {
 	list-style: none;
+}
+#container li {
+	list-style: disc inside;
+	margin: 2px 0;
 }
 blockquote, q {
 	quotes: none;
@@ -64,6 +68,12 @@ h3 {
 	font-size: 1.2rem;
 	font-weight: bold;
 	margin: 0 0 10px;
+}
+#container i {
+	font-style: italic;
+}
+#container b {
+	font-weight: bold;
 }
 #masterhead {
 	background: #222;
