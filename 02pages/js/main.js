@@ -62,12 +62,12 @@ var slides = [
 		slideMediaAlt: 'Image of SlideMedia',
 		templateType: 'basic'
 	},
-
+/*
 	{
 		slideVideo: 'business1/firstMilkyWay.mp4',
 		templateType: 'video'
 	},
-
+*/
 	{
 		slideTitle: 'Introduction',
 		slideText: '<p>The policies and procedures set forth in this orientation establish our expectations for Contractor work behavior.</p><p>Failure to adhere to these expectations is considered a violation and will be dealt with accordingly.</p> <p>If you are unsure about anything, please ask your Carus Group representative.</p>',
