@@ -250,7 +250,8 @@ var slides = [
 		slideAudio: 'CarusGroup_Peru_Contractor_Course/15.mp3',
 		slideMedia: 'CarusGroup_Peru_Contractor_Course/15.jpg',
 		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'remediation'
+		templateType: 'basic',
+		slideType: 'remediation'
 	},
 	{
 		slideTitle: 'Fall Protection',
