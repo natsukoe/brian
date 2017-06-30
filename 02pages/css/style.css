@@ -38,7 +38,7 @@ body {
 }
 #slide-text li {
 	list-style: disc inside;
-	margin: 2px 0;
+	margin: 2px 10px;
 }
 blockquote, q {
 	quotes: none;
@@ -69,10 +69,10 @@ h3 {
 	font-weight: bold;
 	margin: 0 0 10px;
 }
-#slide-text i {
+#slide-text i, #question-q i, #question-multi i {
 	font-style: italic;
 }
-#slide-text b {
+#slide-text b, #question-q b, #question-multi b {
 	font-weight: bold;
 }
 #masterhead {
