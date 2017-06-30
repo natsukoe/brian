@@ -2,7 +2,7 @@
 
 var course_title = "Carus Group test";
 var sub_title = "Peru, Illinois";
-var header_color = "#b1273e"; //#b1273e
+var header_color = "#e3721b"; //#b1273e
 var header_txt_color = "#fff";
 var user_name = 'Admin';
 //var user_name = 'Curt';
@@ -768,8 +768,8 @@ document.getElementById('user-name').innerHTML = user_name;
 // Creating Course Contents
 function slides_work() {
 
-	// This block is to accommodate next button gets disabled initially on iPhone
-	if ( slides[ current_slide_num ].templateType === 'video' ) {
+	// This block is to accommodate next button on particularly video slide gets disabled initially on iPhone
+	if ( slides[ current_slide_num ].templateType === 'basic' && 'video' && 'remediation' ) {
 		// disable next btn when no bookmarked pg or current slide num is smaller than bookmarked
 		if ( current_slide_num >= bookmarked ) {
 			document.getElementById('pg-next').setAttribute('disabled', true);
