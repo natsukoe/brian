@@ -71,7 +71,7 @@ var slides = [
 		templateType: 'basic'
 	},
 	{
-		slideVideo: 'business1/firstMilkyWay.mp4',
+		slideVideo: 'MasterBrand/MasterBrand_Intro.mp4',
 		templateType: 'video'
 	},
 	{
