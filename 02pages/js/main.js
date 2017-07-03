@@ -436,7 +436,7 @@ document.getElementById('user-name').innerHTML = user_name;
 function slides_work() {
 
 	// This block is to accommodate next button particularly on video slide gets disabled initially on iPhone
-	if ( slides[ current_slide_num ].templateType === 'basic' && 'video' && 'remediation' ) {
+	if ( slides[ current_slide_num ].templateType === 'basic' || 'video' || 'remediation' ) {
 		// disable next btn when no bookmarked pg or current slide num is smaller than bookmarked
 		if ( current_slide_num >= bookmarked ) {
 			document.getElementById('pg-next').setAttribute('disabled', true);
