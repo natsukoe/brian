@@ -1,8 +1,8 @@
 'use strict';
 
-var course_title = "Carus Group test";
-var sub_title = "Peru, Illinois";
-var header_color = "#e3721b"; //#b1273e
+var course_title = "MasterBrand Cabinets, Inc. (MBCI)";
+var sub_title = "Jasper, Indiana";
+var header_color = "#e3dd1b"; //#b1273e
 var header_txt_color = "#fff";
 var user_name = 'Admin';
 //var user_name = 'Curt';
@@ -56,589 +56,256 @@ var q_4_span = document.querySelector('#q-4 span');
 var slides = [
 	{
 		slideTitle: 'Introduction',
-		slideText: '<p>Welcome to Carus Group\'s, Peru Illinois headquarters.</p><p>The employees with Carus are committed to maintaining a safe work environment. At our headquarters, safety is a condition of employment. We ask that you always look for safety hazards, be aware of your environment and be your brother\'s keeper.</p><p>SAFETY IS FIRST - NO EXCEPTIONS!!!</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/1.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/1.jpg',	
+		slideText: '<p>Welcome to the MasterBrand Cabinets Contractor Safety Orientation.  MasterBrand Cabinets, Inc. (MBCI) is the largest cabinet manufacturer in North America.</p><p>Headquartered in Jasper, Indiana, MBCI is also the largest division of Fortune Brands Home %26 Security.  Today, MBCI has over 11,000 employees with manufacturing and sales locations across the United States, Canada and Mexico.</p><p>MBCI\'s major brands include KitchenCraft, Diamond, Schrock, Kemper, Aristokraft, Kitchen Classics, Wood Crafters, Homecrest, Martha Stewart Living, Thomasville, Decora\', Omega, Mid-Continent, Ultra Craft, Star Mark, and Urban Effects.</p>',
+		slideAudio: 'MasterBrand/1.mp3',
+		slideMedia: 'MasterBrand/1.jpg',	
 		slideMediaAlt: 'Image of SlideMedia',
 		templateType: 'basic'
 	},
-/*
+	{
+		slideTitle: 'Introduction',
+		slideText: '<p>To set the stage for this training, our President, Dave Randich, would like to review our safety commitment.</p>',
+		slideAudio: 'MasterBrand/2.mp3',
+		slideMedia: 'MasterBrand/2.jpg',
+		slideMediaAlt: 'Image of SlideMedia',
+		templateType: 'basic'
+	},
 	{
 		slideVideo: 'business1/firstMilkyWay.mp4',
 		templateType: 'video'
 	},
-*/
 	{
 		slideTitle: 'Introduction',
-		slideText: '<p>The policies and procedures set forth in this orientation establish our expectations for Contractor work behavior.</p><p>Failure to adhere to these expectations is considered a violation and will be dealt with accordingly.</p> <p>If you are unsure about anything, please ask your Carus Group representative.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/2.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/2.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		slideTitle: 'Introduction',
-		slideText: '<p>This orientation does not replace the safety, health and environmental training you have received from your company and is not intended to be all-inclusive.</p><p>Contractors are responsible for their behavior and unsafe actions will not be tolerated!</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/3.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/3.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		slideTitle: 'General Information',
 		slideText: '<p>At the successful completion of this orientation you will be issued a Carus Group-approved Contractors ID badge.</p><p>You must have this card on your person, prominently displayed whenever you do work at our facility.</p><p>This Contractors ID badge is to be returned to Carus Group at the conclusion of you contracted tasks.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/4.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/4.jpg',
+		slideAudio: 'MasterBrand/4.mp3',
+		slideMedia: 'MasterBrand/4.jpg',
 		slideMediaAlt: 'Image of SlideMedia',
 		templateType: 'basic'
 	},
 	{
-		slideTitle: 'General Information',
-		slideText: '<p>The training you will receive today is valid for one year.</p><p>Failure to stay current with the safety certification requirements could result in the termination of your contract and cost your company future work with Carus Group.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/5.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/5.jpg',
+		slideTitle: 'Introduction',
+		slideText: '<p>Now that you\'ve listened to Mr. Randich\'s message, we\'d like to introduce you to MBCI\'s Contractor Safety Program, where you will learn about:<ul><li>The potential workplace hazards you may face at our facilities, and</li><li>The consequences for non-compliance with federal, national, regional, state and local regulations and MBCI company policy</li></ul></p><p>Throughout the training course, you will be tested on your comprehension of this information.  To progress through the course, you will need to correctly answer all questions.  In addition, there is a brief quiz at the end of the course that you are required to pass in order to complete the course. We anticipate a successful outcome.</p>',
+		slideAudio: 'MasterBrand/5.mp3',
+		slideMedia: 'MasterBrand/5.jpg',
 		slideMediaAlt: 'Image of SlideMedia',
 		templateType: 'basic'
 	},
 	{
-		slideTitle: 'General Information',
-		slideText: '<p>As a contract employee, park your personal vehicle in the main parking lot and enter (and exit) the facility through an authorized exit.  An authorized entrance/exit is one where the exit is equipped with a card reader.</p><p>You are required to "Badge in" when you enter the building and required to "Badge out" when you leave the building.</p><p>This will assure that you will be accounted for in the event of an emergency.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/6.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/6.jpg',
+		slideTitle: 'Introduction',
+		slideText: '<p>MBCI\'s mission is to provide the best overall kitchen and bath solutions for consumers and channel partners throughout North America.</p><p>To enable the achievement of this mission, employees embody the Four Basics (what we do) and the Five Traits of Success (how we accomplish the Four Basics).</p><p>MBCI\'s <b><i>Safety %26 Risk Management Policy</i></b> is to provide each person a safe, healthful and secure place in which to work.</p>',
+		slideAudio: 'MasterBrand/6.mp3',
+		slideMedia: 'MasterBrand/6.jpg',
 		slideMediaAlt: 'Image of SlideMedia',
 		templateType: 'basic'
 	},
 	{
-		quizQuestion: 'You are required to "Badge in" when you enter the building and "Badge out" when you leave the building for any reason.',
+		slideTitle: 'Introduction',
+		slideText: '<p>Our philosophy is to establish and maintain a World Class "Total Safety Culture" where:<ul><li>Safety and health is a core value</li><li>Injuries are preventable, predictable and unacceptable (our Zero Injury Culture)</li><li>Every reasonable effort is made to prevent injuries and preserve health</li><li>We all share responsibility for safety, health and security</li><li>Continuous improvement is expected, and where</li><li>Safety is viewed as a system of behavioral, technical and business components</li></ul></p>',
+		slideAudio: 'MasterBrand/7.mp3',
+		slideMedia: 'MasterBrand/7.jpg',
+		slideMediaAlt: 'Image of SlideMedia',
+		templateType: 'basic'
+	},
+	{
+		slideTitle: 'Introduction',
+		slideText: '<p>MBCI\'s success depends on how safely every job is performed.</p><p>No job is so important, nor any service so urgent that it should not be done safely.</p><p>Our ultimate goal is to not injure anyone.</p>',
+		slideAudio: 'MasterBrand/8.mp3',
+		slideMedia: 'MasterBrand/8.jpg',
+		slideMediaAlt: 'Image of SlideMedia',
+		templateType: 'basic'
+	},
+	{
+		slideTitle: 'Scope and Purpose',
+		slideText: '<p>The MBCI <b><i>Contractor Safety Program</i></b> and training requirements apply to all contractors, subcontractors, suppliers and vendors at any MBCI location who perform construction, maintenance, repair, renovation, or other specialty work.</p><p>The purpose of this training is to make you aware of the rules and regulations in place at MBCI, as well as the potential hazards you may face while working at any MBCI facility.</p><p>This training does <b>NOT</b> replace your health and safety training, and it is <b>NOT</b> intended to be all-inclusive.</p>',
+		slideAudio: 'MasterBrand/9.mp3',
+		slideMedia: 'MasterBrand/9.jpg',
+		slideMediaAlt: 'Image of SlideMedia',
+		templateType: 'basic'
+	},
+	{
+		slideTitle: 'Contractor Responsibilities',
+		slideText: '<p>Contractors are required to develop, implement, and manage their own written health and safety program.  MBCI may request a copy of any contractor\'s written plan.</p><p>Contractor health and safety programs shall provide for the safety of their employees as well as that of subcontractors, suppliers, vendors and others working in conjunction with the contractor.</p><p>The MBCI <b><i>Contractor Safety Policy</i></b> is supplementary to the health and safety programs of each contractor.  No liability is assumed by MBCI by reason of our policy.</p>',
+		slideAudio: 'MasterBrand/10.mp3',
+		slideMedia: 'MasterBrand/10.jpg',
+		slideMediaAlt: 'Image of SlideMedia',
+		templateType: 'basic'
+	},
+	{
+		slideTitle: 'Contractor Responsibilities',
+		slideText: '<p>While on site at any MBCI location, contractors must comply with all applicable national, federal, state, regional and local health and safety regulations and codes, as well as MBCI company policies.</p><p>MBCI company policies are available upon request.</p>',
+		slideAudio: 'MasterBrand/11.mp3',
+		slideMedia: 'MasterBrand/11.jpg',
+		slideMediaAlt: 'Image of SlideMedia',
+		templateType: 'basic'
+	},
+		{
+		quizQuestion: 'Contractor employees are responsible for compliance with all applicable governmental standards, practices, and policies, and the MBCI company policies.',
 		quizAnswer: 'True',
 		templateType: 'question'
 	},
 	{
-		slideTitle: 'General Information',
-		slideText: '<p>As a contract employee, park your personal vehicle in the main parking lot and enter (and exit) the facility through an authorized exit.  An authorized entrance/exit is one where the exit is equipped with a card reader.</p><p><font color="#FF0000">You are required to "Badge in" when you enter the building and required to "Badge out" when you leave the building.</font></p><p>This will assure that you will be accounted for in the event of an emergency.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/6.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/6.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic',
-		slideType: 'remediation'
-	},
-	{
-		slideTitle: 'General Information',
-		slideText: '<p>Please be advised that all posted signs (warning or otherwise) and audio warnings in use at our facility use the English language.</p><p>It is the Contractor\'s responsibility to ensure that all of its workers are fluent in reading and speaking English in order to provide the safest work environment possible.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/7.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/7.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		slideTitle: 'General Information',
-		slideText: '<p>You are expected to keep your work area clean at all times.</p><p>Tools, materials and equipment must be cleaned up at the end of each shift.  Under no circumstances should tools or equipment block access to safety or emergency equipment or exits.</p><p>Contracting firms are responsible for removing all waste materials, including materials that may be considered hazardous, consistent with the current regulations in force.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/8.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/8.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		slideTitle: 'General Information',
-		slideText: '<p>Chemicals must be approved by Carus prior to being brought on site.</p><p>Chemicals and contaminated materials may <b>not</b> be washed down the drain or placed into general waste receptacles unless authorized by the local site EHSS Department.</p><p>Please see your Carus Group representative to coordinate the proper disposal of these items.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/9.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/9.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		slideTitle: 'General Information',
-		slideText: '<p>Smoking is permitted only in approved areas outside of the Carus headquarters building; all areas within the building are designated "No Smoking.” </p><p>See your Carus Group representative for approved smoking areas if needed.  Smoking material must be disposed of in approved containers.</p>  <p>Food and beverage consumption is limited to authorized areas only and not in areas where a spill or a breakage would create a safety and/or health hazard.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/10.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/10.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		quizQuestion: 'Smoking is not permitted in the Peru Headquarters building.',
-		quizAnswer: 'True',
-		templateType: 'question'
-	},
-	{
-		slideTitle: 'General Information',
-		slideText: '<p><font color="#FF0000">Smoking is permitted only in approved areas outside of the Carus headquarters building; all areas within the building are designated "No Smoking."</font></p> <p>See your Carus Group representative for approved smoking areas if needed.  Smoking material must be disposed of in approved containers.</p><p>Food and beverage consumption is limited to authorized areas only and not in areas where a spill or a breakage would create a safety and/or health hazard.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/10.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/10.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic',
-		slideType: 'remediation'
-	},
-	{
-		slideTitle: 'General Information',
-		slideText: '<p>Cameras are not allowed on facility grounds without written permission from a Carus Group representative.</p><p>The possession or use of firearms, ammunition, explosives, alcoholic beverages or illegal drugs is strictly prohibited.</p> <p>Concealed deadly weapons are also strictly prohibited.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/11.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/11.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		slideTitle: 'General Information',
-		slideText: '<p>All injuries, no matter how minor, <b>must</b> be reported to your Carus Group representative immediately.</p><p>An accident report is to be filled out for each incident.</p><p>Your Carus Group representative, or member of management, must be notified immediately when an ambulance or other vehicle is called to assist in an emergency.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/12.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/12.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		quizQuestion: 'All injuries, no matter how minor, must be reported to your Carus Group representative _____.',
-		quizChoice: [ 'Immediately', 'By the end of the work week', 'By the end of the day', 'When you get an opportunity' ],
-		quizAnswer: [ 1 ],
-		templateType: 'question'
-	},
-	{
-		slideTitle: 'General Information',
-		slideText: '<p><font color="#FF0000">All injuries, no matter how minor, <b>must</b> be reported to your Carus Group representative immediately.</font></p><p>An accident report is to be filled out for each incident.</p><p>Your Carus Group representative, or member of management, must be notified immediately when an ambulance or other vehicle is called to assist in an emergency.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/12.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/12.jpg',
+		slideTitle: 'Contractor Responsibilities',
+		slideText: '<p><font color="#FF0000">While on site at any MBCI location, contractors must comply with all applicable national, federal, state, regional and local health and safety regulations and codes, as well as MBCI company policies.</font></p><p>MBCI company policies are available upon request.</p>',
+		slideAudio: 'MasterBrand/11.mp3',
+		slideMedia: 'MasterBrand/11.jpg',
 		slideMediaAlt: 'Image of SlideMedia for page 5',
 		templateType: 'basic',
 		slideType: 'remediation'
 	},
 	{
-		slideTitle: 'General Information',
-		slideText: '<p>You must report any safety hazards or conditions or near-miss incidents to your supervisor as well as your Carus Group representative.</p>  <p>It is Carus Group\'s requirement that any employee or contractor who observes unsafe work practices request that the work STOP immediately, and notify their Carus Group supervisor or contact.</p><p>Safety is everyone\'s responsibility.  Keep your eyes and mind on your task while on site, and ask questions if there is any doubt.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/13.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/13.jpg',
+		slideTitle: 'Contractor Responsibilities',
+		slideText: '<p>Contractors are responsible for providing their employees with all training related to applicable national, federal, state, regional and local health and safety regulations and codes that apply to their activities and the products and services they provide to MBCI.</p><p>MBCI may request copies of contractor training documentation.</p><p>Contractors are responsible for having all required licenses, permits and certifications necessary to fulfill the contract in compliance with all applicable laws and regulations.</p>',
+		slideAudio: 'MasterBrand/12.mp3',
+		slideMedia: 'MasterBrand/12.jpg',
 		slideMediaAlt: 'Image of SlideMedia',
 		templateType: 'basic'
 	},
 	{
-		quizQuestion: 'Carus Group employee is observed to be violating established work procedures.  You should:',
-		quizChoice: [ 'Request that the work stop, and notify a supervisor', 'Not worry about it as it is not your problem', 'Walk away and look for a supervisor to intervene', 'Take good notes so that it can be discussed at the next safety meeting' ],
+		quizQuestion: 'Who is responsible to provide you with all training related to applicable national, federal, state, regional and local health and safety regulations and codes?',
+		quizChoice: [ 'Your company', 'Gatefeed', 'MBCI', 'OSHA' ],
 		quizAnswer: [ 1 ],
 		templateType: 'question'
 	},
 	{
-		slideTitle: 'General Information',
-		slideText: '<p>You must report any safety hazards or conditions or near-miss incidents to your supervisor as well as your Carus Group representative.</p><p><font color="#FF0000">It is Carus Group\'s requirement that any employee or contractor who observes unsafe work practices request that the work STOP immediately, and notify their Carus Group supervisor or contact.</font></p><p>Safety is everyone\'s responsibility.  Keep your eyes and mind on your task while on site, and ask questions if there is any doubt.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/13.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/13.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
+		slideTitle: 'Contractor Responsibilities',
+		slideText: '<p><font color="#FF0000">Contractors are responsible for providing their employees with all training related to applicable national, federal, state, regional and local health and safety regulations and codes that apply to their activities and the products and services they provide to MBCI.</font>  MBCI may request copies of contractor training documentation.</p><p>Contractors are responsible for having all required licenses, permits and certifications necessary to fulfill the contract in compliance with all applicable laws and regulations.</p>',
+		slideAudio: 'MasterBrand/12.mp3',
+		slideMedia: 'MasterBrand/12.jpg',
+		slideMediaAlt: 'Image of SlideMedia for page 5',
 		templateType: 'basic',
 		slideType: 'remediation'
 	},
 	{
-		slideTitle: 'Personal Protective Equipment (PPE)',
-		slideText: '<p>Contractors performing work at the Carus Group headquarters are expected to arrive for their job “Fit for Duty,” including having all appropriate PPE for the contracted job.</p><p>Examples include: safety glasses, gloves fit for the task, appropriate footwear, hearing protection, and specialized PPE such as burning goggles, and respirators, etc.</p><p>Failure to wear the required PPE will result in action on the part of Carus up to expulsion from the site.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/14.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/14.jpg',
+		slideTitle: 'Contractor Responsibilities',
+		slideText: '<p>Each contractor is responsible for designating an onsite Contractor Safety Representative (CSR), whose responsibilities will include:<ul><li>Enforcing and correcting all safety deficiencies in a timely manner</li><li>Enforcing compliance with the requirements of the MBCI <b><i>Contractor Safety Policy</i></b></li><li>Enforcing compliance with all other applicable governmental standards, practices and policies</li><li>Being physically present at the worksite at all times, and</li><li>Advancing personnel safety and the prevention of injuries</li></ul></p>',
+		slideAudio: 'MasterBrand/13.mp3',
+		slideMedia: 'MasterBrand/13.jpg',
 		slideMediaAlt: 'Image of SlideMedia',
 		templateType: 'basic'
 	},
 	{
-		slideTitle: 'Fall Protection',
-		slideText: '<p>Contractors must provide their own personal fall protection equipment.</p>  <p>Personal fall protection equipment (as required by OSHA) is required when working at heights over <b>4 feet</b> or where temporary or permanent fall protection is not in place.   At a minimum, a full body harness with shock absorbing lanyard is required.</p><p>Contractors must provide fall protection barricades, covers, or rails, etc. to protect any openings, pits or holes that have resulted from their work.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/15.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/15.jpg',
+		slideTitle: 'Contractor Responsibilities',
+		slideText: '<p>The CSR shall be a "competent person", which is defined as one who is:<ul><li>Capable of identifying existing and predictable hazards in the surroundings or working conditions which are unsanitary, hazardous or dangerous to employees, and</li><li>Authorized to take prompt corrective measures to eliminate these types of hazards and working conditions</li></ul></p>',
+		slideAudio: 'MasterBrand/14.mp3',
+		slideMedia: 'MasterBrand/14.jpg',
 		slideMediaAlt: 'Image of SlideMedia',
 		templateType: 'basic'
 	},
 	{
-		quizQuestion: 'Personal fall protection equipment is required when working at heights over _____ feet.',
-		quizChoice: [ '4', '6', '8', '10' ],
-		quizAnswer: [ 1 ],
-		templateType: 'question'
-	},
-	{
-		slideTitle: 'Fall Protection',
-		slideText: '<p>Contractors must provide their own personal fall protection equipment.</p><p><font color="#FF0000">Personal fall protection equipment (as required by OSHA) is required when working at heights over <b>4 feet</b> or where temporary or permanent fall protection is not in place.</font>   At a minimum, a full body harness with shock absorbing lanyard is required.</p><p>Contractors must provide fall protection barricades, covers, or rails, etc. to protect any openings, pits or holes that have resulted from their work.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/15.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/15.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic',
-		slideType: 'remediation'
-	},
-	{
-		slideTitle: 'Fall Protection',
-		slideText: '<p>Examples of conditions where personal fall protection will be required include work performed on:</p><p><ul><li>Manlifts or personnel lifts of any type (in this situation, the fall protection equipment must be secured to approved anchor points on the lift)</li><li>Sloping roofs</li><li>Any suspended platform or stage</li><li>Flat roofs without handrails or parapets within 8 feet of the edge or opening</li></ul></p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/16.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/16.jpg',
+		slideTitle: 'Contractor Responsibilities',
+		slideText: '<p><font color="#86381A"><b>Additional Contractor Responsibilities</b></font></p><p>Contractors are required to <b>take immediate action on safety concerns</b>.  Failure to do so may constitute a breach of contract by a contractor and result in termination of the contract.</p><p>Specifically, each contractor has agreed in their contract to "provide and maintain the necessary precautions and safeguards for the safety of all persons on the site."</p><p>A contractor\'s response to safety concerns will, at a minimum, be taken into consideration in the awarding of future contracts.</p>',
+		slideAudio: 'MasterBrand/15.mp3',
+		slideMedia: 'MasterBrand/15.jpg',
 		slideMediaAlt: 'Image of SlideMedia',
 		templateType: 'basic'
 	},
 	{
-		slideTitle: 'Fall Protection',
-		slideText: '<p>Examples of conditions where personal fall protection will be required include work performed on:</p><p><ul><li>Elevated positions without permanent fall protection</li><li>Any scaffold with incomplete handrails or decking, or</li><li>Any scaffold during assembly</li></ul></p><p>Please note: all tie-off points must be capable of withstanding 5000 pounds of force per employee.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/17.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/17.jpg',
+		slideTitle: 'Contractor Responsibilities',
+		slideText: '<p><font color="#86381A"><b>Additional Contractor Responsibilities</b></font></p><p>MBCI retains the right to call a job shut-down to correct or abate any observed safety hazard or to terminate a contractor\'s work if imminent danger exists or if the contractor fails to take prompt and appropriate action to correct or abate any safety hazard.</p><p>When contacting MBCI EHS personnel for workplace safety concerns, the first and second points of contact are MBCI site EHS personnel, and MBCI corporate EHS personnel.</p>',
+		slideAudio: 'MasterBrand/16.mp3',
+		slideMedia: 'MasterBrand/16.jpg',
 		slideMediaAlt: 'Image of SlideMedia',
 		templateType: 'basic'
 	},
 	{
-		slideTitle: 'Fall Protection',
-		slideText: '<p>The Contractor must furnish all tools and equipment.  They must be in good condition and used in a safe manner.</p><p>All tools and equipment, including extension cords, must be inspected prior to use; defective tools or equipment may not be used and must be removed from the site.</p><p>Contract employees will not be permitted to use Carus Group tools or equipment unless authorized by their Carus Group representative.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/18.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/18.jpg',
+		slideTitle: 'Contractor Responsibilities',
+		slideText: '<p><font color="#86381A"><b>Additional Contractor Responsibilities</b></font></p><p>The contractor is also responsible for advising and notifying MBCI site EHS personnel of any unique hazards presented by the contractor\'s work, or of any hazards found or discovered during the course of work.</p>',
+		slideAudio: 'MasterBrand/17.mp3',
+		slideMedia: 'MasterBrand/17.jpg',
 		slideMediaAlt: 'Image of SlideMedia',
 		templateType: 'basic'
 	},
 	{
-		slideTitle: 'Tools and Equipment',
-		slideText: '<p>Ground Fault Circuit Interrupters (GFCIs) must be used on all electric tools, extension cords, and portable electric equipment.</p><p>They must be in good condition and used in a safe manner.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/19.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/19.jpg',
+		slideTitle: 'Personal Conduct',
+		slideText: '<p><font color="#86381A"><b>Substance Abuse</b></font></p><p>MBCI has a <b><i>Drug Free Workplace and Substance Abuse Policy</i></b> designed to establish and maintain a work environment free from the effects of drugs and alcohol.</p><p>In our policy, employees are required to report to work free of the effects of alcohol, drugs and the misuse of medication; and the distribution, possession, sale, transfer and use of drugs or alcohol in the workplace is prohibited.</p><p>Contractors are responsible for compliance with this policy.</p>',
+		slideAudio: 'MasterBrand/18.mp3',
+		slideMedia: 'MasterBrand/18.jpg',
 		slideMediaAlt: 'Image of SlideMedia',
 		templateType: 'basic'
 	},
 	{
-		slideTitle: 'Ladders',
-		slideText: '<p>Carus Group insists on the use of fiberglass ladders; wood or metal ladders are prohibited.  All ladders should be inspected prior to use.</p><p>You are required to follow all rules and regulations for the safe use of ladders.  Do not overload ladders.  Always maintain 3 points of contact when using a ladder.</p><p>Use ladders for their intended purpose only.  Under no circumstance should a chair, other furniture, drums or pails be used as a ladder.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/20.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/20.jpg',
+		slideTitle: 'Personal Conduct',
+		slideText: '<p><font color="#86381A"><b>Workplace Harassment and Retaliation</b></font>MBCI has a policy on <b><i>Equal Opportunity Employment, Workplace Harassment and Retaliation</i></b> designed to establish and maintain a work environment free of discrimination, harassment and retaliation.</p><p>Employees are not to be subjected to sexual harassment or discrimination on the basis of race, color, gender, religion, national origin, age, disability, veteran status, citizenship or any other legally protected status.</p><p>Contractors are responsible for compliance with this policy; non-compliance with this policy is a violation of both company policy and the law.</p>',
+		slideAudio: 'MasterBrand/19.mp3',
+		slideMedia: 'MasterBrand/19.jpg',
 		slideMediaAlt: 'Image of SlideMedia',
 		templateType: 'basic'
 	},
 	{
-		quizQuestion: 'Carus Group insists on the use of metal ladders on site.',
-		quizAnswer: 'False',
-		templateType: 'question'
-	},
-	{
-		slideTitle: 'Ladders',
-		slideText: '<p><font color="#FF0000">Carus Group insists on the use of fiberglass ladders; wood or metal ladders are prohibited.</font>  All ladders should be inspected prior to use.</p><p>You are required to follow all rules and regulations for the safe use of ladders.  Do not overload ladders.  Always maintain 3 points of contact when using a ladder.</p><p>Use ladders for their intended purpose only.  Under no circumstance should a chair, other furniture, drums or pails be used as a ladder.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/20.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/20.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic',
-		slideType: 'remediation'
-	},
-	{
-		slideTitle: 'Ladders',
-		slideText: '<p>All straight and extension ladders must be adequately tied-off or held securely in place with spreaders locked in place.  Follow the "4 to 1" rule when using a straight ladder or extension ladder.</p><p>Stepladders must be fully opened and set level on all four feet with spreaders locked in place.  Never use a stepladder as a straight ladder.</p><p>No materials or tools should be placed on steps or the platform.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/21.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/21.jpg',
+		slideTitle: 'Personal Conduct',
+		slideText: '<p><font color="#86381A"><b>Solicitation and Distribution</b></font><p><p>MBCI has a policy prohibiting the solicitation and distribution of literature, designed to establish:<ul><li>Limitations on efforts to solicit employees at work, and</li><li>Guidelines for the distribution of literature</li></ul></p><p>The solicitation of employees and the distribution of literature during working times are prohibited.  Contractors are responsible for compliance with this policy.</p>',
+		slideAudio: 'MasterBrand/20.mp3',
+		slideMedia: 'MasterBrand/20.jpg',
 		slideMediaAlt: 'Image of SlideMedia',
 		templateType: 'basic'
 	},
 	{
-		slideTitle: 'Scaffolding',
-		slideText: '<p>All scaffolds must be erected level and plumb, on a firm base, and meet applicable OSHA Standards.  They must be rated to handle five times the working load.</p><p>Always inspect scaffolding before working from it to insure that:</p><p><ul><li>Handrails, midrails, toeboards, and decking are in place</li><li>All wheels are locked, if it is a moveable scaffold, and that</li><li>Locking pins are in place at each joint</li></ul></p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/22.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/22.jpg',
+		slideTitle: 'Personal Conduct',
+		slideText: '<p>Other Personal Conduct rules include:</p><p><ul><li>Horseplay: reckless conduct and behavior is strictly prohibited</li><li>Weapons: the possession of any weapon in violation of state or local regulations is prohibited on MBCI property, and</li><li>Smoking: smoking is not allowed, except in designated smoking areas; such areas will be communicated during pre-job reviews</li></ul></p><p>Non-compliance with MBCI personal conduct rules is a serious offense and can lead to dismissal from the worksite.</p>',
+		slideAudio: 'MasterBrand/21.mp3',
+		slideMedia: 'MasterBrand/21.jpg',
 		slideMediaAlt: 'Image of SlideMedia',
 		templateType: 'basic'
 	},
 	{
-		slideTitle: 'Barricades',
-		slideText: '<p>Barricades or covers are required around excavations, holes, or openings in floors, roofs and elevated platforms.</p><p>They must also be used for overhead work, underground work, in areas where it is necessary to warn or protect people of potential hazards, or to separate the construction area.</p><p>Barricades must be about 42 inches high, neat, level, and constantly maintained.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/23.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/23.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		quizQuestion: 'Which of the following statements regarding barricades at this facility are true?',
-		quizChoice: [ 'Barricades must be about 42 inches high, neat, level and constantly maintained', 'Barricades are required around excavations, holes or openings in floors, roofs and elevated platforms', 'Barricades must be used wherever necessary to warn or protect people of potential hazards', 'All of the above' ],
+		quizQuestion: 'Which of the following personal conduct behaviors is not permissible on MBCI property?',
+		quizChoice: [ 'Horseplay', 'Smoking in other than designated areas', 'Weapons possession in violation of state or local regulation', 'All of the above' ],
 		quizAnswer: [ 4 ],
 		templateType: 'question'
 	},
 	{
-		slideTitle: 'Barricades',
-		slideText: '<p><font color="#FF0000">Barricades or covers are required around excavations, holes, or openings in floors, roofs and elevated platforms.</p><p>They must also be used for overhead work, underground work, in areas where it is necessary to warn or protect people of potential hazards, or to separate the construction area.</p><p>Barricades must be about 42 inches high, neat, level, and constantly maintained.</font></p> ',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/23.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/23.jpg',
+		slideTitle: 'Personal Conduct',
+		slideText: '<p>Other Personal Conduct rules include:</p><ul><li><font color="#FF0000">Horseplay: reckless conduct and behavior is strictly prohibited</font></li><li><font color="#FF0000">Weapons: the possession of any weapon in violation of state or local regulations is prohibited on MBCI property, and</font></li><li><font color="#FF0000">Smoking: smoking is not allowed, except in designated smoking areas; such areas will be communicated during pre-job reviews</font></li></ul></p><p>Non-compliance with MBCI personal conduct rules is a serious offense and can lead to dismissal from the worksite.</p>',
+		slideAudio: 'MasterBrand/21.mp3',
+		slideMedia: 'MasterBrand/21.jpg',
 		slideMediaAlt: 'Image of SlideMedia for page 5',
 		templateType: 'basic',
 		slideType: 'remediation'
 	},
 	{
-		slideTitle: 'Utilities',
-		slideText: '<p>Your Carus Group representative must be notified before attaching any hose or other equipment to any site utility, such as steam, water, or air, etc.</p><p>At no time, should you hook any hose or other equipment to the potable (city) water line without the permission of your Carus Group representative.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/24.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/24.jpg',
+		slideTitle: 'Plant Rules and Information',
+		slideText: '<p><font color="#86381A"><b>Driving and Parking</b></font></p><p>Contractors are to park in designated areas only, and not in MBCI employee parking areas unless authorized by MBCI site EHS personnel.</p><p>All contractor employees driving a vehicle on MBCI property must have a valid driver\'s license.</p><p>Unless otherwise posted, the maximum speed limit in MBCI parking lots is <b>5 mph</b>; the maximum speed limit inside any part of an MBCI building is <b>3 mph</b>.</p>',
+		slideAudio: 'MasterBrand/22.mp3',
+		slideMedia: 'MasterBrand/22.jpg',
 		slideMediaAlt: 'Image of SlideMedia',
 		templateType: 'basic'
 	},
 	{
-		slideTitle: 'Confined Space Entry',
-		slideText: '<p>A <b><i>Confined Space Entry Permit</i></b> is required for any job that involves entering a confined space such as a vessel, tank, or other space where the atmospheric conditions must be monitored prior to and during occupancy.</p><p>A <b><i>Confined Space Entry Permit</i></b> is required for all confined space entry.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/25.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/25.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		quizQuestion: 'A _____ is required for any job that involves entering a confined space such as a vessel or a tank.',
-		quizChoice: [ '<b><i>Confined Space Entry Permit</i></b>', '<b><i>Lockout/Tagout Permt</i></b>', '<b><i>Line Breaking Permit</i></b>', '<b><i>Hot Work Permit</i></b>' ],
-		quizAnswer: [ 1 ],
+		quizQuestion: 'Which of the following statements regarding MBCI driving and parking rules is true?',
+		quizChoice: [ 'Contractors will park in designated areas only and not in MBCI employee parking', 'All contractor employees driving a vehicle on MBCI property must have a valid driver\'s license', 'The maximum speed limit in MBCI parking lots is 5 mph, unless otherwise posted', 'All of the above' ],
+		quizAnswer: [ 4 ],
 		templateType: 'question'
 	},
 	{
-		slideTitle: 'Confined Space Entry',
-		slideText: '<p><font color="#FF0000">A <b><i>Confined Space Entry Permit</i></b> is required for any job that involves entering a confined space such as a vessel, tank, or other space where the atmospheric conditions must be monitored prior to and during occupancy.</font></p><p>A <b><i>Confined Space Entry Permit</i></b> is required for all confined space entry.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/25.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/25.jpg',
+		slideTitle: 'Plant Rules and Information',
+		slideText: '<p><font color="#86381A"><b>Driving and Parking</b></font></p><p><font color="#FF0000">Contractors are to park in designated areas only, and not in MBCI employee parking areas unless authorized by MBCI site EHS personnel.</p><p>All contractor employees driving a vehicle on MBCI property must have a valid driver\'s license.</p><p>Unless otherwise posted, the maximum speed limit in MBCI parking lots is <b>5 mph</b>; the maximum speed limit inside any part of an MBCI building is <b>3 mph</b>.</font></p>',
+		slideAudio: 'MasterBrand/22.mp3',
+		slideMedia: 'MasterBrand/22.jpg',
 		slideMediaAlt: 'Image of SlideMedia for page 5',
 		templateType: 'basic',
 		slideType: 'remediation'
 	},
 	{
-		slideTitle: 'Confined Space Entry',
-		slideText: '<p>Your Carus Group representative (or a qualified designee) will indicate when the scope of work requires entry into a confined space and will issue this permit.</p><p>Properly display the <b><i>Confined Space Entry Permit</i></b> at the entrance to the confined space.</p><p>A Carus Group representative will review any specific procedures for a particular confined space to be entered.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/26.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/26.jpg',
+		slideTitle: 'Plant Rules and Information',
+		slideText: '<p><font color="#86381A"><b>Driving and Parking</b></font></p><p>Contractor vehicles <b>may not be parked</b> in MBCI buildings.  Subject to prior approval from MBCI site EHS personnel only, contractor vehicles may only be driven into MBCI buildings to pick up or drop off supplies or equipment.</p><p>Contractors are to avoid operating any vehicle during shift change or break time.</p><p>If left unattended, contractor vehicles must be shut off with the emergency brake set.</p>',
+		slideAudio: 'MasterBrand/23.mp3',
+		slideMedia: 'MasterBrand/23.jpg',
 		slideMediaAlt: 'Image of SlideMedia',
 		templateType: 'basic'
 	},
 	{
-		slideTitle: 'Lockout/Tagout',
-		slideText: '<p>Carus Group maintains a strict lockout/tagout policy.  This practice applies to electrical, pneumatic and hydraulic equipment as well as piping systems.</p><p>Many pre-established written procedures are available and will be followed for most common lockout situations.</p><p>If a pre-established written procedure is not available, one may be developed for the lockout.</p> ',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/27.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/27.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		slideTitle: 'Lockout/Tagout',
-		slideText: '<p>During a lockout at this facility, a Carus Group employee will be responsible for placing locks on all energy sources along with the contracting employee.</p><p>There will always be at a minimum two locks required, one for the contractor and one for the Carus Group employee.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/28.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/28.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		slideTitle: 'Lockout/Tagout',
-		slideText: '<p>Contractors are encouraged to bring their own locks.  Contractor locks must be installed on the equipment before work is initiated.  In the absence of specific contracting company locks, maintenance locks can be obtained and coordinated through Maintenance.</p><p>Contractor locks must include the name of the company on the lock (and the craft for multi-craft companies).</p><p>Only a contractor company representative can remove a contractor lock.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/29.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/29.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		slideTitle: 'Lockout/Tagout',
-		slideText: '<p>Only the person who attaches their lock to a piece of equipment may remove it; you are not permitted to remove someone else\'s lock or tag.</p><p>Should a lock need to be cut, only an authorized contractor employee, in coordination with the building Maintenance Department, can have the lock removed.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/30.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/30.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		quizQuestion: 'Who may remove a lock placed for lockout/tagout of a piece of equipment?',
-		quizChoice: [ 'Only the person who attached the lock', 'Anyone', 'Any Carus employee', 'Any Supervisor' ],
-		quizAnswer: [ 1 ],
-		templateType: 'question'
-	},
-	{
-		slideTitle: 'Lockout/Tagout',
-		slideText: '<p><font color="#FF0000">Only the person who attaches their lock to a piece of equipment may remove it; you are not permitted to remove someone else\'s lock or tag.</font></p><p>Should a lock need to be cut, only an authorized contractor employee, in coordination with the building Maintenance Department, can have the lock removed.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/30.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/30.jpg',
-		slideMediaAlt: 'Image of SlideMedia for page 5',
-		templateType: 'basic',
-		slideType: 'remediation'
-	},
-	{
-		slideTitle: 'Hazard Communication (HazCom)',
-		slideText: '<p>All Contractors must be trained in the specific hazards present at this facility.</p><p>A list of all hazardous chemicals used on site is present and available in the Maintenance Department.</p><p>Each chemical has its own Safety Data Sheet (SDS) describing all aspects of the chemical.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/31.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/31.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		quizQuestion: 'All SDSs are kept where?',
-		quizChoice: [ 'Maintenance Department', 'CEO\'s office', 'EHSS Department', 'Receptionist' ],
-		quizAnswer: [ 1 ],
-		templateType: 'question'
-	},
-	{
-		slideTitle: 'Hazard Communication (HazCom)',
-		slideText: '<p>All Contractors must be trained in the specific hazards present at this facility.</p><p><font color="#FF0000">A list of all hazardous chemicals used on site is present and available in the Maintenance Department. </font></p><p>Each chemical has its own Safety Data Sheet (SDS) describing all aspects of the chemical.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/31.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/31.jpg',
-		slideMediaAlt: 'Image of SlideMedia for page 5',
-		templateType: 'basic',
-		slideType: 'remediation'
-	},
-	{
-		slideTitle: 'Hazard Communication (HazCom)',
-		slideText: '<p>HazCom requires that all containers of hazardous chemicals entering or leaving the plant be properly labeled.</p><p>These labels must include: the identity of the chemical, the appropriate hazard warnings, and the name and address of the manufacturer or importer of the chemical.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/32.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/32.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		slideTitle: 'Hazard Communication (HazCom)',
-		slideText: '<p>All chemicals brought on site must be pre-approved by the EHSS Department and your Carus Group representative.</p><p>An SDS for each chemical must be on site prior to the arrival of the chemical.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/33.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/33.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		quizQuestion: 'All chemicals brought on site must be pre-approved by EHSS and your Carus Group representative, and _____ must be on site prior to the arrival of the chemical.',
-		quizChoice: [ 'An SDS', 'An original container', 'A Bill of Lading', 'A label' ],
-		quizAnswer: [ 1 ],
-		templateType: 'question'
-	},
-	{
-		slideTitle: 'Hazard Communication (HazCom)',
-		slideText: '<p><font color="#FF0000">All chemicals brought on site must be pre-approved by the EHSS Department and your Carus Group representative.</p><p>An SDS for each chemical must be on site prior to the arrival of the chemical.</font></p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/33.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/33.jpg',
-		slideMediaAlt: 'Image of SlideMedia for page 5',
-		templateType: 'basic',
-		slideType: 'remediation'
-	},
-	{
-		slideTitle: 'Hazard Communication (HazCom)',
-		slideText: '<p>Asbestos is a mineral made up of microscopic fibers.</p><p>Asbestos consisting of fibers that become airborne when disturbed is considered "friable" and can present a breathing hazard.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/34.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/34.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		slideTitle: 'Hazard Communication (HazCom)',
-		slideText: '<p>Old asbestos insulating material exists in isolated areas of the building, away from any normal day-to-day activity.  It has been encapsulated in such a way as to prevent any potential exposure.</p><p>Any and all operations that require work on piping must be coordinated with the Maintenance Department to ensure that the asbestos is not disturbed.</p><p>Only trained and licensed contractors can handle asbestos.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/35.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/35.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		quizQuestion: 'Asbestos, which is present in some areas of the building, may only be handled by trained and licensed contractors.',
-		quizAnswer: 'False',
-		templateType: 'question'
-	},
-	{
-		slideTitle: 'Hazard Communication (HazCom)',
-		slideText: '<p><font color="#FF0000">Old asbestos insulating material exists in isolated areas of the building, away from any normal day-to-day activity.</font>  It has been encapsulated in such a way as to prevent any potential exposure.</p><p>Any and all operations that require work on piping must be coordinated with the Maintenance Department to ensure that the asbestos is not disturbed.</p><p><font color="#FF0000">Only trained and licensed contractors can handle asbestos.</font></p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/35.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/35.jpg',
-		slideMediaAlt: 'Image of SlideMedia for page 5',
-		templateType: 'basic',
-		slideType: 'remediation'
-	},
-	{
-		slideTitle: 'Hot Work',
-		slideText: '<p>You must obtain a Carus <b><i>Hot Work Permit</i></b> prior to starting any welding jobs.</p><p>Appropriate fire extinguishers and a 30-minute fire watch must also be provided for all hot work.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/36.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/36.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		slideTitle: 'Hot Work',
-		slideText: '<p>Contractors must provide approved welding blinds made of a fire resistant material when welding.</p><p>These blinds must be placed so as to shield all passersby from exposure to welding flash.</p><p>Welding blinds must also protect the immediate environment of people and facilities from welding slag, sparks, and flying particles from grinding or chipping.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/37.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/37.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		slideTitle: 'Emergency Response',
-		slideText: '<p>It is important that you know how to act during an emergency while working here at the Carus Group\'s Peru facility.</p><p>You should be familiar with the location of all emergency equipment, evacuation routes, and assembly areas before you begin your job.</p><p>Your Carus Group contact can help you with this important information.  If you do not know, ask!</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/38.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/38.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		slideTitle: 'Emergency Response',
-		slideText: '<p>If you need to report a life-threatening emergency, you are required to notify your Carus Group representative and pick up the nearest phone and dial <b>8-911</b>.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/39.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/39.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		quizQuestion: 'If you need to report a life-threatening emergency, pick up the nearest phone and dial _____.',
-		quizChoice: [ '8-911', '711', '6060', '311' ],
-		quizAnswer: [ 1 ],
-		templateType: 'question'
-	},
-	{
-		slideTitle: 'Emergency Response',
-		slideText: '<p><font color="#FF0000">If you need to report a life-threatening emergency, you are required to notify your Carus Group representative and pick up the nearest phone and dial <b>8-911</b>.</font></p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/39.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/39.jpg',
-		slideMediaAlt: 'Image of SlideMedia for page 5',
-		templateType: 'basic',
-		slideType: 'remediation'
-	},
-	{
-		slideTitle: 'Emergency Response',
-		slideText: '<p>All contractors are required to immediately evacuate the site to the designated muster point when the evacuation alarm sounds.</p><p>Specific training for Headquarter-related evacuations and emergency response will be provided by the appropriate Carus Group representative prior to any work being performed on site.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/40.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/40.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		slideTitle: 'Emergency Response',
-		slideText: '<p>First aid cabinets are located within the building.</p><p>Carus Group is not responsible for first aid treatment for contractors.</p><p>All injuries, however, should be reported to the appropriate Carus Group personnel.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/41.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/41.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		slideTitle: 'Emergency Response',
-		slideText: '<p>If an emergency (such as a serious injury, fire, or health, safety or security issue) requires immediate assistance or response, the appropriate Carus Group personnel must be notified.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/42.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/42.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		slideTitle: 'Emergency Response',
-		slideText: '<p>If an emergency alarm is activated you are required to do the following:</p><p><ul><li>Shut down all tools and equipment</li><li>Follow all instructions given by Carus Group personnel and consistent with the evacuation training received</li><li>Walk immediately to the \"muster area,\" and</li><li>Remain in the muster area for further instructions</li></ul></p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/43.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/43.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		quizQuestion: 'Which of the following should you NOT do if an emergency alarm is activated?',
-		quizChoice: [ 'Finish whatever you are doing and then evacuate', 'Shut down all tools and equipment', 'Follow all instructions you were provided during training', 'Walk immediately to the “muster area' ],
-		quizAnswer: [ 1 ],
-		templateType: 'question'
-	},
-	{
-		slideTitle: 'Emergency Response',
-		slideText: '<p><font color="#FF0000">If an emergency alarm is activated you are required to do the following:</font></p><p><ul><li><font color="#FF0000">Shut down all tools and equipment</font></li><li><font color="#FF0000">Follow all instructions given by Carus Group personnel and consistent with the evacuation training received</font></li><li><font color="#FF0000">Walk immediately to the "muster area,"</font> and</li><li>Remain in the muster area for further instructions</li></ul></p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/43.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/43.jpg',
-		slideMediaAlt: 'Image of SlideMedia for page 5',
-		templateType: 'basic',
-		slideType: 'remediation'
-	},
-	{
-		slideTitle: 'Emergency Response',
-		slideText: '<p>Building maps displaying evacuation routes, fire extinguisher locations, and assembly areas are located throughout this facility.</p><p>You should familiarize yourself with all possible evacuation routes from your work area as well as the nearest assembly areas.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/44.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/44.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		slideTitle: 'Emergency Response',
-		slideText: '<p>Be sure to ask your Carus Group representative if you are unsure about evacuation routes or muster area locations.</p><p>It is important that you report to the muster area in case of an evacuation.</p><p>Do not leave the muster area until you have been accounted for.</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/45.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/45.jpg',
-		slideMediaAlt: 'Image of SlideMedia',
-		templateType: 'basic'
-	},
-	{
-		slideTitle: 'Emergency Response',
-		slideText: '<p>Fire alarms, hydrants, fire extinguishers and exits are plainly marked and must be kept clear of all obstructions.</p> ',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/46.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/46.jpg',
+		slideTitle: 'Plant Rules and Information',
+		slideText: '<p><font color="#86381A"><b>Driving and Parking</b></font></p><p>Fuel tank valves must be closed when parking contractor propane vehicles for extended time periods.  Forks must be lowered to the ground when fork trucks are left unattended.</p><p>Contractor gasoline powered lift trucks are prohibited within MBCI buildings.</p>',
+		slideAudio: 'MasterBrand/24.mp3',
+		slideMedia: 'MasterBrand/24.jpg',
 		slideMediaAlt: 'Image of SlideMedia',
 		templateType: 'basic'
 	},
 	{
 		slideTitle: 'Conclusion',
-		slideText: '<p>Once again, welcome to Carus Groups’ Corporate Headquarters.</p><p>Your safety, as well as that of our employees and the community, is our top priority.  We are working hard on our safety record and hope that you realize how important safety is to us.</p><p>It should be just as important to you - your health and safety may depend on it!</p>',
-		slideAudio: 'CarusGroup_Peru_Contractor_Course/47.mp3',
-		slideMedia: 'CarusGroup_Peru_Contractor_Course/47.jpg',
+		slideText: '<p>You\'ve now completed MBCI\'s Contractor Safety Training.</p><p>Prior to your work assignment at MBCI, you must meet with the MBCI site Project Manager who will provide you with additional details on site-specific pre-work health and safety procedures.  Please do not forget to perform this critical action.</p><p>Congratulations on successfully completing this course.  Please click on the forward button to get credit for taking this course.</p>',
+		slideAudio: 'MasterBrand/25.mp3',
+		slideMedia: 'MasterBrand/25.jpg',
 		slideMediaAlt: 'Image of SlideMedia',
 		templateType: 'basic'
 	}

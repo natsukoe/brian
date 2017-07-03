@@ -1,0 +1,119 @@
+Script_1=<font size="20"><b>Introduction</b></font>
+<p>Welcome to the MasterBrand Cabinets Contractor Safety Orientation.  MasterBrand Cabinets, Inc. (MBCI) is the largest cabinet manufacturer in North America.</p><p>Headquartered in Jasper, Indiana, MBCI is also the largest division of Fortune Brands Home %26 Security.  Today, MBCI has over 11,000 employees with manufacturing and sales locations across the United States, Canada and Mexico.</p><p>MBCI\'s major brands include KitchenCraft, Diamond, Schrock, Kemper, Aristokraft, Kitchen Classics, Wood Crafters, Homecrest, Martha Stewart Living, Thomasville, Decora\', Omega, Mid-Continent, Ultra Craft, Star Mark, and Urban Effects.</p>
+
+&Script_2=<font size="20"><b>Introduction</b></font>
+<p>To set the stage for this training, our President, Dave Randich, would like to review our safety commitment.</p>
+
+&Script_3=<font size="20"><b>Introduction</b></font>
+
+&Script_4=<font size="20"><b>Introduction</b></font>
+<p>Now that you\'ve listened to Mr. Randich\'s message, we\'d like to introduce you to MBCI\'s Contractor Safety Program, where you will learn about:<ul><li>Our company</li><li>The EHS rules and regulations in place at MBCI</li><li>The expectation for all contractors and their employees to contribute to a safe and healthful workplace at MBCI</li></ul></p>
+
+&Script_5=<font size="20"><b>Introduction</b></font>
+<p>Now that you\'ve listened to Mr. Randich\'s message, we\'d like to introduce you to MBCI\'s Contractor Safety Program, where you will learn about:<ul><li>The potential workplace hazards you may face at our facilities, and</li><li>The consequences for non-compliance with federal, national, regional, state and local regulations and MBCI company policy</li></ul></p><p>Throughout the training course, you will be tested on your comprehension of this information.  To progress through the course, you will need to correctly answer all questions.  In addition, there is a brief quiz at the end of the course that you are required to pass in order to complete the course. We anticipate a successful outcome.</p>
+
+&Script_6=<font size="20"><b>Introduction</b></font>
+<p>MBCI\'s mission is to provide the best overall kitchen and bath solutions for consumers and channel partners throughout North America.</p><p>To enable the achievement of this mission, employees embody the Four Basics (what we do) and the Five Traits of Success (how we accomplish the Four Basics).</p><p>MBCI\'s <b><i>Safety %26 Risk Management Policy</i></b> is to provide each person a safe, healthful and secure place in which to work.</p>
+
+&Script_7=<font size="20"><b>Introduction</b></font>
+<p>Our philosophy is to establish and maintain a World Class "Total Safety Culture" where:<ul><li>Safety and health is a core value</li><li>Injuries are preventable, predictable and unacceptable (our Zero Injury Culture)</li><li>Every reasonable effort is made to prevent injuries and preserve health</li><li>We all share responsibility for safety, health and security</li><li>Continuous improvement is expected, and where</li><li>Safety is viewed as a system of behavioral, technical and business components</li></ul></p>
+
+&Script_8=<font size="20"><b>Introduction</b></font>
+<p>MBCI\'s success depends on how safely every job is performed.</p><p>No job is so important, nor any service so urgent that it should not be done safely.</p><p>Our ultimate goal is to not injure anyone.</p>
+
+&Script_9=<font size="20"><b>Scope and Purpose</b></font>
+<p>The MBCI <b><i>Contractor Safety Program</i></b> and training requirements apply to all contractors, subcontractors, suppliers and vendors at any MBCI location who perform construction, maintenance, repair, renovation, or other specialty work.</p><p>The purpose of this training is to make you aware of the rules and regulations in place at MBCI, as well as the potential hazards you may face while working at any MBCI facility.</p><p>This training does <b>NOT</b> replace your health and safety training, and it is <b>NOT</b> intended to be all-inclusive.</p>
+
+&Script_10=<font size="20"><b>Contractor Responsibilities</b></font>
+<p>Contractors are required to develop, implement, and manage their own written health and safety program.  MBCI may request a copy of any contractor\'s written plan.</p><p>Contractor health and safety programs shall provide for the safety of their employees as well as that of subcontractors, suppliers, vendors and others working in conjunction with the contractor.</p><p>The MBCI <b><i>Contractor Safety Policy</i></b> is supplementary to the health and safety programs of each contractor.  No liability is assumed by MBCI by reason of our policy.</p>
+
+&Script_11=<font size="20"><b>Contractor Responsibilities</b></font>
+<p>While on site at any MBCI location, contractors must comply with all applicable national, federal, state, regional and local health and safety regulations and codes, as well as MBCI company policies.</p><p>MBCI company policies are available upon request.</p>
+
+&q_1=Contractor employees are responsible for compliance with all applicable governmental standards, practices, and policies, and the MBCI company policies.
+&A_1=True
+&B_1=False
+&C_1=
+&D_1=
+&Rem_1=11
+&questionType_1=T
+
+&RemScript_11=<font size="20"><b>Contractor Responsibilities</b></font>
+<p><font color="#FF0000">While on site at any MBCI location, contractors must comply with all applicable national, federal, state, regional and local health and safety regulations and codes, as well as MBCI company policies.</font></p><p>MBCI company policies are available upon request.</p>
+
+&Script_12=<font size="20"><b>Contractor Responsibilities</b></font>
+<p>Contractors are responsible for providing their employees with all training related to applicable national, federal, state, regional and local health and safety regulations and codes that apply to their activities and the products and services they provide to MBCI.</p><p>MBCI may request copies of contractor training documentation.</p><p>Contractors are responsible for having all required licenses, permits and certifications necessary to fulfill the contract in compliance with all applicable laws and regulations.</p>
+
+&q_2=Who is responsible to provide you with all training related to applicable national, federal, state, regional and local health and safety regulations and codes?
+&A_2=Your company
+&B_2=Gatefeed
+&C_2=MBCI
+&D_2=OSHA
+&Rem_2=12
+&questionType_2=M
+
+&RemScript_12=<font size="20"><b>Contractor Responsibilities</b></font>
+<p><font color="#FF0000">Contractors are responsible for providing their employees with all training related to applicable national, federal, state, regional and local health and safety regulations and codes that apply to their activities and the products and services they provide to MBCI.</font>  MBCI may request copies of contractor training documentation.
+Contractors are responsible for having all required licenses, permits and certifications necessary to fulfill the contract in compliance with all applicable laws and regulations.</p>
+
+&Script_13=<font size="20"><b>Contractor Responsibilities</b></font>
+<p>Each contractor is responsible for designating an onsite Contractor Safety Representative (CSR), whose responsibilities will include:<ul><li>Enforcing and correcting all safety deficiencies in a timely manner</li><li>Enforcing compliance with the requirements of the MBCI <b><i>Contractor Safety Policy</i></b></li><li>Enforcing compliance with all other applicable governmental standards, practices and policies</li><li>Being physically present at the worksite at all times, and</li><li>Advancing personnel safety and the prevention of injuries</li></ul></p>
+
+&Script_14=<font size="20"><b>Contractor Responsibilities</b></font>
+<p>The CSR shall be a "competent person", which is defined as one who is:<ul><li>Capable of identifying existing and predictable hazards in the surroundings or working conditions which are unsanitary, hazardous or dangerous to employees, and</li><li>Authorized to take prompt corrective measures to eliminate these types of hazards and working conditions</li></ul></p>
+
+&Script_15=<font size="20"><b>Contractor Responsibilities</b></font>
+<p><font color="#86381A"><b>Additional Contractor Responsibilities</b></font></p><p>Contractors are required to <b>take immediate action on safety concerns</b>.  Failure to do so may constitute a breach of contract by a contractor and result in termination of the contract.</p><p>Specifically, each contractor has agreed in their contract to "provide and maintain the necessary precautions and safeguards for the safety of all persons on the site."</p><p>A contractor\'s response to safety concerns will, at a minimum, be taken into consideration in the awarding of future contracts.</p>
+
+&Script_16=<font size="20"><b>Contractor Responsibilities</b></font>
+<p><font color="#86381A"><b>Additional Contractor Responsibilities</b></font></p><p>MBCI retains the right to call a job shut-down to correct or abate any observed safety hazard or to terminate a contractor\'s work if imminent danger exists or if the contractor fails to take prompt and appropriate action to correct or abate any safety hazard.</p><p>When contacting MBCI EHS personnel for workplace safety concerns, the first and second points of contact are MBCI site EHS personnel, and MBCI corporate EHS personnel.</p>
+
+&Script_17=<font size="20"><b>Contractor Responsibilities</b></font>
+<p><font color="#86381A"><b>Additional Contractor Responsibilities</b></font></p><p>The contractor is also responsible for advising and notifying MBCI site EHS personnel of any unique hazards presented by the contractor\'s work, or of any hazards found or discovered during the course of work.</p>
+
+&Script_18=<font size="20"><b>Personal Conduct</b></font>
+<p><font color="#86381A"><b>Substance Abuse</b></font></p><p>MBCI has a <b><i>Drug Free Workplace and Substance Abuse Policy</i></b> designed to establish and maintain a work environment free from the effects of drugs and alcohol.</p><p>In our policy, employees are required to report to work free of the effects of alcohol, drugs and the misuse of medication; and the distribution, possession, sale, transfer and use of drugs or alcohol in the workplace is prohibited.</p><p>Contractors are responsible for compliance with this policy.</p>
+
+&Script_19=<font size="20"><b>Personal Conduct</b></font>
+<p><font color="#86381A"><b>Workplace Harassment and Retaliation</b></font>
+MBCI has a policy on <b><i>Equal Opportunity Employment, Workplace Harassment and Retaliation</i></b> designed to establish and maintain a work environment free of discrimination, harassment and retaliation.</p><p>Employees are not to be subjected to sexual harassment or discrimination on the basis of race, color, gender, religion, national origin, age, disability, veteran status, citizenship or any other legally protected status.</p><p>Contractors are responsible for compliance with this policy; non-compliance with this policy is a violation of both company policy and the law.</p>
+
+&Script_20=<font size="20"><b>Personal Conduct</b></font>
+<p><font color="#86381A"><b>Solicitation and Distribution</b></font><p><p>MBCI has a policy prohibiting the solicitation and distribution of literature, designed to establish:<ul><li>Limitations on efforts to solicit employees at work, and</li><li>Guidelines for the distribution of literature</li></ul></p><p>The solicitation of employees and the distribution of literature during working times are prohibited.  Contractors are responsible for compliance with this policy.</p>
+
+&Script_21=<font size="20"><b>Personal Conduct</b></font>
+<p>Other Personal Conduct rules include:</p><p><ul><li>Horseplay: reckless conduct and behavior is strictly prohibited</li><li>Weapons: the possession of any weapon in violation of state or local regulations is prohibited on MBCI property, and</li><li>Smoking: smoking is not allowed, except in designated smoking areas; such areas will be communicated during pre-job reviews</li></ul></p><p>Non-compliance with MBCI personal conduct rules is a serious offense and can lead to dismissal from the worksite.</p>
+
+&q_4=Which of the following personal conduct behaviors is not permissible on MBCI property?
+&A_4=All of the above
+&B_4=Horseplay
+&C_4=Smoking in other than designated areas
+&D_4=Weapons possession in violation of state or local regulation
+&Rem_4=21
+&questionType_4=A
+
+&RemScript_21=<font size="20"><b>Personal Conduct</b></font>
+<p>Other Personal Conduct rules include:</p><ul><li><font color="#FF0000">Horseplay: reckless conduct and behavior is strictly prohibited</font></li><li><font color="#FF0000">Weapons: the possession of any weapon in violation of state or local regulations is prohibited on MBCI property, and</font></li><li><font color="#FF0000">Smoking: smoking is not allowed, except in designated smoking areas; such areas will be communicated during pre-job reviews</font></li></ul></p><p>Non-compliance with MBCI personal conduct rules is a serious offense and can lead to dismissal from the worksite.</p>
+
+&Script_22=<font size="20"><b>Plant Rules and Information</b></font>
+<p><font color="#86381A"><b>Driving and Parking</b></font></p><p>Contractors are to park in designated areas only, and not in MBCI employee parking areas unless authorized by MBCI site EHS personnel.</p><p>All contractor employees driving a vehicle on MBCI property must have a valid driver\'s license.</p><p>Unless otherwise posted, the maximum speed limit in MBCI parking lots is <b>5 mph</b>; the maximum speed limit inside any part of an MBCI building is <b>3 mph</b>.</p>
+
+&q_5=Which of the following statements regarding MBCI driving and parking rules is true?
+&A_5=All of the above
+&B_5=Contractors will park in designated areas only and not in MBCI employee parking
+&C_5=All contractor employees driving a vehicle on MBCI property must have a valid driver\'s license
+&D_5=The maximum speed limit in MBCI parking lots is 5 mph, unless otherwise posted
+&Rem_5=22
+&questionType_5=A
+
+&RemScript_22=<font size="20"><b>Plant Rules and Information</b></font>
+<p><font color="#86381A"><b>Driving and Parking</b></font></p><p><font color="#FF0000">Contractors are to park in designated areas only, and not in MBCI employee parking areas unless authorized by MBCI site EHS personnel.</p><p>All contractor employees driving a vehicle on MBCI property must have a valid driver\'s license.</p><p>Unless otherwise posted, the maximum speed limit in MBCI parking lots is <b>5 mph</b>; the maximum speed limit inside any part of an MBCI building is <b>3 mph</b>.</font></p>
+
+&Script_23=<font size="20"><b>Plant Rules and Information</b></font>
+<p><font color="#86381A"><b>Driving and Parking</b></font></p><p>Contractor vehicles <b>may not be parked</b> in MBCI buildings.  Subject to prior approval from MBCI site EHS personnel only, contractor vehicles may only be driven into MBCI buildings to pick up or drop off supplies or equipment.</p><p>Contractors are to avoid operating any vehicle during shift change or break time.</p><p>If left unattended, contractor vehicles must be shut off with the emergency brake set.</p>
+
+&Script_24=<font size="20"><b>Plant Rules and Information</b></font>
+<p><font color="#86381A"><b>Driving and Parking</b></font></p><p>Fuel tank valves must be closed when parking contractor propane vehicles for extended time periods.  Forks must be lowered to the ground when fork trucks are left unattended.</p><p>Contractor gasoline powered lift trucks are prohibited within MBCI buildings.</p>
+
+&Script_25=<font size="20"><b>Conclusion</b></font>
+<p>You\'ve now completed MBCI\'s Contractor Safety Training.</p><p>Prior to your work assignment at MBCI, you must meet with the MBCI site Project Manager who will provide you with additional details on site-specific pre-work health and safety procedures.  Please do not forget to perform this critical action.</p><p>Congratulations on successfully completing this course.  Please click on the forward button to get credit for taking this course.</p>
