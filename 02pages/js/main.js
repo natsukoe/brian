@@ -56,7 +56,7 @@ var q_4_span = document.querySelector('#q-4 span');
 var slides = [
 	{
 		slideTitle: 'Introduction',
-		slideText: '<p>Welcome to the MasterBrand Cabinets Contractor Safety Orientation.  MasterBrand Cabinets, Inc. (MBCI) is the largest cabinet manufacturer in North America.</p><p>Headquartered in Jasper, Indiana, MBCI is also the largest division of Fortune Brands Home %26 Security.  Today, MBCI has over 11,000 employees with manufacturing and sales locations across the United States, Canada and Mexico.</p><p>MBCI\'s major brands include KitchenCraft, Diamond, Schrock, Kemper, Aristokraft, Kitchen Classics, Wood Crafters, Homecrest, Martha Stewart Living, Thomasville, Decora\', Omega, Mid-Continent, Ultra Craft, Star Mark, and Urban Effects.</p>',
+		slideText: '<p>Welcome to the MasterBrand Cabinets Contractor Safety Orientation.  MasterBrand Cabinets, Inc. (MBCI) is the largest cabinet manufacturer in North America.</p><p>Headquartered in Jasper, Indiana, MBCI is also the largest division of Fortune Brands Home & Security.  Today, MBCI has over 11,000 employees with manufacturing and sales locations across the United States, Canada and Mexico.</p><p>MBCI\'s major brands include KitchenCraft, Diamond, Schrock, Kemper, Aristokraft, Kitchen Classics, Wood Crafters, Homecrest, Martha Stewart Living, Thomasville, Decora\', Omega, Mid-Continent, Ultra Craft, Star Mark, and Urban Effects.</p>',
 		slideAudio: 'MasterBrand/1.mp3',
 		slideMedia: 'MasterBrand/1.jpg',	
 		slideMediaAlt: 'Image of SlideMedia',
@@ -538,7 +538,7 @@ function slides_work() {
 		// Clearing previously selected answer
 	    var quizInput = document.querySelectorAll("input[name='tfQuestion'], input[name='4choices']");
 	    var index;
-	    for (index = 0; index < quizInput.length; index++) {
+	    for ( index = 0; index < quizInput.length; index++ ) {
 	        quizInput[index].checked = false;
 	    }
 
@@ -552,7 +552,7 @@ function slides_work() {
 
 		// Getting an appropriate question form
 
-		if ( typeof(slides[ current_slide_num ].quizChoice) == 'undefined' ) {
+		if ( typeof ( slides[ current_slide_num ].quizChoice ) == 'undefined' ) {
 		// Load the True or False form	
 			document.getElementById('question-tf').setAttribute("class", "display-yes"); 
 			document.getElementById('question-multi').removeAttribute("class", "display-yes");
