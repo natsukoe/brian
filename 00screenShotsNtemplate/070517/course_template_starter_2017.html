@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<title>Course Viewer Template</title>
+	
+	<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+	<script src="course_template_starter_2017.js"></script>
+	
+	<script type="text/javascript">
+		// This is a very rough template. Feel free to modify the javascript variables and 
+		// HTML as you wish. The HTML tags are version 4, make it 5.
+		
+		// The name of course, read this variable and apply it to the H1 tags inside the header
+		var course_title = "ADM - Clinton";
+		
+		// Color the header should be, read this variable and apply color as background color
+		// Note: This red will appear too strong, change it to a more subtle color.
+		var header_color = "#FF0000";
+		
+		// The directory name shared between assets folder of course
+		// ie the part that is the same between ADM_Clinton_Course, ADM_Clinton_pics, ADM_Clinton_mp3
+		var course_directory_name = "ADM_Clinton";
+		
+		// The slide to start the course on
+		// Change this value to jump ahead
+		var starting_slide = 5;
+		
+		// After pulling the content from the array, add a next button
+		// When clicked it will look into the slides variable and grab the next array
+		// Read the content in the array and then replace existing
+		// You may have to add a new variable to keep track of current slide, ex: var current_slide = 1;
+		// The next button will be a link that calls a javascript function you will create
+		function load_slide_content(slide_array){
+			var template = slide_array[0];
+			var title    = slide_array[1];
+			var body     = slide_array[2];
+			var image    = slide_array[3];
+			var audio    = slide_array[4];
+			
+			jQuery("#slide_text").html("<b>"+title+"</b><br/><br/>"+body).text();
+			jQuery("#slide_image").attr("src", "http://courseassets.gatefeed.com/"+course_directory_name+"_Course/"+course_directory_name+"_pics/"+image);
+			jQuery("#slide_audio").attr("src", "http://courseassets.gatefeed.com/"+course_directory_name+"_Course/"+course_directory_name+"_mp3/"+audio);
+			jQuery("#audio_audio").get(0).load();
+			jQuery("#audio_audio").get(0).play();
+		}
+		
+		
+		// next button function
+		function advance_slide(slide_number) {
+			// check if there is a review question first
+			if(slides_with_review_questions_mapper.hasOwnProperty((slide_number - 1))) {
+				jQuery("#btn_next").hide();
+				// jQuery("#btn_next").attr("onclick","next_slide_onclick("+slide_number+")");
+				alert("question here");
+			} else {
+				load_slide_content(slides[slide_number-1]);
+				jQuery("#btn_next").hide();
+				jQuery("#btn_next").attr("onclick","next_slide_onclick("+slide_number+")");
+				jQuery("#current_slide").text(slide_number);
+			}
+		}
+		
+		
+		function next_slide_onclick(slide_number) {
+			jQuery('#audio_audio').get(0).pause();
+			advance_slide((slide_number+1));
+			jQuery('#audio_audio').get(0).play();
+		}
+		
+		
+		jQuery(document).ready(function() {
+			jQuery("#default_message").hide("");
+			load_slide_content(slides[starting_slide - 1]);
+			
+			jQuery("#audio_audio").get(0).addEventListener("ended", function() {
+				jQuery("#btn_next").show();
+			});
+			// jQuery("#btn_next").show();
+			
+			jQuery("#course_title").text(course_title);
+			jQuery("#total_slides").text(slides.length);
+			jQuery("#current_slide").text(starting_slide);
+		});
+	</script>
+	
+	<style type="text/css">
+		#course_wrapper {
+			position:relative;
+			width:90%;
+			height:400px;
+			background-color: #FFFFFF;
+			margin:0px auto;
+			border:1px solid #CCCCCC;
+			padding: 10px;
+			font-family: arial, sans-serif;
+		}
+		
+		#course_wrapper h1 {
+			margin-top: 0px;
+			color: #B30838;
+		}
+		
+		#slide_text {
+			float:left;
+			width:45%;
+		}
+		
+		#slide_image_wrapper {
+			float:left;
+			width: 30%;
+			height:300px;
+			margin-left:25px;
+		}
+		
+		#slide_image_wrapper img {
+			width:300px;
+			height:300px;
+		}
+		
+		#btn_next {
+			position: absolute;
+			right: 10px;
+			bottom: 5px;
+			font-size: 25px;
+			font-weight: bold;
+			text-decoration: none;
+			color: #B30838;
+		}
+		
+		#slide_counter_wrapper {
+			position:absolute;
+			bottom:5px;
+			left:10px;
+		}
+	</style>
+</head>
+<body>
+	<audio id="audio_audio">
+		<source id="slide_audio" src="http://courseassets.gatefeed.com/ADM_Clinton_Course/ADM_Clinton_mp3/1.mp3" type="audio/mpeg"></source>
+	</audio>
+	
+	
+	<p id="default_message">This page may appear blank. Open in a text editor to help change that. Then remove this line.</p>
+	
+	<div id="course_wrapper">
+		<div id="course_header">
+			<h1 id="course_title"></h1>
+		</div>
+		<div id="slide_content">
+			<div id="slide_text">
+				
+			</div>
+			
+			<div id="slide_image_wrapper">
+				<img id="slide_image" src="" />
+			</div>
+		</div>
+		
+		<span id="slide_counter_wrapper">
+			<span id="current_slide">1</span> of <span id="total_slides"></span>
+		</span>
+		
+		<a id="btn_next" href="#" onclick="next_slide_onclick(2)" style="display:none;">Next</a>
+	</div>
+	
+</body>
+</html>
