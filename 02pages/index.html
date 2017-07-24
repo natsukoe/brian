@@ -16,7 +16,7 @@
 </head>
 <body>
 	<div id="masterhead">
-		<div id="masterhead-inner">
+		<div class="header-inner">
 			<h1 id="corporate-name">ADM</h1>
 			<ul class="user-info">
 				<li>
@@ -27,7 +27,13 @@
 		</div>
 	</div>
 	<div id="sub-title">
-		<h2>Core</h2>
+		<div class="header-inner">
+			<h2>Core</h2>
+			<div id="jump-admin">
+				<input type="text" id="jump-page">
+				<input type="button" value=" Go " id="jump-button">
+			</div>
+		</div>		
 	</div>
 	<div id="container">
 		<div id="contentbody">
@@ -37,17 +43,17 @@
 				<div class="contentbody-left block-padding">
 					<h3>Default Chapter Name</h3>
 					<div id="slide-text">
-						<p>Welcome to ADM - Cidar Rapids, Iowa fucility.</p>
+						<p>Warning - Default Page</p>
 						<p>
-							(Notice this content won't be appeared unless there's some issue.) As largest agricultual company in the world, ADM serves vital glocal purpose. We connect the harvest to the home, transporting crops into products that serve vital needs for food and energy. As largest agricultual company in the world, ADM serves vital glocal purpose. We connect the harvest to the home, transporting crops into products that serve vital needs for food and energy.
+							(Notice this content won't be appeared unless there's some issue.) Please check the code.
 						</p>
 						<p>
-							As largest agricultual company in the world, ADM serves vital glocal purpose. We connect the harvest to the home, transporting crops into products that serve vital needs for food and energy. As largest agricultual company in the world, ADM serves vital glocal purpose. We connect the harvest to the home, transporting crops into products that serve vital needs for food and energy. As largest agricultual company in the world, ADM serves vital glocal purpose. We connect the harvest to the home, transporting crops into products that serve vital needs for food and energy.
+							Hope you can fix this :)
 						</p>		
 					</div>	
 					<audio autoplay id="admin-audio" class="audioDemo" style="background: #333;">
 						<source src="audio/letgo.mp3" type="audio/mpeg">
-						<<source src="music.ogg" type="audio/ogg">
+						<source src="music.ogg" type="audio/ogg">
 					</audio>
 				</div>
 				<div id="bodymedia" class="block-padding">
@@ -80,6 +86,9 @@
 					<div id="question-wrong" class="display-no">
 						<i class="fa fa-meh-o fa-4x" aria-hidden="true"></i>
 						<p>Wrong answer. Please review the associated slide again.</p>
+					</div>
+					<div id="jump-far" class="display-no">
+						<p>Enter the page number <span class="maxSlideNum">25</span> or below</p>
 					</div>
 				</div>
 

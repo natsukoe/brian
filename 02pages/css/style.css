@@ -23,6 +23,9 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+input, button {
+	font-size: 100%;
+}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -33,7 +36,7 @@ body {
 	font-family: arial, sans-serif;
 	background: #e5e5e5;
 }
-#masterhead-inner ol, #masterhead-inner ul {
+#masterhead ol, #masterhead ul {
 	list-style: none;
 }
 #slide-text li {
@@ -80,7 +83,7 @@ h3 {
 	color: #fff;
 	padding: 6px 10px;
 }
-#masterhead-inner {
+.header-inner {
 	max-width: 960px;
 	margin: 0 auto;	
 	display: -ms-flexbox; /* IE 10 */
@@ -108,8 +111,19 @@ h3 {
 	padding: 8px 10px;
 }
 #sub-title h2 {
-	max-width: 960px;
-	margin: 0 auto;
+	/*max-width: 960px;*/
+	margin-right: auto;
+	max-width: 80%;
+}
+#jump-admin {
+	display: none;
+}
+#jump-admin.display-yes {
+	display: block;
+}
+#jump-page {
+	width: 40px;
+	padding: 2px;
 }
 #container {
 	max-width: 960px; 
@@ -193,7 +207,7 @@ h3 {
 #question-result.display-yes {
 	display: block;
 }
-#question-correct.display-no, #question-wrong.display-no {
+#question-correct.display-no, #question-wrong.display-no, #jump-far.display-no {
 	display: none;
 }
 #question-correct, #question-wrong {
@@ -214,6 +228,9 @@ h3 {
 }
 #question-tf.display-yes, #question-multi.display-yes {
 	display: block;
+}
+.remediation .highlight {
+	color: #f00;
 }
 #audio-controller {
 	padding: 10px;
@@ -242,11 +259,14 @@ h3 {
 	text-align: center;
 	margin: 0 10px 0 0;
 	padding: 10px;
-	font-size: 100%;
 }
 input[type="button"] {
 	margin-top: 10px;
-	padding: 6px 10px;
+	padding: 6px 5px;
+}
+#sub-title input[type="button"] {
+	margin: 0;
+	padding: 3px 10px;
 }
 #audio-controller button:hover {
 	background: #fff;
@@ -298,6 +318,7 @@ html {
 .block-padding { padding: 20px; }
 audio { width: 460px; margin: 10px auto; }
 #audio-controller button { width: 101px; }
+
 @media (max-width: 900px) {
   html { font-size: 16px; }
   body { background: #fff; }
@@ -314,13 +335,12 @@ audio { width: 460px; margin: 10px auto; }
   #template-basic { display: block; }
   .contentbody-left { max-width: 100%; }
   audio { width: 98%; }
-  #slide-video {
-	margin: 10px auto;
-}
+  #slide-video { margin: 10px auto; }
   #audio-controller button { width: 72px; }
   #bodymedia img { margin: 0 auto; }
   #audio-controller button, input[type="button"] {
 	margin: 0 2px 0;
 	padding: 8px 0;
-}
+	}
+  #sub-title input[type="button"] { padding: 3px 0; }
 }
