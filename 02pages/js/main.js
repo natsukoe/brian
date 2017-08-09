@@ -2,7 +2,7 @@
 
 var course_title = "MasterBrand Cabinets, Inc. (MBCI)";
 var sub_title = "Jasper, Indiana";
-var header_color = "#e3dd1b"; //#b1273e #e3dd1b
+var header_color = "#b1273e"; // #e3dd1b #b1273e
 var header_txt_color = "#fff";
 var user_name = 'Admin';
 //var user_name = 'Curt';
@@ -15,16 +15,21 @@ document.getElementsByTagName('h2')[0].innerHTML = sub_title;
 $("#masterhead").css({"background":header_color});
 $("#masterhead").css({"color":header_txt_color});
 
+//$( auto_play_input.checked + " .slider").css({"background-color":header_color});
+//$("#auto-play-input:focus").css({"box-shadow":header_color});
+//$(".state-label-on").css({"color":header_txt_color});
+
+
 // If user is admin add controls as property on audio and media tag
 if ( user_name == 'Admin' ) {
 	document.getElementById('admin-audio').setAttribute("controls", true);
 	document.getElementById('slide-video').setAttribute("controls", true);
-	document.getElementById('jump-admin').setAttribute("class", "display-yes");
+	document.getElementById('admin-controller').setAttribute("class", "display-yes");
 }
 else {
 	document.getElementById('admin-audio').removeAttribute("controls");
 	document.getElementById('slide-video').removeAttribute("controls");
-	document.getElementById('jump-admin').removeAttribute("class", "display-yes");
+	document.getElementById('admin-controller').removeAttribute("class", "display-yes");
 }
 
 // Trim user name after 10th letter
@@ -54,6 +59,8 @@ var q_1_span = document.querySelector('#q-1 span');
 var q_2_span = document.querySelector('#q-2 span');
 var q_3_span = document.querySelector('#q-3 span');
 var q_4_span = document.querySelector('#q-4 span');
+var auto_play_input = document.getElementById('auto-play-input');
+var jump_page = document.getElementById('jump-page');
 
 var slides = [
 	{
@@ -382,21 +389,25 @@ else {
 }
 // For admin when wanting to jump to desired page
 document.getElementById('jump-button').addEventListener("click", function(){
-	current_slide_num = document.getElementById('jump-page').value - 1;	
-
+	
+	// if page number entered was greater than max pg num
+	if ( jump_page.value > slides.length ){
+		current_slide_num = prompt("Please enter the page number " + slides.length + " or below.") - 1;
+	}
+	// when proper page number entered
+	else {
+		current_slide_num = jump_page.value - 1;		
+	}
+	
 	if ( slides_mapper.hasOwnProperty( current_slide_num ) ) {
-		bookmarked = document.getElementById('jump-page').value;
+		bookmarked = jump_page.value;
 	}
 	else {
-		bookmarked = document.getElementById('jump-page').value - 1;
-	}
-
-	if ( document.getElementById('jump-page').value > slides.length ){
-		alert("No!")
+		bookmarked = jump_page.value - 1;
 	}	
 
 	slides_work();
-	pg_current.innerHTML = document.getElementById('jump-page').value;
+	pg_current.innerHTML = current_slide_num + 1;
 });
 
 // Counting the total number of question slides
@@ -514,13 +525,34 @@ function decreaseBookmark() {
 	//updateProgress();
 }
 
+// Adding style when auto play button gets updated
+auto_play_input.addEventListener("click", function() {
+	if ( auto_play_input.checked ) {
+		document.getElementById('auto-play').setAttribute("class", "on-state");
+
+		// When audio is not playing and auto run is set ON, move slide to next	
+		if ( media_audio.duration < 0 || media_audio.paused ) {
+			next_slide();
+			slides_work();
+			pg_current.innerHTML = current_slide_num + 1;
+		}
+	}
+	else {
+		document.getElementById('auto-play').removeAttribute("class", "on-state");
+	}	
+});
+
 /* Course Contents */
 
 // Get user name
 document.getElementById('user-name').innerHTML = user_name;
 
 function slides_work() {
-	if ( bookmarked > current_slide_num || !slides_mapper.hasOwnProperty( current_slide_num ) ) {
+	// Make jump page input num blank after once showing it
+	if ( current_slide_num != jump_page.value - 1 ) {
+		jump_page.value = null;
+	}	
+	if ( bookmarked > current_slide_num || !slides_mapper.hasOwnProperty( current_slide_num ) || auto_play_input.checked ) {
 		course_load();
 	}
 	else {
@@ -848,7 +880,7 @@ document.getElementById('question-submit').addEventListener("click", function(){
 		}, 1500);
 	}
 	else {
-		// Wrong answer
+		// Wropg-replayng answer
 		document.getElementById('question-result').setAttribute("class", "display-yes");
 		document.getElementById('question-correct').setAttribute("class", "display-no");
 		document.getElementById('question-wrong').removeAttribute("class", "display-no");
@@ -904,7 +936,14 @@ $(media_audio).on('ended', function() {
 
    // enable button
    document.getElementById('pg-next').removeAttribute('disabled');
-   writeBookmark();  
+   writeBookmark(); 	
+
+	// auto play on
+	if ( auto_play_input.checked ) {
+		next_slide();
+		slides_work();
+		pg_current.innerHTML = current_slide_num + 1;
+	}
 });
 
 $(media_video).on('playing', function() {
@@ -927,6 +966,13 @@ $(media_video).on('ended', function() {
    // enable button
    document.getElementById('pg-next').removeAttribute('disabled');
    writeBookmark();
+
+	// auto play on
+	if ( auto_play_input.checked ) {
+		next_slide();
+		slides_work();
+		pg_current.innerHTML = current_slide_num + 1;
+	}
 });
 
 $(media_audio).on('pause', function() {
@@ -937,6 +983,8 @@ $(media_video).on('pause', function() {
 	$("#state-play").css({"display": "block"});
 	$("#state-repeat").css({"display": "none"});
 });
+
+
 
 
 // Sowing progress bar
