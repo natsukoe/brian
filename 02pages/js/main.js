@@ -531,7 +531,8 @@ auto_play_input.addEventListener("click", function() {
 		document.getElementById('auto-play').setAttribute("class", "on-state");
 
 		// When audio is not playing and auto run is set ON, move slide to next	
-		if ( media_audio.duration < 0 || media_audio.paused ) {
+		// media_audio.duration < 0
+		if ( media_audio.paused ) {
 			next_slide();
 			slides_work();
 			pg_current.innerHTML = current_slide_num + 1;
