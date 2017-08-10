@@ -389,10 +389,16 @@ else {
 }
 // For admin when wanting to jump to desired page
 document.getElementById('jump-button').addEventListener("click", function(){
-	
-	// if page number entered was greater than max pg num
-	if ( jump_page.value > slides.length ){
-		current_slide_num = prompt("Please enter the page number " + slides.length + " or below.") - 1;
+
+	// if page number entered was greater than max pg num or non numbers
+	if ( jump_page.value > slides.length || isNaN(jump_page.value) === true  ){
+		var user_jump_page = prompt("Please enter the page number " + slides.length + " or below.");
+		if ( user_jump_page === null ) {
+			return; //break out of the function early
+		}
+		else {
+			current_slide_num =  - 1;
+		}	
 	}
 	// when proper page number entered
 	else {
@@ -901,8 +907,28 @@ document.getElementById('question-submit').addEventListener("click", function(){
 	}
 });
 
+// Play Button
+document.getElementById('state-play').addEventListener("click", function(){
+	if ( slides[ current_slide_num ].templateType === 'video' ) {
+		media_video.play();	
+	}
+	else {
+		media_audio.play();
+	}	
+});
+
+// Pause Button
+document.getElementById('state-pause').addEventListener("click", function(){
+	if ( slides[ current_slide_num ].templateType === 'video' ) {
+		media_video.pause();	
+	}
+	else {
+		media_audio.pause();
+	}	
+});
+
 // Replay Button
-document.getElementById("pg-replay").addEventListener("click", function(){
+document.getElementById('state-replay').addEventListener("click", function(){
 	if ( slides[ current_slide_num ].templateType === 'video' ) {
 		media_video.pause();
 		media_video.currentTime = 0.0;
@@ -917,8 +943,10 @@ document.getElementById("pg-replay").addEventListener("click", function(){
 
 /* Next Button Enabled/ Disabled until audio or video ends */
 $(media_audio).on('playing', function() {
-	$("#state-play").css({"display": "none"});
-	$("#state-repeat").css({"display": "block"});
+	document.getElementById('state-pause').setAttribute("class", "display-yes");
+	document.getElementById('state-play').setAttribute("class", "display-no");
+	document.getElementById('state-replay').setAttribute("class", "display-no");
+
 	console.log('media_audio on playing, current_slide_num ', current_slide_num, '  bookmarked: ', bookmarked);
 
 	// disable next btn when no bookmarked pg or current slide num is smaller than bookmarked
@@ -931,9 +959,11 @@ $(media_audio).on('playing', function() {
 		console.log('case disabled removed');
 	}
 });
+
 $(media_audio).on('ended', function() {
-	$("#state-play").css({"display": "block"});
-	$("#state-repeat").css({"display": "none"});
+	document.getElementById('state-pause').setAttribute("class", "display-no");
+	document.getElementById('state-play').setAttribute("class", "display-no");
+	document.getElementById('state-replay').setAttribute("class", "display-yes");
 
    // enable button
    document.getElementById('pg-next').removeAttribute('disabled');
@@ -947,9 +977,16 @@ $(media_audio).on('ended', function() {
 	}
 });
 
+$(media_audio).on('pause', function() {
+	document.getElementById('state-pause').setAttribute("class", "display-no");
+	document.getElementById('state-play').removeAttribute("class", "display-no");
+	document.getElementById('state-replay').setAttribute("class", "display-no");
+});
+
 $(media_video).on('playing', function() {
-	$("#state-play").css({"display": "none"});
-	$("#state-repeat").css({"display": "block"});
+	document.getElementById('state-pause').setAttribute("class", "display-yes");
+	document.getElementById('state-play').setAttribute("class", "display-no");
+	document.getElementById('state-replay').setAttribute("class", "display-no");
 
 	// disable next btn if current page num is greater than bookmarked page num
 	if ( bookmarked === 0 || current_slide_num >= bookmarked ) {
@@ -961,8 +998,9 @@ $(media_video).on('playing', function() {
 });
 
 $(media_video).on('ended', function() {
-	$("#state-play").css({"display": "block"});
-	$("#state-repeat").css({"display": "none"});
+	document.getElementById('state-pause').setAttribute("class", "display-no");
+	document.getElementById('state-play').setAttribute("class", "display-no");
+	document.getElementById('state-replay').setAttribute("class", "display-yes");
 
    // enable button
    document.getElementById('pg-next').removeAttribute('disabled');
@@ -976,13 +1014,10 @@ $(media_video).on('ended', function() {
 	}
 });
 
-$(media_audio).on('pause', function() {
-	$("#state-play").css({"display": "block"});
-	$("#state-repeat").css({"display": "none"});
-});
 $(media_video).on('pause', function() {
-	$("#state-play").css({"display": "block"});
-	$("#state-repeat").css({"display": "none"});
+	document.getElementById('state-pause').setAttribute("class", "display-no");
+	document.getElementById('state-play').removeAttribute("class", "display-no");
+	document.getElementById('state-replay').setAttribute("class", "display-no");
 });
 
 
