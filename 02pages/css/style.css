@@ -130,9 +130,11 @@ h3 {
 	display: flex;
 	box-sizing: border-box;
 	height: 500px;
-	overflow: auto;
-	margin-bottom: 120px;
+	overflow: auto;	
 }
+.admin-style #template-basic, .admin-style #template-video, .admin-style #template-text {
+	margin-bottom: 120px;
+} 
 #template-basic.display-no {
 	display: none;
 }
@@ -158,13 +160,13 @@ h3 {
 	display: block;
 	margin: 0 auto;
 }
-#template-video {
+#template-video, #template-text {
 	display: none;
 	box-sizing: border-box;
 	height: 500px;
 	overflow: auto;
 }
-#template-video.display-yes {
+#template-video.display-yes, #template-text.display-yes {
 	display: block;
 }
 #template-question {

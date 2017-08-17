@@ -2,10 +2,10 @@
 
 var course_title = "MasterBrand Cabinets, Inc. (MBCI)";
 var sub_title = "Jasper, Indiana";
-var header_color = "#b1273e"; // #e3dd1b #b1273e
+var header_color = "#e3dd1b"; // #e3dd1b #b1273e
 var header_txt_color = "#fff";
 var user_name = 'Admin';
-//var user_name = 'Curt';
+var user_status = 'Admin';
 
 // Selecting each title
 document.getElementsByTagName('h1')[0].innerHTML = course_title;
@@ -20,11 +20,12 @@ $("#masterhead").css({"color":header_txt_color});
 //$(".state-label-on").css({"color":header_txt_color});
 
 
-// If user is admin add controls as property on audio and media tag
-if ( user_name == 'Admin' ) {
+// If user is admin add special features and CSS style
+if ( user_status === 'Admin' ) {
 	document.getElementById('admin-audio').setAttribute("controls", true);
 	document.getElementById('slide-video').setAttribute("controls", true);
 	document.getElementById('admin-controller').setAttribute("class", "display-yes");
+	document.getElementsByTagName('body')[0].setAttribute("class", "admin-style");
 }
 else {
 	document.getElementById('admin-audio').removeAttribute("controls");
@@ -46,6 +47,7 @@ var slide_text = document.getElementById('slide-text');
 var media_audio = document.getElementById('admin-audio');
 var tempplate_basic = document.getElementById('template-basic');
 var template_video = document.getElementById('template-video');
+var template_text = document.getElementById('template-text');
 var template_question = document.getElementById('template-question');
 var media_video = document.getElementById('slide-video');
 var question_q = document.getElementById('question-q');
@@ -85,7 +87,7 @@ var slides = [
 	},
 	{
 		slideTitle: 'Introduction',
-		slideText: '<p>At the successful completion of this orientation you will be issued a Carus Group-approved Contractors ID badge.</p><p>You must have this card on your person, prominently displayed whenever you do work at our facility.</p><p>This Contractors ID badge is to be returned to Carus Group at the conclusion of you contracted tasks.</p>',
+		slideText: '<p>Now that you\'ve listened to Mr. Randich\'s message, we\'d like to introduce you to MBCI\'s Contractor Safety Program, where you will learn about:<ul><li>Our company</li><li>The EHS rules and regulations in place at MBCI</li><li>The expectation for all contractors and their employees to contribute to a safe and healthful workplace at MBCI</li></ul></p>',
 		slideAudio: 'MasterBrand/4.mp3',
 		slideMedia: 'MasterBrand/4.jpg',
 		slideMediaAlt: 'Image of SlideMedia',
@@ -101,7 +103,7 @@ var slides = [
 	},
 	{
 		slideTitle: 'Introduction',
-		slideText: '<p>MBCI\'s mission is to provide the best overall kitchen and bath solutions for consumers and channel partners throughout North America.</p><p>To enable the achievement of this mission, employees embody the Four Basics (what we do) and the Five Traits of Success (how we accomplish the Four Basics).</p><p>MBCI\'s <b><i>Safety %26 Risk Management Policy</i></b> is to provide each person a safe, healthful and secure place in which to work.</p>',
+		slideText: '<p>MBCI\'s mission is to provide the best overall kitchen and bath solutions for consumers and channel partners throughout North America.</p><p>To enable the achievement of this mission, employees embody the Four Basics (what we do) and the Five Traits of Success (how we accomplish the Four Basics).</p><p>MBCI\'s <b><i>Safety & Risk Management Policy</i></b> is to provide each person a safe, healthful and secure place in which to work.</p>',
 		slideAudio: 'MasterBrand/6.mp3',
 		slideMedia: 'MasterBrand/6.jpg',
 		slideMediaAlt: 'Image of SlideMedia',
@@ -262,6 +264,12 @@ var slides = [
 		slideMedia: 'MasterBrand/25.jpg',
 		slideMediaAlt: 'Image of SlideMedia',
 		templateType: 'basic'
+	},
+	{
+		slideTitle: 'Text Only Template',
+		slideText: '<p>Sorry to repeat the naration #25 again here, but we are supposed to have an empty audio here & I don\'t have that file at the moment!</p>',
+		slideAudio: 'MasterBrand/25.mp3',
+		templateType: 'text'
 	}
 ];
 
@@ -356,6 +364,8 @@ var slides_mapper = {
 	12: [2],
 	21: [3],
 	22: [4]
+
+	/*24: [1,2,3,4]*/
 };
 
 var question_index = Number( slides_mapper[ current_slide_num ] ) - 1;
@@ -496,7 +506,6 @@ function next_slide() {
 			else if ( slide_text.classList.contains('remediation') ) {
 				current_slide_num++;
 				slide_text.removeAttribute('class', 'remediation');
-				decreaseBookmark();
 				console.log("case4");
 			}
 			else {
@@ -519,12 +528,31 @@ function skip_next_slide() {
 */
 
 // Bookmarking
+// New bookmarking
 function writeBookmark() {
-	if ( bookmarked === 0 || bookmarked <= current_slide_num || !slides_mapper.hasOwnProperty( current_slide_num ) ) {
+	/*if (bookmarked - 1 >=  current_slide_num) {
+		console.log("bookmarked already");
+	}
+	else if*/ 
+	if ( bookmarked === 0 || bookmarked - 1 <  current_slide_num || slides_mapper.hasOwnProperty( current_slide_num ) ) {
 		bookmarked++;
+		console.log("current slide num: " + current_slide_num);
+		console.log("bookmarked: "+ bookmarked);
+		console.log("Now bookmark gets updated to : " + bookmarked);
 		//updateProgress();
 	}
 }
+
+/*
+function writeBookmark() {
+	if ( bookmarked === 0 || bookmarked <= current_slide_num || !slides_mapper.hasOwnProperty( current_slide_num ) ) {
+		bookmarked++;
+		console.log("Now bookmark updated to : " + bookmarked);
+		//updateProgress();
+	}
+}
+*/
+
 // Using only after remediation slide
 function decreaseBookmark() {
 	bookmarked = bookmarked - 1;
@@ -571,16 +599,22 @@ function slides_work() {
 // Creating Course Contents
 function course_load() {
 
+	console.log(slides[ current_slide_num ].templateType);
+
+	// New bookmarking
+	writeBookmark();
+
 	// This block is to accommodate next button particularly on video slide gets disabled initially on iPhone
-	if ( slides[ current_slide_num ].templateType === 'basic' || 'video' ) {
+	if ( slides[ current_slide_num ].templateType === 'basic' || 'video' || 'text' ) {
 		// disable next btn when no bookmarked pg or current slide num is smaller than bookmarked
 		if ( current_slide_num >= bookmarked ) {
 			document.getElementById('pg-next').setAttribute('disabled', true);
 		}
 	}
 
-	// Getting text
+	// Getting title for both course and text only slides
 	document.getElementsByTagName('h3')[0].innerHTML = slides[ current_slide_num ].slideTitle;
+	// Getting text
 	slide_text.innerHTML = slides[ current_slide_num ].slideText;
 
 	var body_media = document.getElementById('bodymedia');
@@ -595,6 +629,7 @@ function course_load() {
 	if ( slides[ current_slide_num ].templateType === 'basic' ) {
 		// Choosing a proper template
 		template_video.removeAttribute("class", "display-yes");
+		template_text.removeAttribute("class", "display-yes block-padding");
 		template_question.removeAttribute("class", "display-yes");
 
 		// Show the page controller
@@ -622,6 +657,7 @@ function course_load() {
 		// Choosing a proper template	
 		tempplate_basic.setAttribute("class", "display-no"); 
 		template_video.setAttribute("class", "display-yes block-padding");
+		template_text.removeAttribute("class", "display-yes block-padding");
 		template_question.setAttribute("class", "display-no");   
 		media_video.src = slides[ current_slide_num ].slideVideo;
 
@@ -635,6 +671,24 @@ function course_load() {
 	else {
 		tempplate_basic.removeAttribute("class", "display-no");
 		template_video.removeAttribute("class", "display-yes");
+	}
+
+	// Loading Text Template
+	if ( slides[ current_slide_num ].templateType === 'text' ) {
+		// Choosing a proper template
+		tempplate_basic.setAttribute("class", "display-no"); 
+		template_video.removeAttribute("class", "display-yes");
+		template_text.setAttribute("class", "display-yes block-padding");
+		template_question.removeAttribute("class", "display-yes");		
+
+		// Show the page controller
+		document.getElementById('pg-buttons').removeAttribute("class", "display-no");
+
+		// Getting text
+		document.getElementById('slide-text-Only').innerHTML = slides[ current_slide_num ].slideText;
+
+		// Inserting an audio file
+		media_audio.src = slides[ current_slide_num ].slideAudio;
 	}
 		
 	// Removing video that has run previously just in case
@@ -653,6 +707,12 @@ function course_load() {
 }
 
 function questions_load() {
+	// memo:
+	//console.log(current_slide_num, ':', slides_mapper[current_slide_num]);
+	//var question_length = slides_mapper[current_course_num].length;
+	//question_index = slides_mapper[current_course_num][0]
+
+	
 	question_index = Number( slides_mapper[ current_slide_num ] ) - 1;
 
 	// Loading Question Template
@@ -879,10 +939,13 @@ document.getElementById('question-submit').addEventListener("click", function(){
 
 		// Moving to the next slide by skipping remediation slide after 2 seconds
 		setTimeout(function(){
-			//writeBookmark();
+			// New bookmarking
+			writeBookmark();
+			console.log("correct! boormarked page is now: " + bookmarked);
 			// Showing the current course slide numbers
 			pg_current.innerHTML = current_slide_num + 1;
 			course_load();
+			writeBookmark();
 
 		}, 1500);
 	}
@@ -947,17 +1010,24 @@ $(media_audio).on('playing', function() {
 	document.getElementById('state-play').setAttribute("class", "display-no");
 	document.getElementById('state-replay').setAttribute("class", "display-no");
 
-	console.log('media_audio on playing, current_slide_num ', current_slide_num, '  bookmarked: ', bookmarked);
-
+	// New bookmarking
 	// disable next btn when no bookmarked pg or current slide num is smaller than bookmarked
-	if ( bookmarked === 0 || current_slide_num >= bookmarked ) {
+	if ( bookmarked === 1 || current_slide_num >= bookmarked - 1 ) {
 		document.getElementById('pg-next').setAttribute('disabled', true);
-		console.log('case disabled true');
 	}
 	else {
 		document.getElementById('pg-next').removeAttribute('disabled');
-		console.log('case disabled removed');
 	}
+
+	/*
+	// disable next btn when no bookmarked pg or current slide num is smaller than bookmarked
+	if ( bookmarked === 0 || current_slide_num >= bookmarked ) {
+		document.getElementById('pg-next').setAttribute('disabled', true);
+	}
+	else {
+		document.getElementById('pg-next').removeAttribute('disabled');
+	}
+	*/
 });
 
 $(media_audio).on('ended', function() {
@@ -967,7 +1037,8 @@ $(media_audio).on('ended', function() {
 
    // enable button
    document.getElementById('pg-next').removeAttribute('disabled');
-   writeBookmark(); 	
+   // Use this if bookmarking at the end of narration is preferred
+   //writeBookmark(); 	
 
 	// auto play on
 	if ( auto_play_input.checked ) {
@@ -989,7 +1060,7 @@ $(media_video).on('playing', function() {
 	document.getElementById('state-replay').setAttribute("class", "display-no");
 
 	// disable next btn if current page num is greater than bookmarked page num
-	if ( bookmarked === 0 || current_slide_num >= bookmarked ) {
+	if ( bookmarked === 1 || current_slide_num >= bookmarked - 1 ) {
 		document.getElementById('pg-next').setAttribute('disabled', true);
 	}
 	else {
@@ -1004,7 +1075,8 @@ $(media_video).on('ended', function() {
 
    // enable button
    document.getElementById('pg-next').removeAttribute('disabled');
-   writeBookmark();
+   // New bookmarking
+   //writeBookmark();
 
 	// auto play on
 	if ( auto_play_input.checked ) {
