@@ -534,7 +534,7 @@ function writeBookmark() {
 		console.log("bookmarked already");
 	}
 	else if*/ 
-	if ( bookmarked === 0 || bookmarked - 1 <  current_slide_num || slides_mapper.hasOwnProperty( current_slide_num ) ) {
+	if ( bookmarked === 0 || bookmarked - 1 <  current_slide_num ) {
 		bookmarked++;
 		console.log("current slide num: " + current_slide_num);
 		console.log("bookmarked: "+ bookmarked);
