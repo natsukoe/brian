@@ -63,6 +63,8 @@ var q_3_span = document.querySelector('#q-3 span');
 var q_4_span = document.querySelector('#q-4 span');
 var auto_play_input = document.getElementById('auto-play-input');
 var jump_page = document.getElementById('jump-page');
+var resume_question_num; // Tracking which question needs to go back after remediation
+var question_array = 0; // Tracking the question array locally
 
 var slides = [
 	{
@@ -360,15 +362,15 @@ var remediation_slides = [
 ];
 */
 var slides_mapper = {
-	11: [1],
+	/*11: [1],
 	12: [2],
 	21: [3],
-	22: [4]
+	22: [4]*/
 
-	/*24: [1,2,3,4]*/
+	24: [1, 2, 3, 4]
 };
 
-var question_index = Number( slides_mapper[ current_slide_num ] ) - 1;
+var question_index;
 
 /* Pagenation */
 
@@ -437,7 +439,7 @@ var current_question_num;
 // Counting the total number of course slides
 var i = 0;
 	while ( i < slides.length - 1 ) {
-		if ( slides[ i ].templateType == 'basic' && slides[ i ].slideType !== 'remediation' || slides[ i ].templateType == 'video' ) {
+		if ( slides[ i ].templateType == 'basic' || slides[ i ].templateType == 'video' ) {
 			total_course_num++;
 			i++;
 		}
@@ -485,37 +487,37 @@ function next_slide() {
 	// Below if statement is to prevent page going to exceed the max slide number
 	if ( current_slide_num < slides.length - 1 ) {
 
-		if ( bookmarked > current_slide_num + 1 ) {
-			current_slide_num++;
-			current_course_num++;
-			pg_current.innerHTML = current_course_num + 1;
-			console.log("case1")
-			// Question slides
-			while ( slides_mapper.hasOwnProperty( current_slide_num ) && ! bookmarked > current_slide_num ) {
+		if ( bookmarked => current_slide_num + 1 ) {
+
+			// Remediation slides				
+			if ( slide_text.classList.contains('remediation') ) {
+				current_slide_num = resume_question_num;
+				question_array--;
+				slide_text.removeAttribute('class', 'remediation');
+				questions_load();
+			} else {
 				current_slide_num++;
-				console.log("case2");
+				current_course_num++;
+				pg_current.innerHTML = current_course_num + 1;
+				console.log("case A");
+				// Question slides
+				while ( slides_mapper.hasOwnProperty( current_slide_num ) && ! bookmarked > current_slide_num ) {
+					current_slide_num++;
+					console.log("case B");
+				}
 			}
-		}
-		else {
+		} else {
 			// Question slides
 			if ( slides_mapper.hasOwnProperty( current_slide_num ) ) {
 				current_slide_num++;
-				console.log("case3");				
-			}
-			// Remediation slides				
-			else if ( slide_text.classList.contains('remediation') ) {
-				current_slide_num++;
-				slide_text.removeAttribute('class', 'remediation');
-				console.log("case4");
-			}
-			else {
+				console.log("case C");				
+			} else {
 				current_slide_num++;
 				current_course_num++;
-				console.log("case5");
 				pg_current.innerHTML = current_slide_num + 1;
+				console.log("case D");
 			}
 		}
-
 	}	
 }
 /*
@@ -559,7 +561,7 @@ function decreaseBookmark() {
 	//updateProgress();
 }
 
-// Adding style when auto play button gets updated
+// Adding CSS style when auto play button gets updated
 auto_play_input.addEventListener("click", function() {
 	if ( auto_play_input.checked ) {
 		document.getElementById('auto-play').setAttribute("class", "on-state");
@@ -571,8 +573,7 @@ auto_play_input.addEventListener("click", function() {
 			slides_work();
 			pg_current.innerHTML = current_slide_num + 1;
 		}
-	}
-	else {
+	} else {
 		document.getElementById('auto-play').removeAttribute("class", "on-state");
 	}	
 });
@@ -586,20 +587,25 @@ function slides_work() {
 	// Make jump page input num blank after once showing it
 	if ( current_slide_num != jump_page.value - 1 ) {
 		jump_page.value = null;
+		console.log("1!");
 	}	
 	if ( bookmarked > current_slide_num || !slides_mapper.hasOwnProperty( current_slide_num ) || auto_play_input.checked ) {
 		course_load();
-	}
-	else {
+		console.log("2!");
+	} else {
+		question_index = slides_mapper[ current_slide_num ][ question_array ] - 1;
 		questions_load();
+		console.log("3!");
+		if ( question_array <= slides_mapper[ current_slide_num ].length ) {
+			question_array++;
+			console.log("4!");	
+		}
 	}
 }
 
 
 // Creating Course Contents
 function course_load() {
-
-	console.log(slides[ current_slide_num ].templateType);
 
 	// New bookmarking
 	writeBookmark();
@@ -667,8 +673,7 @@ function course_load() {
 		// Hiding Pagenation and Showing the Embeded Txt in HTML
 		document.getElementById('pagenation').removeAttribute("class", "display-no");
 		document.getElementById('pg-question').removeAttribute("class", "display-yes");
-	}
-	else {
+	} else {
 		tempplate_basic.removeAttribute("class", "display-no");
 		template_video.removeAttribute("class", "display-yes");
 	}
@@ -699,22 +704,15 @@ function course_load() {
 	// Disable back button when current page is 1
 	if ( current_slide_num == 0 ) {
 		document.getElementById('pg-back').setAttribute("disabled", true);
-	}
-	// Enable back button when current page is NOT 1
-	else {
+	} else {
+		// Enable back button when current page is NOT 1
 		document.getElementById('pg-back').removeAttribute('disabled');
 	}
 }
 
 function questions_load() {
-	// memo:
-	//console.log(current_slide_num, ':', slides_mapper[current_slide_num]);
-	//var question_length = slides_mapper[current_course_num].length;
-	//question_index = slides_mapper[current_course_num][0]
-
-	
-	question_index = Number( slides_mapper[ current_slide_num ] ) - 1;
-
+	resume_question_num = current_slide_num;
+	console.log("question_array: " + question_array);
 	// Loading Question Template
 	if ( question_slides[ question_index ].templateType === 'question' ) {
 	// Removing audio that has run previously
@@ -930,26 +928,30 @@ function remediation_load() {
 // Checking if the submitted answer is correct or wrong
 document.getElementById('question-submit').addEventListener("click", function(){
 	var selectedAnswer = $('input:checked').val();
-	question_index = Number( slides_mapper[ current_slide_num ] ) - 1;
 	if ( question_slides[ question_index ].quizAnswer == selectedAnswer ) {
 		// Correct answer
 		document.getElementById('question-result').setAttribute("class", "display-yes");
 		document.getElementById('question-correct').removeAttribute("class", "display-no");
 		document.getElementById('question-wrong').setAttribute("class", "display-no");
 
-		// Moving to the next slide by skipping remediation slide after 2 seconds
-		setTimeout(function(){
-			// New bookmarking
-			writeBookmark();
-			console.log("correct! boormarked page is now: " + bookmarked);
-			// Showing the current course slide numbers
-			pg_current.innerHTML = current_slide_num + 1;
-			course_load();
-			writeBookmark();
-
-		}, 1500);
-	}
-	else {
+			// Moving to the next slide by skipping remediation slide after 2 seconds
+			setTimeout(function(){
+			// Correct answer and there's no more question at the time
+			if ( question_array === slides_mapper[ current_slide_num ].length ) {
+				// New bookmarking
+				writeBookmark();
+				console.log("correct! boormarked page is now: " + bookmarked);
+				// Showing the current course slide numbers
+				pg_current.innerHTML = current_slide_num + 1;
+				course_load();
+				writeBookmark();
+				question_array = 0;	
+			} else {
+				// Correct answer but there's more question, move on to the next question
+				slides_work();
+			}
+		}, 1500);	
+	} else {
 		// Wropg-replayng answer
 		document.getElementById('question-result').setAttribute("class", "display-yes");
 		document.getElementById('question-correct').setAttribute("class", "display-no");
@@ -958,10 +960,12 @@ document.getElementById('question-submit').addEventListener("click", function(){
 		// Moving to the next (remediation) slide after 2 seconds
 		setTimeout(function(){
 			current_slide_num = question_slides[ question_index ].referenceSlide - 1;
+			console.log("resume_question_num: " + resume_question_num + "current_slide_num: " + current_slide_num);
 			pg_current.innerHTML = current_slide_num + 1;
 			decreaseBookmark();
 			course_load();
 			slide_text.setAttribute("class", "remediation");
+			document.getElementById('pg-back').setAttribute("disabled", true);
 			// The below 3 lines are to replace the pagenation label
 			document.getElementById('pagenation').setAttribute("class", "display-no");
 			document.getElementById('pg-question').removeAttribute("class", "display-yes");
@@ -1012,7 +1016,7 @@ $(media_audio).on('playing', function() {
 
 	// New bookmarking
 	// disable next btn when no bookmarked pg or current slide num is smaller than bookmarked
-	if ( bookmarked === 1 || current_slide_num >= bookmarked - 1 ) {
+	if ( bookmarked === 1 || current_slide_num >= bookmarked - 1 || slide_text.classList.contains('remediation') ) {
 		document.getElementById('pg-next').setAttribute('disabled', true);
 	}
 	else {
@@ -1041,7 +1045,7 @@ $(media_audio).on('ended', function() {
    //writeBookmark(); 	
 
 	// auto play on
-	if ( auto_play_input.checked ) {
+	if ( auto_play_input.checked && current_slide_num + 1 < slides.length ) {
 		next_slide();
 		slides_work();
 		pg_current.innerHTML = current_slide_num + 1;
@@ -1091,8 +1095,6 @@ $(media_video).on('pause', function() {
 	document.getElementById('state-play').removeAttribute("class", "display-no");
 	document.getElementById('state-replay').setAttribute("class", "display-no");
 });
-
-
 
 
 // Sowing progress bar
