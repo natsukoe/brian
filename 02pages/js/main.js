@@ -2,7 +2,7 @@
 
 var course_title = "MasterBrand Cabinets, Inc. (MBCI)";
 var sub_title = "Jasper, Indiana";
-var header_color = "#e3dd1b"; // #e3dd1b #b1273e
+var header_color = "#b1273e"; // #e3dd1b #b1273e
 var header_txt_color = "#fff";
 var user_name = 'Admin';
 var user_status = 'Admin';
@@ -26,8 +26,7 @@ if ( user_status === 'Admin' ) {
 	document.getElementById('slide-video').setAttribute("controls", true);
 	document.getElementById('admin-controller').setAttribute("class", "display-yes");
 	document.getElementsByTagName('body')[0].setAttribute("class", "admin-style");
-}
-else {
+} else {
 	document.getElementById('admin-audio').removeAttribute("controls");
 	document.getElementById('slide-video').removeAttribute("controls");
 	document.getElementById('admin-controller').removeAttribute("class", "display-yes");
@@ -36,8 +35,7 @@ else {
 // Trim user name after 10th letter
 if (user_name.length > 11) {
     user_name = user_name.substr(0,11) + '...';
-}
-else {
+} else {
 	// Show the entire name
 }
 
@@ -389,8 +387,7 @@ var bookmarked;
 var current_course_num;
 	if ( bookmarked == 0 ) {
 		current_course_num = 0;
-	}
-	else {
+	} else {
 		current_course_num = bookmarked;
 	}
 	
@@ -398,8 +395,7 @@ var current_course_num;
 var current_slide_num;
 if ( bookmarked == 0 ) {
 	current_slide_num = 0;	
-}
-else {
+} else {
 	current_slide_num = bookmarked;
 }
 
@@ -412,13 +408,11 @@ document.getElementById('jump-button').addEventListener("click", function(){
 	current_slide_num = jump_page.value - 1;
 	slides_work();
 	pg_current.innerHTML = current_slide_num + 1;
-	/* commenting out on 08252017 because it appears to be no longer needed
 	if ( slides_mapper.hasOwnProperty( current_slide_num ) ) {
 		bookmarked = jump_page.value;
 	} else {
 		bookmarked = jump_page.value - 1;
 	}
-	*/
 });
 
 // Counting the total number of question slides
@@ -435,8 +429,7 @@ var i = 0;
 		if ( slides[ i ].templateType == 'basic' || slides[ i ].templateType == 'video' ) {
 			total_course_num++;
 			i++;
-		}
-		else {
+		} else {
 			i++;
 		}
 }
@@ -738,8 +731,7 @@ function questions_load() {
 			maxNum = 3;
 			q_4_input.value = 4;
 			q_4_span.innerHTML = question_slides[ question_index ].quizChoice[3];
-		}
-		else {
+		} else {
 			maxNum = 4;
 			q_4_input.value = randomNum[3];
 			q_4_span.innerHTML = question_slides[ question_index ].quizChoice[ randomNum[3] - 1 ];
@@ -806,12 +798,10 @@ function questions_load() {
 		document.getElementById('pagenation').setAttribute("class", "display-no");
 		document.getElementById('pg-question').setAttribute("class", "display-yes");
 		document.getElementById('pg-remediation').removeAttribute("class", "display-yes");
-	}
-	else {
+	} else {
 		//tempplate_basic.removeAttribute("class", "display-no");
 		//template_video.removeAttribute("class", "display-yes");
 	}
-
 }
 /*
 function remediation_load() {
@@ -958,8 +948,7 @@ document.getElementById('question-submit').addEventListener("click", function(){
 document.getElementById('state-play').addEventListener("click", function(){
 	if ( slides[ current_slide_num ].templateType === 'video' ) {
 		media_video.play();	
-	}
-	else {
+	} else {
 		media_audio.play();
 	}	
 });
@@ -968,8 +957,7 @@ document.getElementById('state-play').addEventListener("click", function(){
 document.getElementById('state-pause').addEventListener("click", function(){
 	if ( slides[ current_slide_num ].templateType === 'video' ) {
 		media_video.pause();	
-	}
-	else {
+	} else {
 		media_audio.pause();
 	}	
 });
@@ -980,8 +968,7 @@ document.getElementById('state-replay').addEventListener("click", function(){
 		media_video.pause();
 		media_video.currentTime = 0.0;
 		media_video.play(); 	
-	}
-	else {
+	} else {
 		media_audio.pause();
 		media_audio.currentTime = 0.0;
 		media_audio.play();
@@ -998,8 +985,7 @@ $(media_audio).on('playing', function() {
 	// disable next btn when no bookmarked pg or current slide num is smaller than bookmarked
 	if ( bookmarked === 1 || current_slide_num >= bookmarked - 1 || slide_text.classList.contains('remediation') ) {
 		document.getElementById('pg-next').setAttribute('disabled', true);
-	}
-	else {
+	} else {
 		document.getElementById('pg-next').removeAttribute('disabled');
 	}
 
@@ -1046,8 +1032,7 @@ $(media_video).on('playing', function() {
 	// disable next btn if current page num is greater than bookmarked page num
 	if ( bookmarked === 1 || current_slide_num >= bookmarked - 1 ) {
 		document.getElementById('pg-next').setAttribute('disabled', true);
-	}
-	else {
+	} else {
 		document.getElementById('pg-next').removeAttribute('disabled');
 	}
 });
