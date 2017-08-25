@@ -368,6 +368,9 @@ var slides_mapper = {
 	22: [4]*/
 
 	24: [1, 2, 3, 4]
+
+	/*11: [1, 2],
+	24: [3, 4]*/
 };
 
 var question_index;
@@ -399,33 +402,23 @@ if ( bookmarked == 0 ) {
 else {
 	current_slide_num = bookmarked;
 }
+
 // For admin when wanting to jump to desired page
 document.getElementById('jump-button').addEventListener("click", function(){
-
-	// if page number entered was greater than max pg num or non numbers
-	if ( jump_page.value > slides.length || isNaN(jump_page.value) === true  ){
-		var user_jump_page = prompt("Please enter the page number " + slides.length + " or below.");
-		if ( user_jump_page === null ) {
-			return; //break out of the function early
-		}
-		else {
-			current_slide_num =  - 1;
-		}	
+	// Page number entered was greater than max pg num or non numbers
+	while ( jump_page.value >= slides.length || isNaN(jump_page.value) === true || jump_page.value === "" ) {
+		jump_page.value = prompt("Please enter the page number " + slides.length + " or below.");
 	}
-	// when proper page number entered
-	else {
-		current_slide_num = jump_page.value - 1;		
-	}
-	
-	if ( slides_mapper.hasOwnProperty( current_slide_num ) ) {
-		bookmarked = jump_page.value;
-	}
-	else {
-		bookmarked = jump_page.value - 1;
-	}	
-
+	current_slide_num = jump_page.value - 1;
 	slides_work();
 	pg_current.innerHTML = current_slide_num + 1;
+	/* commenting out on 08252017 because it appears to be no longer needed
+	if ( slides_mapper.hasOwnProperty( current_slide_num ) ) {
+		bookmarked = jump_page.value;
+	} else {
+		bookmarked = jump_page.value - 1;
+	}
+	*/
 });
 
 // Counting the total number of question slides
@@ -499,23 +492,19 @@ function next_slide() {
 				current_slide_num++;
 				current_course_num++;
 				pg_current.innerHTML = current_course_num + 1;
-				console.log("case A");
 				// Question slides
 				while ( slides_mapper.hasOwnProperty( current_slide_num ) && ! bookmarked > current_slide_num ) {
 					current_slide_num++;
-					console.log("case B");
 				}
 			}
 		} else {
 			// Question slides
 			if ( slides_mapper.hasOwnProperty( current_slide_num ) ) {
-				current_slide_num++;
-				console.log("case C");				
+				current_slide_num++;			
 			} else {
 				current_slide_num++;
 				current_course_num++;
 				pg_current.innerHTML = current_slide_num + 1;
-				console.log("case D");
 			}
 		}
 	}	
@@ -538,9 +527,6 @@ function writeBookmark() {
 	else if*/ 
 	if ( bookmarked === 0 || bookmarked - 1 <  current_slide_num ) {
 		bookmarked++;
-		console.log("current slide num: " + current_slide_num);
-		console.log("bookmarked: "+ bookmarked);
-		console.log("Now bookmark gets updated to : " + bookmarked);
 		//updateProgress();
 	}
 }
@@ -572,7 +558,6 @@ auto_play_input.addEventListener("click", function() {
 			next_slide();
 			slides_work();
 			pg_current.innerHTML = current_slide_num + 1;
-			console.log("hello");
 		}
 	} else {
 		document.getElementById('auto-play').removeAttribute("class", "on-state");
@@ -588,18 +573,14 @@ function slides_work() {
 	// Make jump page input num blank after once showing it
 	if ( current_slide_num != jump_page.value - 1 ) {
 		jump_page.value = null;
-		console.log("1!");
 	}	
 	if ( bookmarked > current_slide_num || !slides_mapper.hasOwnProperty( current_slide_num ) || auto_play_input.checked ) {
 		course_load();
-		console.log("2!");
 	} else {
 		question_index = slides_mapper[ current_slide_num ][ question_array ] - 1;
 		questions_load();
-		console.log("3!");
 		if ( question_array <= slides_mapper[ current_slide_num ].length ) {
 			question_array++;
-			console.log("4!");	
 		}
 	}
 }
@@ -713,7 +694,6 @@ function course_load() {
 
 function questions_load() {
 	resume_question_num = current_slide_num;
-	console.log("question_array: " + question_array);
 	// Loading Question Template
 	if ( question_slides[ question_index ].templateType === 'question' ) {
 	// Removing audio that has run previously
@@ -941,7 +921,6 @@ document.getElementById('question-submit').addEventListener("click", function(){
 			if ( question_array === slides_mapper[ current_slide_num ].length ) {
 				// New bookmarking
 				writeBookmark();
-				console.log("correct! boormarked page is now: " + bookmarked);
 				// Showing the current course slide numbers
 				pg_current.innerHTML = current_slide_num + 1;
 				course_load();
@@ -961,12 +940,12 @@ document.getElementById('question-submit').addEventListener("click", function(){
 		// Moving to the next (remediation) slide after 2 seconds
 		setTimeout(function(){
 			current_slide_num = question_slides[ question_index ].referenceSlide - 1;
-			console.log("resume_question_num: " + resume_question_num + "current_slide_num: " + current_slide_num);
 			pg_current.innerHTML = current_slide_num + 1;
-			decreaseBookmark();
+			//decreaseBookmark();
 			course_load();
 			slide_text.setAttribute("class", "remediation");
 			document.getElementById('pg-back').setAttribute("disabled", true);
+			console.log( "Reference Course Slide: " + Number(current_slide_num + 1 ) );
 			// The below 3 lines are to replace the pagenation label
 			document.getElementById('pagenation').setAttribute("class", "display-no");
 			document.getElementById('pg-question').removeAttribute("class", "display-yes");
