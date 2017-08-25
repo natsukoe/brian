@@ -1045,7 +1045,7 @@ $(media_audio).on('ended', function() {
    //writeBookmark(); 	
 
 	// auto play on
-	if ( auto_play_input.checked && current_slide_num + 1 < slides.length ) {
+	if ( auto_play_input.checked && current_slide_num + 1 < slides.length && media_audio.currentTime > 0.0; ) {
 		next_slide();
 		slides_work();
 		pg_current.innerHTML = current_slide_num + 1;
