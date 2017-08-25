@@ -2,7 +2,7 @@
 
 var course_title = "MasterBrand Cabinets, Inc. (MBCI)";
 var sub_title = "Jasper, Indiana";
-var header_color = "#b1273e"; // #e3dd1b #b1273e
+var header_color = "#e3dd1b"; // #e3dd1b #b1273e
 var header_txt_color = "#fff";
 var user_name = 'Admin';
 var user_status = 'Admin';
@@ -1045,7 +1045,7 @@ $(media_audio).on('ended', function() {
    //writeBookmark(); 	
 
 	// auto play on
-	if ( auto_play_input.checked && current_slide_num + 1 < slides.length && media_audio.currentTime === media_audio.duration ) {
+	if ( auto_play_input.checked && current_slide_num + 1 < slides.length && media_audio.currentTime === media_audio.duration - 0.1 ) {
 		next_slide();
 		slides_work();
 		pg_current.innerHTML = current_slide_num + 1;
