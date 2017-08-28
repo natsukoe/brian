@@ -63,6 +63,7 @@ var auto_play_input = document.getElementById('auto-play-input');
 var jump_page = document.getElementById('jump-page');
 var resume_question_num; // Tracking which question needs to go back after remediation
 var question_array = 0; // Tracking the question array locally
+var replay; // Tracking to see if reply button is hit so that we can eable the next btn
 
 var slides = [
 	{
@@ -267,7 +268,7 @@ var slides = [
 	},
 	{
 		slideTitle: 'Text Only Template',
-		slideText: '<p>Sorry to repeat the naration #25 again here, but we are supposed to have an empty audio here & I don\'t have that file at the moment!</p>',
+		slideText: '<p>Sorry to repeat the naration #25 again here, but we are supposed to have an empty audio & I don\'t have that file at the moment!</p>',
 		slideAudio: 'MasterBrand/25.mp3',
 		templateType: 'text'
 	}
@@ -409,9 +410,10 @@ document.getElementById('jump-button').addEventListener("click", function(){
 	slides_work();
 	pg_current.innerHTML = current_slide_num + 1;
 	if ( slides_mapper.hasOwnProperty( current_slide_num ) ) {
-		bookmarked = jump_page.value;
+		bookmarked = jump_page.value + 1;
+		console.log("case1");
 	} else {
-		bookmarked = jump_page.value - 1;
+		bookmarked = jump_page.value;
 	}
 });
 
@@ -965,13 +967,15 @@ document.getElementById('state-pause').addEventListener("click", function(){
 // Replay Button
 document.getElementById('state-replay').addEventListener("click", function(){
 	if ( slides[ current_slide_num ].templateType === 'video' ) {
+		replay = 1;
 		media_video.pause();
 		media_video.currentTime = 0.0;
 		media_video.play(); 	
 	} else {
+		replay = 1;
 		media_audio.pause();
 		media_audio.currentTime = 0.0;
-		media_audio.play();
+		media_audio.play();		
 	}	
 });
 
@@ -983,10 +987,12 @@ $(media_audio).on('playing', function() {
 
 	// New bookmarking
 	// disable next btn when no bookmarked pg or current slide num is smaller than bookmarked
-	if ( bookmarked === 1 || current_slide_num >= bookmarked - 1 || slide_text.classList.contains('remediation') ) {
+	if ( bookmarked === 1 && replay != 1 || current_slide_num >= bookmarked - 1 && replay != 1 || slide_text.classList.contains('remediation') ) {
 		document.getElementById('pg-next').setAttribute('disabled', true);
+		
 	} else {
 		document.getElementById('pg-next').removeAttribute('disabled');
+		replay = 0;
 	}
 
 	/*
@@ -1030,10 +1036,11 @@ $(media_video).on('playing', function() {
 	document.getElementById('state-replay').setAttribute("class", "display-no");
 
 	// disable next btn if current page num is greater than bookmarked page num
-	if ( bookmarked === 1 || current_slide_num >= bookmarked - 1 ) {
+	if ( bookmarked === 1 || current_slide_num >= bookmarked - 1 && replay != 1 ) {
 		document.getElementById('pg-next').setAttribute('disabled', true);
 	} else {
 		document.getElementById('pg-next').removeAttribute('disabled');
+		replay = 0;
 	}
 });
 

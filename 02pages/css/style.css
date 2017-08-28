@@ -337,6 +337,7 @@ input[type="button"] {
 }
 #audio-controller button[disabled]:hover {
 	background: #f1efef;
+	cursor: default;
 }
 #audio-controller i {
 	padding-right: 6px;
