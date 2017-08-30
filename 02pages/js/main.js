@@ -366,10 +366,10 @@ var slides_mapper = {
 	21: [3],
 	22: [4]*/
 
-	24: [1, 2, 3, 4]
+	/*24: [1, 2, 3, 4]*/
 
-	/*11: [1, 2],
-	24: [3, 4]*/
+	11: [1, 2],
+	24: [3, 4]
 };
 
 var question_index;
@@ -386,7 +386,7 @@ var bookmarked;
 
 // Showing the current course slide number
 var current_course_num;
-	if ( bookmarked == 0 ) {
+	if ( bookmarked === 0 ) {
 		current_course_num = 0;
 	} else {
 		current_course_num = bookmarked;
@@ -394,7 +394,7 @@ var current_course_num;
 	
 // Current slide number
 var current_slide_num;
-if ( bookmarked == 0 ) {
+if ( bookmarked === 0 ) {
 	current_slide_num = 0;	
 } else {
 	current_slide_num = bookmarked;
@@ -403,18 +403,23 @@ if ( bookmarked == 0 ) {
 // For admin when wanting to jump to desired page
 document.getElementById('jump-button').addEventListener("click", function(){
 	// Page number entered was greater than max pg num or non numbers
-	while ( jump_page.value >= slides.length || isNaN(jump_page.value) === true || jump_page.value === "" ) {
+	while ( jump_page.value > slides.length || isNaN(jump_page.value) === true ) {
 		jump_page.value = prompt("Please enter the page number " + slides.length + " or below.");
 	}
+	if ( jump_page.value === "" || jump_page.value === null ) {
+		return;
+	}
+
+	if ( slides_mapper.hasOwnProperty( current_slide_num ) ) {
+		//bookmarked = jump_page.value + 1;
+	} else {
+		//bookmarked = jump_page.value;
+	}
+	bookmarked = jump_page.value;
 	current_slide_num = jump_page.value - 1;
 	slides_work();
 	pg_current.innerHTML = current_slide_num + 1;
-	if ( slides_mapper.hasOwnProperty( current_slide_num ) ) {
-		bookmarked = jump_page.value + 1;
-		console.log("case1");
-	} else {
-		bookmarked = jump_page.value;
-	}
+	//bookmarked = jump_page.value;
 });
 
 // Counting the total number of question slides
@@ -483,23 +488,28 @@ function next_slide() {
 				question_array--;
 				slide_text.removeAttribute('class', 'remediation');
 				questions_load();
+				console.log("case A");
 			} else {
 				current_slide_num++;
 				current_course_num++;
 				pg_current.innerHTML = current_course_num + 1;
+				console.log("case B");
 				// Question slides
 				while ( slides_mapper.hasOwnProperty( current_slide_num ) && ! bookmarked > current_slide_num ) {
 					current_slide_num++;
+					console.log("case C");
 				}
 			}
 		} else {
 			// Question slides
 			if ( slides_mapper.hasOwnProperty( current_slide_num ) ) {
-				current_slide_num++;			
+				current_slide_num++;
+				console.log("case D");			
 			} else {
 				current_slide_num++;
 				current_course_num++;
 				pg_current.innerHTML = current_slide_num + 1;
+				console.log("case E");
 			}
 		}
 	}	
@@ -570,6 +580,7 @@ function slides_work() {
 		jump_page.value = null;
 	}	
 	if ( bookmarked > current_slide_num || !slides_mapper.hasOwnProperty( current_slide_num ) || auto_play_input.checked ) {
+		console.log("course loading");
 		course_load();
 	} else {
 		question_index = slides_mapper[ current_slide_num ][ question_array ] - 1;
@@ -579,7 +590,6 @@ function slides_work() {
 		}
 	}
 }
-
 
 // Creating Course Contents
 function course_load() {
@@ -916,11 +926,12 @@ document.getElementById('question-submit').addEventListener("click", function(){
 				// Showing the current course slide numbers
 				pg_current.innerHTML = current_slide_num + 1;
 				course_load();
-				writeBookmark();
-				question_array = 0;	
+				question_array = 0;
+				console.log("runs here");	
 			} else {
 				// Correct answer but there's more question, move on to the next question
 				slides_work();
+				console.log("runs here 2");
 			}
 		}, 1500);	
 	} else {
@@ -938,6 +949,7 @@ document.getElementById('question-submit').addEventListener("click", function(){
 			slide_text.setAttribute("class", "remediation");
 			document.getElementById('pg-back').setAttribute("disabled", true);
 			console.log( "Reference Course Slide: " + Number(current_slide_num + 1 ) );
+			console.log( question_array );
 			// The below 3 lines are to replace the pagenation label
 			document.getElementById('pagenation').setAttribute("class", "display-no");
 			document.getElementById('pg-question').removeAttribute("class", "display-yes");
