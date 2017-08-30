@@ -636,7 +636,14 @@ function course_load() {
 		body_media.appendChild(media_img);
 
 		// Inserting an audio file
-		media_audio.src = slides[ current_slide_num ].slideAudio;
+		if ( auto_play_input.checked ) { // Giving 2 seconds delay when auto play is set
+			setTimeout(function() {
+  				media_audio.src = slides[ current_slide_num ].slideAudio;
+			}, 1000);
+		} else {
+			media_audio.src = slides[ current_slide_num ].slideAudio;	
+		}
+		
 	}
 	// Hiding Pagenation and Showing the Embeded Txt in HTML
 	document.getElementById('pagenation').removeAttribute("class", "display-no");
@@ -652,7 +659,15 @@ function course_load() {
 		template_video.setAttribute("class", "display-yes block-padding");
 		template_text.removeAttribute("class", "display-yes block-padding");
 		template_question.setAttribute("class", "display-no");   
-		media_video.src = slides[ current_slide_num ].slideVideo;
+		
+		// Inserting an video file
+		if ( auto_play_input.checked ) { // Giving 2 seconds delay when auto play is set
+			setTimeout(function() {
+  				media_video.src = slides[ current_slide_num ].slideVideo;
+			}, 1000);
+		} else {
+			media_video.src = slides[ current_slide_num ].slideVideo;	
+		}
 
 		// Show the page controller
 		document.getElementById('pg-buttons').removeAttribute("class", "display-no");
@@ -680,7 +695,13 @@ function course_load() {
 		document.getElementById('slide-text-Only').innerHTML = slides[ current_slide_num ].slideText;
 
 		// Inserting an audio file
-		media_audio.src = slides[ current_slide_num ].slideAudio;
+		if ( auto_play_input.checked ) { // Giving 2 seconds delay when auto play is set
+			setTimeout(function() {
+  				media_audio.src = slides[ current_slide_num ].slideAudio;
+			}, 1000);
+		} else {
+			media_audio.src = slides[ current_slide_num ].slideAudio;	
+		}
 	}
 		
 	// Removing video that has run previously just in case
