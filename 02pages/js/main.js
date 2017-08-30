@@ -664,7 +664,7 @@ function course_load() {
 		if ( auto_play_input.checked ) { // Giving 2 seconds delay when auto play is set
 			setTimeout(function() {
   				media_video.src = slides[ current_slide_num ].slideVideo;
-			}, 1000);
+			}, 500);
 		} else {
 			media_video.src = slides[ current_slide_num ].slideVideo;	
 		}
