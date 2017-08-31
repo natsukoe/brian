@@ -2,7 +2,7 @@
 
 var course_title = "MasterBrand Cabinets, Inc. (MBCI)";
 var sub_title = "Jasper, Indiana";
-var header_color = "#e3dd1b"; // #e3dd1b #b1273e
+var header_color = "#b1273e"; // #e3dd1b #b1273e
 var header_txt_color = "#fff";
 var user_name = 'Admin';
 var user_status = 'Admin';
@@ -366,10 +366,10 @@ var slides_mapper = {
 	21: [3],
 	22: [4]*/
 
-	24: [1, 2, 3, 4]
+	/*24: [1, 2, 3, 4]*/
 
-	/*11: [1, 2],
-	24: [3, 4]*/
+	12: [1, 2],
+	24: [3, 4]
 };
 
 var question_index;
@@ -485,10 +485,12 @@ function next_slide() {
 			// Remediation slides				
 			if ( slide_text.classList.contains('remediation') ) {
 				current_slide_num = resume_question_num;
+
 				question_array--;
 				slide_text.removeAttribute('class', 'remediation');
-				questions_load();
+				//questions_load();
 				console.log("case A");
+				//console.log("question_array: " + question_array);
 			} else {
 				current_slide_num++;
 				current_course_num++;
@@ -582,11 +584,21 @@ function slides_work() {
 	if ( bookmarked > current_slide_num || !slides_mapper.hasOwnProperty( current_slide_num ) || auto_play_input.checked ) {
 		console.log("course loading");
 		course_load();
-	} else {
+	} 
+
+else if (slides_mapper.hasOwnProperty( current_slide_num ) && question_array  > 1 ) {
+
+	console.log("hello hello");
+}
+
+
+	else {
 		question_index = slides_mapper[ current_slide_num ][ question_array ] - 1;
+		console.log("question loading");
 		questions_load();
 		if ( question_array <= slides_mapper[ current_slide_num ].length ) {
 			question_array++;
+			console.log("question adding");
 		}
 	}
 }
