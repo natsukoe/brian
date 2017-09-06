@@ -630,10 +630,10 @@ function course_load() {
 		body_media.appendChild(media_img);
 
 		// Inserting an audio file
-		if ( auto_play_input.checked ) { // Giving 0.5 seconds delay when auto play is set
+		if ( auto_play_input.checked ) { // Giving 1 seconds delay when auto play is set
 			setTimeout(function() {
   				media_audio.src = slides[ current_slide_num ].slideAudio;
-			}, 500);
+			}, 1000);
 		} else {
 			media_audio.src = slides[ current_slide_num ].slideAudio;	
 		}
