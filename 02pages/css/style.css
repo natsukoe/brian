@@ -140,6 +140,7 @@ h3 {
 }
 #admin-audio {
 	margin: 10px auto;
+	background: #333;
 	display: block;
 	box-sizing: border-box;
 	width: 100%; /* If seekbar needs to be seen on IE, comment out this line */
@@ -257,7 +258,7 @@ h3 {
 }
 .state-label-on {
 	position: absolute; 
-	top: 4px;
+	top: 6px;
 	left: 12px;
 	color: #fff;
 	visibility: hidden;
@@ -273,7 +274,7 @@ h3 {
 }
 .state-label-off {
 	position: absolute;
-	top: 4px;
+	top: 6px;
 	right: 12px;
 	color: #666;
 	visibility: visible;

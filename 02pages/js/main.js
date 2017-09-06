@@ -2,10 +2,10 @@
 
 var course_title = "MasterBrand Cabinets, Inc. (MBCI)";
 var sub_title = "Jasper, Indiana";
-var header_color = "#b1273e"; // #e3dd1b #b1273e
+var header_color = "#e3dd1b"; // #e3dd1b #b1273e
 var header_txt_color = "#fff";
 var user_name = 'Admin';
-var user_status = 'Admin';
+var user_status = 'admin';
 
 // Selecting each title
 document.getElementsByTagName('h1')[0].innerHTML = course_title;
@@ -21,13 +21,14 @@ $("#masterhead").css({"color":header_txt_color});
 
 
 // If user is admin add special features and CSS style
-if ( user_status === 'Admin' ) {
-	document.getElementById('admin-audio').setAttribute("controls", true);
+if ( user_status === 'admin' ) {
+	//document.getElementById('admin-audio').setAttribute("controls", true);
 	document.getElementById('slide-video').setAttribute("controls", true);
 	document.getElementById('admin-controller').setAttribute("class", "display-yes");
 	document.getElementsByTagName('body')[0].setAttribute("class", "admin-style");
+	document.getElementById('pg-next').removeAttribute('disabled');
 } else {
-	document.getElementById('admin-audio').removeAttribute("controls");
+	//document.getElementById('admin-audio').removeAttribute("controls");
 	document.getElementById('slide-video').removeAttribute("controls");
 	document.getElementById('admin-controller').removeAttribute("class", "display-yes");
 }
@@ -485,33 +486,27 @@ function next_slide() {
 			// Remediation slides				
 			if ( slide_text.classList.contains('remediation') ) {
 				current_slide_num = resume_question_num;
-
 				question_array--;
 				slide_text.removeAttribute('class', 'remediation');
 				//questions_load();
-				console.log("case A");
 				//console.log("question_array: " + question_array);
 			} else {
 				current_slide_num++;
 				current_course_num++;
 				pg_current.innerHTML = current_course_num + 1;
-				console.log("case B");
 				// Question slides
 				while ( slides_mapper.hasOwnProperty( current_slide_num ) && ! bookmarked > current_slide_num ) {
 					current_slide_num++;
-					console.log("case C");
 				}
 			}
 		} else {
 			// Question slides
 			if ( slides_mapper.hasOwnProperty( current_slide_num ) ) {
-				current_slide_num++;
-				console.log("case D");			
+				current_slide_num++;			
 			} else {
 				current_slide_num++;
 				current_course_num++;
 				pg_current.innerHTML = current_slide_num + 1;
-				console.log("case E");
 			}
 		}
 	}	
@@ -582,23 +577,12 @@ function slides_work() {
 		jump_page.value = null;
 	}	
 	if ( bookmarked > current_slide_num || !slides_mapper.hasOwnProperty( current_slide_num ) || auto_play_input.checked ) {
-		console.log("course loading");
 		course_load();
-	} 
-
-else if (slides_mapper.hasOwnProperty( current_slide_num ) && question_array  > 1 ) {
-
-	console.log("hello hello");
-}
-
-
-	else {
+	} else {
 		question_index = slides_mapper[ current_slide_num ][ question_array ] - 1;
-		console.log("question loading");
 		questions_load();
 		if ( question_array <= slides_mapper[ current_slide_num ].length ) {
 			question_array++;
-			console.log("question adding");
 		}
 	}
 }
@@ -959,12 +943,10 @@ document.getElementById('question-submit').addEventListener("click", function(){
 				// Showing the current course slide numbers
 				pg_current.innerHTML = current_slide_num + 1;
 				course_load();
-				question_array = 0;
-				console.log("runs here");	
+				question_array = 0;	
 			} else {
 				// Correct answer but there's more question, move on to the next question
 				slides_work();
-				console.log("runs here 2");
 			}
 		}, 1500);	
 	} else {
@@ -982,7 +964,6 @@ document.getElementById('question-submit').addEventListener("click", function(){
 			slide_text.setAttribute("class", "remediation");
 			document.getElementById('pg-back').setAttribute("disabled", true);
 			console.log( "Reference Course Slide: " + Number(current_slide_num + 1 ) );
-			console.log( question_array );
 			// The below 3 lines are to replace the pagenation label
 			document.getElementById('pagenation').setAttribute("class", "display-no");
 			document.getElementById('pg-question').removeAttribute("class", "display-yes");
@@ -1032,9 +1013,10 @@ $(media_audio).on('playing', function() {
 
 	// New bookmarking
 	// disable next btn when no bookmarked pg or current slide num is smaller than bookmarked
-	if ( bookmarked === 1 && replay != 1 || current_slide_num >= bookmarked - 1 && replay != 1 || slide_text.classList.contains('remediation') ) {
-		document.getElementById('pg-next').setAttribute('disabled', true);
-		
+	if ( bookmarked === 1 && replay != 1 || current_slide_num >= bookmarked - 1 && replay != 1 || slide_text.classList.contains('remediation')  ) {
+		if ( user_status != 'admin' ) {			
+			document.getElementById('pg-next').setAttribute('disabled', true);
+		}
 	} else {
 		document.getElementById('pg-next').removeAttribute('disabled');
 		replay = 0;
@@ -1081,8 +1063,10 @@ $(media_video).on('playing', function() {
 	document.getElementById('state-replay').setAttribute("class", "display-no");
 
 	// disable next btn if current page num is greater than bookmarked page num
-	if ( bookmarked === 1 || current_slide_num >= bookmarked - 1 && replay != 1 ) {
-		document.getElementById('pg-next').setAttribute('disabled', true);
+	if ( bookmarked === 1 || current_slide_num >= bookmarked - 1 && replay != 1 || user_status != admin ) {
+		if ( user_status != 'admin' ) {
+			document.getElementById('pg-next').setAttribute('disabled', true);	
+		}		
 	} else {
 		document.getElementById('pg-next').removeAttribute('disabled');
 		replay = 0;
