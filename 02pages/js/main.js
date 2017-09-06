@@ -480,9 +480,7 @@ document.getElementById('pg-next').addEventListener("click", function(){
 function next_slide() {
 	// Below if statement is to prevent page going to exceed the max slide number
 	if ( current_slide_num < slides.length - 1 ) {
-
 		if ( bookmarked => current_slide_num + 1 ) {
-
 			// Remediation slides				
 			if ( slide_text.classList.contains('remediation') ) {
 				current_slide_num = resume_question_num;
@@ -556,7 +554,7 @@ auto_play_input.addEventListener("click", function() {
 
 		// When audio is not playing and auto run is set ON, move slide to next	
 		// media_audio.duration < 0
-		if ( media_audio.paused && media_audio.currentTime != 0 ) {
+		if ( media_audio.paused && media_audio.currentTime === media_audio.duration ) {
 			next_slide();
 			slides_work();
 			pg_current.innerHTML = current_slide_num + 1;
@@ -632,10 +630,10 @@ function course_load() {
 		body_media.appendChild(media_img);
 
 		// Inserting an audio file
-		if ( auto_play_input.checked ) { // Giving 2 seconds delay when auto play is set
+		if ( auto_play_input.checked ) { // Giving 0.5 seconds delay when auto play is set
 			setTimeout(function() {
   				media_audio.src = slides[ current_slide_num ].slideAudio;
-			}, 1000);
+			}, 500);
 		} else {
 			media_audio.src = slides[ current_slide_num ].slideAudio;	
 		}
@@ -657,7 +655,7 @@ function course_load() {
 		template_question.setAttribute("class", "display-no");   
 		
 		// Inserting an video file
-		if ( auto_play_input.checked ) { // Giving 2 seconds delay when auto play is set
+		if ( auto_play_input.checked ) { // Giving 0.5 seconds delay when auto play is set
 			setTimeout(function() {
   				media_video.src = slides[ current_slide_num ].slideVideo;
 			}, 500);
@@ -691,7 +689,7 @@ function course_load() {
 		document.getElementById('slide-text-Only').innerHTML = slides[ current_slide_num ].slideText;
 
 		// Inserting an audio file
-		if ( auto_play_input.checked ) { // Giving 2 seconds delay when auto play is set
+		if ( auto_play_input.checked ) { // Giving 1 seconds delay when auto play is set
 			setTimeout(function() {
   				media_audio.src = slides[ current_slide_num ].slideAudio;
 			}, 1000);
@@ -1045,9 +1043,12 @@ $(media_audio).on('ended', function() {
 
 	// auto play on
 	if ( auto_play_input.checked && current_slide_num + 1 < slides.length ) {
-		next_slide();
-		slides_work();
-		pg_current.innerHTML = current_slide_num + 1;
+		// Giving 1 seconds delay when auto play is set
+		setTimeout(function() {
+  			next_slide();
+			slides_work();
+			pg_current.innerHTML = current_slide_num + 1;
+		}, 1000);
 	}
 });
 
@@ -1085,6 +1086,7 @@ $(media_video).on('ended', function() {
 
 	// auto play on
 	if ( auto_play_input.checked ) {
+		// Not giving any delay for video in case taking longer to load
 		next_slide();
 		slides_work();
 		pg_current.innerHTML = current_slide_num + 1;
