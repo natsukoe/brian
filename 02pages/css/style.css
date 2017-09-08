@@ -91,7 +91,7 @@ h3 {
 }
 #corporate-name {
 	font-family: 'Rosario', sans-serif;
-	padding-top: 5px; /* This particular font tends to appear too height so I adjusted to align with the User Info */
+	padding-top: 5px; /* This particular font tends to appear too high so I adjusted to align with the User Info */
   	margin-right: auto;
     white-space: nowrap;
     overflow: hidden;
@@ -258,7 +258,7 @@ h3 {
 }
 .state-label-on {
 	position: absolute; 
-	top: 6px;
+	top: 5px;
 	left: 12px;
 	color: #fff;
 	visibility: hidden;
@@ -274,7 +274,7 @@ h3 {
 }
 .state-label-off {
 	position: absolute;
-	top: 6px;
+	top: 5px;
 	right: 12px;
 	color: #666;
 	visibility: visible;
@@ -410,8 +410,6 @@ audio { width: 460px; margin: 10px auto; }
   #sub-title input[type="button"] { padding: 3px 0; }
 }
 
-
-
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -436,7 +434,6 @@ audio { width: 460px; margin: 10px auto; }
   -webkit-transition: .4s;
   transition: .4s;
 }
-
 .slider:before {
   position: absolute;
   content: "";
@@ -448,26 +445,21 @@ audio { width: 460px; margin: 10px auto; }
   -webkit-transition: .4s;
   transition: .4s;
 }
-
 input:checked + .slider {
   background-color: #2196F3;
 }
-
 input:focus + .slider {
   box-shadow: 0 0 1px #2196F3;
 }
-
 input:checked + .slider:before {
   -webkit-transform: translateX(46px);
   -ms-transform: translateX(46px);
   transform: translateX(46px);
 }
-
 /* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
-
 .slider.round:before {
   border-radius: 50%;
 }
