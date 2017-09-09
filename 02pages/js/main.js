@@ -4,7 +4,7 @@ var course_title = "MasterBrand Cabinets, Inc. (MBCI)";
 var sub_title = "Jasper, Indiana";
 var header_color = "#b1273e"; // #e3dd1b #b1273e
 var header_txt_color = "#fff";
-var user_name = 'Adminadmin';
+var user_name = 'Adminadminadmin';
 var user_status = 'admin';
 
 // Selecting each title
@@ -29,8 +29,8 @@ if ( user_status === 'admin' ) {
 }
 
 // Trim user name after 10th letter
-if (user_name.length > 11) {
-    user_name = user_name.substr(0,11) + '...';
+if (user_name.length > 9) {
+    user_name = user_name.substr(0,9) + '...';
 } else {
 	// Show the entire name
 }
@@ -455,7 +455,33 @@ function decreaseBookmark() {
 	//updateProgress();
 }
 
-// Adding CSS style when auto play button gets updated
+/* Auto Play Feature */
+
+//if only wanting to support swipe gesture for mobile, use this (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+$(function() {
+	//Enable swiping      
+	$("#auto-play .switch").swipe( {
+    	//Generic swipe handler for all directions
+        swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+        	if ( direction === "right" ) {
+          		auto_play_input.setAttribute('checked', true);
+          		document.getElementById('auto-play').setAttribute("class", "on-state");
+				// When audio is not playing and auto run is set ON, move slide to next
+				if ( media_audio.paused && media_audio.currentTime === media_audio.duration ) {
+					next_slide();
+					slides_work();
+					pg_current.innerHTML = current_slide_num + 1;
+				}
+          	} else if ( direction === "left" ) {
+          		auto_play_input.removeAttribute('checked', true);
+          		document.getElementById('auto-play').removeAttribute("class", "on-state");
+    		} 
+    	},
+    threshold:0, //Default is 75px, setting 0 so any distance triggers swipe
+    excludedElements: "select, textarea, .noSwipe"
+    });
+});
+// For non-swiping, meaning clicking, add CSS style when auto play button gets updated
 auto_play_input.addEventListener("click", function() {
 	if ( auto_play_input.checked ) {
 		document.getElementById('auto-play').setAttribute("class", "on-state");
@@ -469,7 +495,7 @@ auto_play_input.addEventListener("click", function() {
 	} else {
 		document.getElementById('auto-play').removeAttribute("class", "on-state");
 	}	
-});
+},);
 
 /* Course Contents */
 
@@ -858,21 +884,6 @@ $(media_video).on('pause', function() {
 	document.getElementById('state-play').removeAttribute("class", "display-no");
 	document.getElementById('state-replay').setAttribute("class", "display-no");
 });
-
-
-
-    $(function() {      
-      //Enable swiping...
-      $("#auto-play-input").swipe( {
-        //Generic swipe handler for all directions
-        swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-          console.log("You swiped " + direction );  
-        },
-        //Default is 75px, set to 0 for demo so any distance triggers swipe
-         threshold:0
-      });
-    });
-
 
 // Sowing progress bar
 /*
