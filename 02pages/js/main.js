@@ -351,7 +351,7 @@ if ( bookmarked === 0 ) {
 }
 
 // For admin when wanting to jump to desired page
-document.getElementById('jump-button').addEventListener("click", function(){
+function loadJumped() {
 	// Page number entered was greater than max pg num or non numbers
 	while ( jump_page.value > slides.length || isNaN(jump_page.value) === true ) {
 		jump_page.value = prompt("Please enter the page number " + slides.length + " or below.");
@@ -363,26 +363,17 @@ document.getElementById('jump-button').addEventListener("click", function(){
 	current_slide_num = jump_page.value - 1;
 	slides_work();
 	pg_current.innerHTML = current_slide_num + 1;
+}
+
+document.getElementById('jump-button').addEventListener("click", function(){
+	loadJumped();
 });
 
 // Enabling the jump page execution by using enter key instead of clicking GO btn
 jump_page.addEventListener('keypress',function(e){
 	if(e.which == 13 || e.key == 13) {
 		e.preventDefault();
-
-
-	// Page number entered was greater than max pg num or non numbers
-	while ( jump_page.value > slides.length || isNaN(jump_page.value) === true ) {
-		jump_page.value = prompt("Please enter the page number " + slides.length + " or below.");
-	}
-	if ( jump_page.value === "" || jump_page.value === null ) {
-		return;
-	}
-	bookmarked = jump_page.value;
-	current_slide_num = jump_page.value - 1;
-	slides_work();
-	pg_current.innerHTML = current_slide_num + 1;
-		
+		loadJumped();
 	}
 })
 
