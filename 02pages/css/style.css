@@ -246,8 +246,10 @@ h3 {
 	margin-right: 6px;
 }
 #jump-page {
-	width: 40px;
-	padding: 2px;
+	width: 46px;
+	padding: 4px;
+	font-size: 125%;
+	margin-right: 4px;
 }
 #auto-play {
 	margin-bottom: 6px;
