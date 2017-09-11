@@ -412,7 +412,7 @@ document.getElementById('pg-next').addEventListener("click", function(){
 function next_slide() {
 	// Below if statement is to prevent page going to exceed the max slide number
 	if ( current_slide_num < slides.length - 1 ) {
-		if ( bookmarked => current_slide_num + 1 ) {
+		if ( bookmarked >= current_slide_num + 1 ) {
 			// Remediation slides				
 			if ( slide_text.classList.contains('remediation') ) {
 				current_slide_num = resume_question_num;
