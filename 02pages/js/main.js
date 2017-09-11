@@ -15,26 +15,6 @@ document.getElementsByTagName('h2')[0].innerHTML = sub_title;
 $("#masterhead").css({"background":header_color});
 $("#masterhead").css({"color":header_txt_color});
 
-// If user is admin add special features and CSS style
-if ( user_status === 'admin' ) {
-	//document.getElementById('admin-audio').setAttribute("controls", true);
-	document.getElementById('slide-video').setAttribute("controls", true);
-	document.getElementById('admin-controller').setAttribute("class", "display-yes");
-	document.getElementsByTagName('body')[0].setAttribute("class", "admin-style");
-	document.getElementById('pg-next').removeAttribute('disabled');
-} else {
-	//document.getElementById('admin-audio').removeAttribute("controls");
-	document.getElementById('slide-video').removeAttribute("controls");
-	document.getElementById('admin-controller').removeAttribute("class", "display-yes");
-}
-
-// Trim user name after 10th letter
-if (user_name.length > 9) {
-    user_name = user_name.substr(0,9) + '...';
-} else {
-	// Show the entire name
-}
-
 var pg_current = document.getElementById('pg-current');
 var pg_total = document.getElementById('pg-total');
 var slide_text = document.getElementById('slide-text');
@@ -55,11 +35,33 @@ var q_1_span = document.querySelector('#q-1 span');
 var q_2_span = document.querySelector('#q-2 span');
 var q_3_span = document.querySelector('#q-3 span');
 var q_4_span = document.querySelector('#q-4 span');
+var pg_next = document.getElementById('pg-next');
+var pg_back = document.getElementById('pg-back');
 var auto_play_input = document.getElementById('auto-play-input');
 var jump_page = document.getElementById('jump-page');
 var resume_question_num; // Tracking which question needs to go back after remediation
 var question_array = 0; // Tracking the question array locally
 var replay; // Tracking to see if reply button is hit so that we can eable the next btn
+
+// If user is admin add special features and CSS style
+if ( user_status === 'admin' ) {
+	//document.getElementById('admin-audio').setAttribute("controls", true);
+	document.getElementById('slide-video').setAttribute("controls", true);
+	document.getElementById('admin-controller').setAttribute("class", "display-yes");
+	document.getElementsByTagName('body')[0].setAttribute("class", "admin-style");
+	pg_next.removeAttribute('disabled');
+} else {
+	//document.getElementById('admin-audio').removeAttribute("controls");
+	document.getElementById('slide-video').removeAttribute("controls");
+	document.getElementById('admin-controller').removeAttribute("class", "display-yes");
+}
+
+// Trim user name after 10th letter
+if (user_name.length > 9) {
+    user_name = user_name.substr(0,9) + '...';
+} else {
+	// Show the entire name
+}
 
 var slides = [
 	{
@@ -387,7 +389,7 @@ pg_current.innerHTML = current_slide_num + 1;
 pg_total.innerHTML = total_course_num + 1;
 
 // Back Button
-document.getElementById('pg-back').addEventListener("click", function(){
+pg_back.addEventListener("click", function(){
 	prev_slide();
 	slides_work();
 });
@@ -402,7 +404,7 @@ function prev_slide() {
 }
 
 // Next Button
-document.getElementById('pg-next').addEventListener("click", function(){
+pg_next.addEventListener("click", function(){
 	next_slide();
 	slides_work();
 	pg_current.innerHTML = current_slide_num + 1;
@@ -528,7 +530,7 @@ function course_load() {
 	if ( slides[ current_slide_num ].templateType === 'basic' || 'video' || 'text' ) {
 		// disable next btn when no bookmarked pg or current slide num is smaller than bookmarked
 		if ( current_slide_num >= bookmarked ) {
-			document.getElementById('pg-next').setAttribute('disabled', true);
+			pg_next.setAttribute('disabled', true);
 		}
 	}
 
@@ -636,10 +638,10 @@ function course_load() {
 
 	// Disable back button when current page is 1
 	if ( current_slide_num == 0 ) {
-		document.getElementById('pg-back').setAttribute("disabled", true);
+		pg_back.setAttribute("disabled", true);
 	} else {
 		// Enable back button when current page is NOT 1
-		document.getElementById('pg-back').removeAttribute('disabled');
+		pg_back.removeAttribute('disabled');
 	}
 }
 
@@ -758,7 +760,7 @@ document.getElementById('question-submit').addEventListener("click", function(){
 			pg_current.innerHTML = current_slide_num + 1;
 			course_load();
 			slide_text.setAttribute("class", "remediation");
-			document.getElementById('pg-back').setAttribute("disabled", true);
+			pg_back.setAttribute("disabled", true);
 			console.log( "Reference Course Slide: " + Number(current_slide_num + 1 ) );
 			// The below 3 lines are to replace the pagenation label
 			document.getElementById('pagenation').setAttribute("class", "display-no");
@@ -780,9 +782,11 @@ document.getElementById('state-play').addEventListener("click", function(){
 // Pause Button
 document.getElementById('state-pause').addEventListener("click", function(){
 	if ( slides[ current_slide_num ].templateType === 'video' ) {
-		media_video.pause();	
+		media_video.pause();
+		console.log("video");	
 	} else {
 		media_audio.pause();
+		console.log("others");
 	}	
 });
 
@@ -811,10 +815,10 @@ $(media_audio).on('playing', function() {
 	// disable next btn when no bookmarked pg or current slide num is smaller than bookmarked
 	if ( bookmarked === 1 && replay != 1 || current_slide_num >= bookmarked - 1 && replay != 1 || slide_text.classList.contains('remediation')  ) {
 		if ( user_status != 'admin' ) {			
-			document.getElementById('pg-next').setAttribute('disabled', true);
+			pg_next.setAttribute('disabled', true);
 		}
 	} else {
-		document.getElementById('pg-next').removeAttribute('disabled');
+		pg_next.removeAttribute('disabled');
 		replay = 0;
 	}
 });
@@ -825,7 +829,7 @@ $(media_audio).on('ended', function() {
 	document.getElementById('state-replay').setAttribute("class", "display-yes");
 
    // enable button
-   document.getElementById('pg-next').removeAttribute('disabled');
+   pg_next.removeAttribute('disabled');
    // Use this if bookmarking at the end of narration is preferred	
 
 	// auto play on
@@ -853,10 +857,10 @@ $(media_video).on('playing', function() {
 	// disable next btn if current page num is greater than bookmarked page num
 	if ( bookmarked === 1 || current_slide_num >= bookmarked - 1 && replay != 1 || user_status != admin ) {
 		if ( user_status != 'admin' ) {
-			document.getElementById('pg-next').setAttribute('disabled', true);	
+			pg_next.setAttribute('disabled', true);	
 		}		
 	} else {
-		document.getElementById('pg-next').removeAttribute('disabled');
+		pg_next.removeAttribute('disabled');
 		replay = 0;
 	}
 });
@@ -867,7 +871,7 @@ $(media_video).on('ended', function() {
 	document.getElementById('state-replay').setAttribute("class", "display-yes");
 
    // enable button
-   document.getElementById('pg-next').removeAttribute('disabled');
+   pg_next.removeAttribute('disabled');
    // New bookmarking
 
 	// auto play on
