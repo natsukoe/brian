@@ -339,6 +339,7 @@ input[type="button"] {
 #audio-controller button:hover, input[type="button"]:hover {
 	background: #fff;
 	cursor: pointer;
+	box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.7);
 }
 #audio-controller button[disabled]:hover {
 	background: #f1efef;
