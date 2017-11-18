@@ -340,7 +340,7 @@ input[type="button"] {
 	background: #fff;
 	cursor: pointer;
 }
-#audio-controller button:hover {
+#audio-controller button[disabled]:hover {
 	background: #f1efef;
 	cursor: default;
 }
