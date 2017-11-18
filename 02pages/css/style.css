@@ -308,11 +308,6 @@ h3 {
 	text-align: center;
 	padding: 10px;
 }
-input[type="button"]:hover {
-	color: #fff;
-	background: #2196F3;
-	box-shadow: 1px 1px 0px 0px rgba(32,148,243,0.5);
-}
 #audio-controller button {
 	margin: 0 10px 0 0;
 }
@@ -345,7 +340,7 @@ input[type="button"] {
 	background: #fff;
 	cursor: pointer;
 }
-#audio-controller button[disabled]:hover {
+#audio-controller button:hover, input[type="button"]:hover {
 	background: #f1efef;
 	cursor: default;
 }
