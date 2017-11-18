@@ -336,11 +336,11 @@ input[type="button"] {
 	margin: 0;
 	padding: 3px 10px;
 }
-#audio-controller button:hover {
+#audio-controller button:hover, input[type="button"]:hover {
 	background: #fff;
 	cursor: pointer;
 }
-#audio-controller button:hover, input[type="button"]:hover {
+#audio-controller button:hover {
 	background: #f1efef;
 	cursor: default;
 }
