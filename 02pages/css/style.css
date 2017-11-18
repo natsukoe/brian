@@ -308,7 +308,7 @@ h3 {
 	text-align: center;
 	padding: 10px;
 }
-#audio-controller button:hover, input[type="button"]:hover {
+input[type="button"]:hover {
 	color: #fff;
 	background: #2196F3;
 	box-shadow: 1px 1px 0px 0px rgba(32,148,243,0.5);
